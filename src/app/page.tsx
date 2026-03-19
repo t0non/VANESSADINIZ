@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Empathy } from "@/components/sections/Empathy";
 import { Pillars } from "@/components/sections/Pillars";
 import { Authority } from "@/components/sections/Authority";
+import { Narrative } from "@/components/sections/Narrative";
 import { OfficeExperience } from "@/components/sections/OfficeExperience";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
@@ -19,6 +20,7 @@ export default function Home() {
       <Empathy />
       <Pillars />
       <Authority />
+      <Narrative />
       <OfficeExperience />
       <Testimonials />
       <FAQ />
