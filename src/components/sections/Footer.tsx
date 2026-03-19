@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -14,7 +13,7 @@ export function Footer() {
       <div className="container-premium">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-32">
           <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="relative h-14 w-56 mb-10 block transition-transform hover:scale-105 duration-300">
+            <Link href="/" className="relative h-20 w-80 mb-10 block transition-transform hover:scale-105 duration-300">
               <Image
                 src={logoImage}
                 alt="Dra. Luísa Mendes Logo"

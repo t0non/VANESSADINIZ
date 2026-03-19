@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -31,7 +30,7 @@ export function Navbar() {
       }`}
     >
       <div className="container-premium flex justify-between items-center">
-        <Link href="/" className="relative h-12 w-48 transition-transform hover:scale-105 duration-300">
+        <Link href="/" className="relative h-16 w-64 transition-transform hover:scale-105 duration-300">
           <Image
             src={logoImage}
             alt="Dra. Luísa Mendes Logo"
