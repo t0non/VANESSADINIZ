@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -72,8 +71,8 @@ export function Pillars() {
 
         <div className="flex justify-center">
           <FadeIn delay={600}>
-            <Button variant="outline" size="lg" className="text-[10px] lettering-wide font-bold px-12 border-white/20 text-white hover:bg-white/10 hover:text-white gap-3 group">
-              <div className="relative w-4 h-4 transition-transform group-hover:scale-110">
+            <Button variant="outline" size="lg" className="text-sm lettering-wide font-bold px-12 border-white/20 text-white hover:bg-white/10 hover:text-white gap-4 group">
+              <div className="relative w-6 h-6 transition-transform group-hover:scale-110">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
                   alt="WhatsApp" 

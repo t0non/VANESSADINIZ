@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -75,9 +74,9 @@ export function Narrative() {
 
             <Button 
               size="xl" 
-              className="bg-[#2D4F60] hover:bg-[#1A303B] text-white rounded-full px-10 h-14 flex items-center gap-3 w-fit"
+              className="bg-[#2D4F60] hover:bg-[#1A303B] text-white rounded-full px-12 h-16 flex items-center gap-4 w-fit"
             >
-              <div className="relative w-5 h-5">
+              <div className="relative w-7 h-7">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
                   alt="WhatsApp" 
@@ -85,7 +84,7 @@ export function Narrative() {
                   className="object-contain brightness-0 invert" 
                 />
               </div>
-              <span className="text-xs uppercase tracking-widest font-bold">Agendar consulta</span>
+              <span className="text-sm uppercase tracking-widest font-bold">Agendar consulta</span>
             </Button>
           </FadeIn>
         </div>

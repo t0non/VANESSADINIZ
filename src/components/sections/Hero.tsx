@@ -23,8 +23,8 @@ export function Hero() {
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história e bem-estar.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button size="xl" variant="default" className="text-[10px] lettering-wide font-bold gap-3 group">
-                <div className="relative w-5 h-5 transition-transform group-hover:scale-110">
+              <Button size="xl" variant="default" className="text-sm lettering-wide font-bold gap-4 group px-12">
+                <div className="relative w-7 h-7 transition-transform group-hover:scale-110">
                   <Image 
                     src="https://files.catbox.moe/pkq8i0.png" 
                     alt="WhatsApp" 

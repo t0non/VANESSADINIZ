@@ -19,9 +19,9 @@ export function CTA() {
             <Button 
               size="xl"
               variant="accent"
-              className="gap-4 text-[12px] lettering-wide font-bold px-16 h-20 group"
+              className="gap-5 text-base md:text-lg lettering-wide font-bold px-16 h-24 group rounded-full"
             >
-              <div className="relative w-6 h-6 transition-transform group-hover:scale-110">
+              <div className="relative w-8 h-8 transition-transform group-hover:scale-110">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
                   alt="WhatsApp" 

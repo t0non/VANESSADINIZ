@@ -43,8 +43,8 @@ export function Authority() {
                 <p className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-1">CRM-SP 123.456 | RQE 78.910</p>
                 <p className="text-[10px] text-primary/50 uppercase tracking-widest font-medium">Médica Geriatra e Especialista em Longevidade</p>
               </div>
-              <Button size="xl" variant="default" className="text-[10px] lettering-wide font-bold w-fit uppercase tracking-widest gap-3 group">
-                <div className="relative w-5 h-5 transition-transform group-hover:scale-110">
+              <Button size="xl" variant="default" className="text-sm lettering-wide font-bold w-fit uppercase tracking-widest gap-4 group px-12">
+                <div className="relative w-6 h-6 transition-transform group-hover:scale-110">
                   <Image 
                     src="https://files.catbox.moe/pkq8i0.png" 
                     alt="WhatsApp" 
