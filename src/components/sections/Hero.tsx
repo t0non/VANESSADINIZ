@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -32,15 +33,15 @@ export function Hero() {
         </div>
 
         {/* Right Side: Visual */}
-        <div className="lg:col-span-5 relative h-[50vh] lg:h-[75vh] w-full">
-          <FadeIn className="h-full w-full" delay={200}>
-            <div className="relative h-full w-full overflow-hidden shadow-2xl">
+        <div className="lg:col-span-5 relative h-[40vh] lg:h-[60vh] w-full flex justify-center items-center">
+          <FadeIn className="h-full w-full flex justify-center items-center" delay={200}>
+            <div className="relative h-full w-full">
               <Image
                 src={heroImage}
                 alt="Envelhecimento com paz e saúde"
                 fill
                 priority
-                className="object-cover"
+                className="object-contain"
                 data-ai-hint="peaceful elderly"
               />
             </div>
