@@ -8,7 +8,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { MessageCircle } from "lucide-react";
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/objayu.png";
+  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/pc66nr.png";
 
   return (
     <section className="relative min-h-[90vh] flex items-center pt-32 lg:pt-20 overflow-hidden bg-background">
