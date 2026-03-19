@@ -3,15 +3,15 @@
   "placeholderImages": [
     {
       "id": "hero",
-      "description": "Mulher madura sorridente e serena",
-      "imageUrl": "https://files.catbox.moe/pc66nr.png",
-      "imageHint": "peaceful aging"
-    },
-    {
-      "id": "doctor",
       "description": "Dra. Vanessa Diniz em seu consultório",
       "imageUrl": "https://files.catbox.moe/w5yubo.png",
       "imageHint": "professional doctor"
+    },
+    {
+      "id": "doctor",
+      "description": "Mulher madura sorridente e serena",
+      "imageUrl": "https://files.catbox.moe/pc66nr.png",
+      "imageHint": "peaceful aging"
     },
     {
       "id": "empathy",
