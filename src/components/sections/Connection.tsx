@@ -4,22 +4,19 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 export function Connection() {
   return (
-    <section className="py-32 bg-background border-y border-border/50">
+    <section id="filosofia" className="py-32 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
-            <span className="text-accent text-xs uppercase tracking-[0.4em] font-semibold mb-8 block">
-              Conexão & Empatia
-            </span>
-            <h2 className="text-3xl md:text-5xl font-headline mb-12 leading-tight">
-              Onde o tempo encontra a <span className="italic">sua elevação.</span>
+            <h2 className="text-3xl md:text-5xl font-headline mb-12 leading-tight text-primary">
+              Mais do que tratar sintomas. <span className="italic">Cuidar de histórias.</span>
             </h2>
-            <div className="space-y-6 text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
+            <div className="space-y-8 text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
               <p>
-                Sabemos que o seu tempo é o seu ativo mais valioso. Você procura resultados extraordinários, mas não quer abrir mão da leveza no processo.
+                Sabemos que a maturidade traz novos desafios, tanto para quem os vive quanto para a família que acompanha.
               </p>
               <p>
-                Até agora, o mercado oferecia o básico. Mas você não se contenta com o básico. Você busca a ressonância entre o que faz e quem você é.
+                O nosso foco não é apenas prolongar anos à vida, mas adicionar vida, independência e dignidade a cada ano que passa. Uma medicina feita com escuta ativa, baseada em ciência e entregue com afeto.
               </p>
             </div>
           </FadeIn>

@@ -1,57 +1,50 @@
 "use client";
 
 import { FadeIn } from "@/components/animations/FadeIn";
-import { Diamond, ShieldCheck, Crown, Zap } from "lucide-react";
+import { Heart, ShieldCheck, Leaf } from "lucide-react";
 
 const pillars = [
   {
-    icon: <Diamond className="w-8 h-8 stroke-[1px]" />,
-    title: "Design Único",
-    description: "Cada detalhe foi desenhado para se adaptar ao seu estilo de vida com exclusividade absoluta."
+    icon: <Leaf className="w-10 h-10 stroke-[1px]" />,
+    title: "Prevenção e Longevidade",
+    description: "Rastreio e mapeamento de saúde para garantir um envelhecimento ativo e independente."
   },
   {
-    icon: <Zap className="w-8 h-8 stroke-[1px]" />,
-    title: "Performance Silenciosa",
-    description: "Resultados visíveis sem atrito. A fluidez que o seu dia a dia exige para manter a sua leveza."
+    icon: <Heart className="w-10 h-10 stroke-[1px]" />,
+    title: "Gestão de Condições Crônicas",
+    description: "Controle rigoroso e integrado de múltiplas condições, evitando a polifarmácia (excesso de remédios)."
   },
   {
-    icon: <ShieldCheck className="w-8 h-8 stroke-[1px]" />,
-    title: "Confiança Absoluta",
-    description: "Sinta a segurança de estar sempre um passo à frente com uma estrutura de suporte impecável."
-  },
-  {
-    icon: <Crown className="w-8 h-8 stroke-[1px]" />,
-    title: "Status & Legado",
-    description: "Uma presença que comunica sem gritar. O reconhecimento de quem entende o valor do detalhe."
+    icon: <ShieldCheck className="w-10 h-10 stroke-[1px]" />,
+    title: "Apoio Familiar",
+    description: "Orientação clara e acolhimento para os familiares, trazendo segurança para quem também cuida."
   }
 ];
 
 export function Services() {
   return (
-    <section id="services" className="py-32 bg-background">
+    <section id="pilares" className="py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mb-24">
+        <div className="text-center mb-24">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-headline mb-8 text-primary">
-              Os Pilares da sua <span className="italic">Elevação</span>
+            <span className="text-accent text-xs uppercase tracking-[0.3em] font-semibold mb-4 block">Abordagem</span>
+            <h2 className="text-4xl md:text-5xl font-headline text-primary">
+              Os Pilares do Atendimento
             </h2>
-            <p className="text-muted-foreground text-lg font-light leading-relaxed">
-              O racional por trás do emocional. Entregamos o extraordinário através de fundamentos sólidos de design e eficiência.
-            </p>
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-12 max-w-6xl mx-auto">
           {pillars.map((pillar, index) => (
-            <FadeIn key={index} delay={index * 150}>
-              <div className="group p-8 border border-transparent hover:border-accent/10 transition-all duration-500">
-                <div className="mb-8 text-accent group-hover:scale-110 transition-transform duration-500">
+            <FadeIn key={index} delay={index * 150} className="text-center">
+              <div className="group px-6 py-10 hover:bg-secondary/20 transition-all duration-500 rounded-lg">
+                <div className="mb-8 text-accent flex justify-center">
                   {pillar.icon}
                 </div>
-                <h3 className="text-xl font-headline mb-4 group-hover:text-accent transition-colors">
+                <h3 className="text-2xl font-headline mb-6 text-primary">
                   {pillar.title}
                 </h3>
-                <p className="text-muted-foreground font-light leading-relaxed text-sm">
+                <p className="text-muted-foreground font-light leading-relaxed text-base">
                   {pillar.description}
                 </p>
               </div>

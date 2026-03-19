@@ -1,57 +1,47 @@
 "use client";
 
 import { FadeIn } from "@/components/animations/FadeIn";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Check } from "lucide-react";
 
-const testimonials = [
-  {
-    name: "Helena Soares",
-    role: "Diretora de Design",
-    text: "A atenção aos detalhes e a sofisticação do atendimento transformaram completamente a minha visão. Impecável em todos os sentidos.",
-    initials: "HS"
-  },
-  {
-    name: "Ricardo Mendes",
-    role: "Investidor",
-    text: "Encontrei aqui a fluidez que faltava na minha rotina. É o luxo que não precisa ser barulhento para ser notado. Uma experiência sublime.",
-    initials: "RM"
-  },
-  {
-    name: "Ana Clara Silva",
-    role: "Arquiteta",
-    text: "O minimalismo funcional do Apex Aura é um estudo sobre como a tecnologia pode servir ao bem-estar sem sobrecarregar os sentidos.",
-    initials: "AS"
-  }
+const steps = [
+  "Consulta estendida e sem pressa.",
+  "Avaliação Geriátrica Ampla (física, cognitiva e emocional).",
+  "Plano de cuidado personalizado e prático.",
+  "Ambiente acolhedor, acessível e pensado para o seu conforto."
 ];
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-32 bg-muted/30">
+    <section className="py-32 bg-background">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <FadeIn>
-            <h2 className="text-3xl md:text-5xl font-headline mb-6">Quem já elevou o seu padrão</h2>
-            <p className="text-muted-foreground font-light tracking-wide italic">Recomendações de um círculo exclusivo.</p>
+        <div className="max-w-4xl mx-auto">
+          <FadeIn className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-headline text-primary mb-6">O que esperar do seu atendimento</h2>
+            <p className="text-muted-foreground font-light tracking-wide italic">A experiência da consulta premium.</p>
           </FadeIn>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {testimonials.map((item, index) => (
-            <FadeIn key={index} delay={index * 200} className="bg-background p-10 shadow-sm border border-border/50">
-              <p className="text-muted-foreground font-light leading-relaxed mb-8 italic">
-                "{item.text}"
-              </p>
-              <div className="flex items-center gap-4">
-                <Avatar className="grayscale border border-border/50">
-                  <AvatarFallback className="bg-primary text-white text-xs">{item.initials}</AvatarFallback>
-                </Avatar>
-                <div>
-                  <h4 className="text-sm font-semibold tracking-wide">{item.name}</h4>
-                  <p className="text-xs text-accent uppercase tracking-widest">{item.role}</p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <FadeIn delay={200} className="bg-secondary/10 p-12 flex flex-col justify-center border border-border/30">
+              <ul className="space-y-8">
+                {steps.map((step, index) => (
+                  <li key={index} className="flex items-start gap-4">
+                    <div className="mt-1 bg-accent/20 p-1">
+                      <Check className="w-5 h-5 text-accent" />
+                    </div>
+                    <p className="text-lg font-light text-muted-foreground">{step}</p>
+                  </li>
+                ))}
+              </ul>
             </FadeIn>
-          ))}
+            <div className="flex flex-col justify-center space-y-8">
+              <FadeIn delay={400}>
+                <h3 className="text-2xl font-headline text-primary">Cuidado com propósito</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  Cada etapa do atendimento foi desenhada para reduzir a ansiedade do paciente e da família, garantindo que todas as dúvidas sejam respondidas e que o plano de tratamento seja sustentável.
+                </p>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -2,8 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Apex Aura | Excellence Redefined',
-  description: 'A premium platform for the modern visionary.',
+  title: 'Dra. Luísa Mendes | Geriatria e Longevidade',
+  description: 'Cuidado médico focado em longevidade e qualidade de vida. O privilégio de envelhecer com saúde, autonomia e propósito.',
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
