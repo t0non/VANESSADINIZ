@@ -37,7 +37,7 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section id="pilares" className="relative w-full py-40 overflow-hidden bg-fixed bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('https://files.catbox.moe/thg2g3.jpg')" }}>
+    <section id="pilares" className="relative w-full py-40 overflow-hidden bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('https://files.catbox.moe/thg2g3.jpg')" }}>
       
       {/* Overlay Verde Premium */}
       <div className="absolute inset-0 bg-[#2A3F32]/90 z-0"></div>
