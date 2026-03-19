@@ -14,15 +14,15 @@
     },
     {
       "id": "doctor",
-      "description": "Dra. Vanessa Diniz",
-      "imageUrl": "https://files.catbox.moe/w5yubo.png",
-      "imageHint": "professional doctor"
+      "description": "Envelhecimento Sereno",
+      "imageUrl": "https://files.catbox.moe/pc66nr.png",
+      "imageHint": "peaceful aging"
     },
     {
       "id": "empathy",
-      "description": "Cuidado e Acolhimento",
-      "imageUrl": "https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=800&auto=format&fit=crop",
-      "imageHint": "medical caring"
+      "description": "Dra. Vanessa Diniz - Um olhar integral",
+      "imageUrl": "https://files.catbox.moe/w5yubo.png",
+      "imageHint": "professional doctor"
     },
     {
       "id": "office",
