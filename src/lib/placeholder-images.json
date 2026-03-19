@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "logo",
+      "description": "Dra. Vanessa Diniz Logo",
+      "imageUrl": "https://files.catbox.moe/ulpl82.png",
+      "imageHint": "medical logo"
+    },
+    {
+      "id": "hero",
+      "description": "Envelhecimento Ativo e Saudável",
+      "imageUrl": "https://files.catbox.moe/pc66nr.png",
+      "imageHint": "peaceful aging"
+    },
+    {
+      "id": "doctor",
+      "description": "Dra. Vanessa Diniz",
+      "imageUrl": "https://files.catbox.moe/w5yubo.png",
+      "imageHint": "professional doctor"
+    },
+    {
+      "id": "empathy",
+      "description": "Cuidado e Acolhimento",
+      "imageUrl": "https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "medical caring"
+    },
+    {
+      "id": "office",
+      "description": "Consultório Premium",
+      "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "luxury clinic room"
+    }
+  ]
 }
