@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 30 40% 98%; /* Off-white/Bege claríssimo */
-    --foreground: 215 25% 15%; /* Marinho acinzentado */
-    --card: 30 40% 98%;
+    --background: 35 30% 98%; /* Creme quente claríssimo */
+    --foreground: 215 25% 15%; /* Marinho acinzentado profundo */
+    --card: 35 30% 98%;
     --card-foreground: 215 25% 15%;
-    --popover: 30 40% 98%;
+    --popover: 35 30% 98%;
     --popover-foreground: 215 25% 15%;
-    --primary: 158 20% 25%; /* Verde Sálvia Escuro */
-    --primary-foreground: 30 40% 98%;
-    --secondary: 35 30% 92%; /* Bege Quente */
-    --secondary-foreground: 158 20% 25%;
-    --muted: 35 20% 88%;
+    --primary: 158 25% 42%; /* Verde Sálvia Médio (mais claro e acolhedor) */
+    --primary-foreground: 35 30% 98%;
+    --secondary: 35 20% 92%; /* Bege Suave */
+    --secondary-foreground: 158 25% 42%;
+    --muted: 35 15% 88%;
     --muted-foreground: 215 15% 40%;
-    --accent: 35 25% 45%; /* Bronze/Dourado suave */
-    --accent-foreground: 30 40% 98%;
+    --accent: 35 25% 55%; /* Bronze suave e iluminado */
+    --accent-foreground: 35 30% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 35 15% 85%;
     --input: 35 15% 85%;
-    --ring: 158 20% 25%;
+    --ring: 158 25% 42%;
     --radius: 0.25rem;
   }
 }
