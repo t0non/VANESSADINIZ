@@ -10,17 +10,17 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen flex items-center pt-32 lg:pt-0 overflow-hidden bg-background">
-      <div className="container-premium grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-16 lg:gap-24 items-center w-full">
+    <section className="relative min-h-screen flex items-center pt-32 lg:pt-16 overflow-hidden bg-background">
+      <div className="container-premium grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-16 lg:gap-24 items-center w-full relative z-10">
         <div className="z-20 order-2 lg:order-1 pb-20 lg:pb-0">
           <FadeIn>
             <span className="inline-block text-accent lettering-wide text-[10px] font-bold mb-6">
               GERIATRIA E LONGEVIDADE PREMIUM
             </span>
             
-            <h1 className="text-4xl md:text-5xl lg:text-[64px] font-headline leading-[1.1] mb-12 text-primary w-full max-w-none">
-              O privilégio de envelhecer<br className="hidden md:block" />
-              com saúde, autonomia<br className="hidden md:block" />
+            <h1 className="text-4xl md:text-5xl lg:text-[60px] font-headline leading-[1.1] mb-12 text-primary w-full max-w-none">
+              O privilégio de envelhecer<br />
+              com saúde, autonomia<br />
               e propósito.
             </h1>
 
@@ -44,17 +44,18 @@ export function Hero() {
           </FadeIn>
         </div>
 
-        <div className="relative order-1 lg:order-2 h-[60vh] lg:h-[105vh] w-full flex items-end lg:absolute lg:right-0 lg:bottom-0 lg:w-[45%] pointer-events-none">
+        <div className="relative order-1 lg:order-2 h-[50vh] lg:h-[80vh] w-full flex items-center justify-center">
           <FadeIn delay={300} className="w-full h-full relative">
             <Image
               src={heroImage}
               alt="Dra. Vanessa Diniz"
               fill
               priority
-              className="object-contain object-bottom scale-110 lg:scale-125 origin-bottom"
+              className="object-contain object-center scale-110 lg:scale-125 origin-center"
               data-ai-hint="professional doctor"
             />
-            <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
+            {/* Transição suave na base da imagem */}
+            <div className="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-background via-background/60 to-transparent z-10" />
           </FadeIn>
         </div>
       </div>
