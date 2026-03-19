@@ -3,19 +3,31 @@
   "placeholderImages": [
     {
       "id": "hero",
-      "description": "Mature woman with peaceful expression",
+      "description": "Mulher madura sorridente e serena",
       "imageUrl": "https://files.catbox.moe/objayu.png",
       "imageHint": "peaceful aging"
     },
     {
       "id": "doctor",
-      "description": "Professional geriatric doctor portrait",
+      "description": "Dra. Vanessa Diniz em seu consultório",
       "imageUrl": "https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=800&auto=format&fit=crop",
       "imageHint": "professional doctor"
     },
     {
+      "id": "empathy",
+      "description": "Mãos de médica segurando as mãos de um idoso",
+      "imageUrl": "https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "caring doctor"
+    },
+    {
+      "id": "office",
+      "description": "Consultório médico elegante e acolhedor",
+      "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "luxury clinic"
+    },
+    {
       "id": "logo",
-      "description": "Dra. Luísa Mendes Logo",
+      "description": "Dra. Vanessa Diniz Logo",
       "imageUrl": "https://files.catbox.moe/ulpl82.png",
       "imageHint": "medical logo"
     }

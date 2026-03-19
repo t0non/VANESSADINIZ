@@ -1,47 +1,47 @@
+
 "use client";
 
 import { FadeIn } from "@/components/animations/FadeIn";
-import { Check } from "lucide-react";
+import { Quote } from "lucide-react";
 
-const steps = [
-  "Consulta estendida e sem pressa.",
-  "Avaliação Geriátrica Ampla (física, cognitiva e emocional).",
-  "Plano de cuidado personalizado e prático.",
-  "Ambiente acolhedor, acessível e pensado para o seu conforto."
+const testimonials = [
+  {
+    content: "Dra. Vanessa foi a primeira médica a realmente ouvir a história do meu pai antes de prescrever qualquer coisa. A mudança na qualidade de vida dele foi nítida.",
+    author: "Filha da D. Maria"
+  },
+  {
+    content: "Encontrar uma profissional que entende as fragilidades e as forças de quem envelhece foi um alívio para nossa família. O cuidado é impecável.",
+    author: "R.S., paciente há 2 anos"
+  },
+  {
+    content: "As consultas domiciliares trouxeram uma tranquilidade que não tínhamos. Atendimento humano, científico e extremamente ético.",
+    author: "Filho do Sr. Joaquim"
+  }
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-32 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <FadeIn className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-headline text-primary mb-6">O que esperar do seu atendimento</h2>
-            <p className="text-muted-foreground font-light tracking-wide italic">A experiência da consulta premium.</p>
+    <section className="py-32 bg-secondary/5">
+      <div className="container-premium">
+        <div className="text-center mb-24">
+          <FadeIn>
+            <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-4 block">Depoimentos</span>
+            <h2 className="text-3xl md:text-5xl font-headline text-primary">Mudando histórias de vida</h2>
           </FadeIn>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <FadeIn delay={200} className="bg-secondary/10 p-12 flex flex-col justify-center border border-border/30">
-              <ul className="space-y-8">
-                {steps.map((step, index) => (
-                  <li key={index} className="flex items-start gap-4">
-                    <div className="mt-1 bg-accent/20 p-1">
-                      <Check className="w-5 h-5 text-accent" />
-                    </div>
-                    <p className="text-lg font-light text-muted-foreground">{step}</p>
-                  </li>
-                ))}
-              </ul>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {testimonials.map((t, index) => (
+            <FadeIn key={index} delay={index * 200} className="bg-background p-12 border border-primary/5 shadow-sm relative group">
+              <Quote className="absolute top-8 right-8 w-8 h-8 text-accent/10 transition-colors group-hover:text-accent/30" />
+              <p className="text-primary/70 font-light italic leading-relaxed mb-10 text-lg">
+                "{t.content}"
+              </p>
+              <p className="text-[10px] lettering-wide font-bold text-accent uppercase">
+                {t.author}
+              </p>
             </FadeIn>
-            <div className="flex flex-col justify-center space-y-8">
-              <FadeIn delay={400}>
-                <h3 className="text-2xl font-headline text-primary">Cuidado com propósito</h3>
-                <p className="text-muted-foreground font-light leading-relaxed">
-                  Cada etapa do atendimento foi desenhada para reduzir a ansiedade do paciente e da família, garantindo que todas as dúvidas sejam respondidas e que o plano de tratamento seja sustentável.
-                </p>
-              </FadeIn>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

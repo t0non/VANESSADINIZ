@@ -1,3 +1,4 @@
+
 "use client";
 
 import { FadeIn } from "@/components/animations/FadeIn";
@@ -10,16 +11,20 @@ import {
 
 const faqs = [
   {
-    question: "Atende planos de saúde?",
-    answer: "Trabalhamos exclusivamente no modelo particular para garantir a duração e a profundidade que uma consulta geriátrica de excelência exige. No entanto, fornecemos toda a documentação necessária para que você possa solicitar o reembolso junto ao seu convênio."
+    question: "A partir de qual idade devo procurar uma geriatra?",
+    answer: "Não existe uma idade rígida. Embora o foco principal seja acima de 60 anos, muitos buscam o geriatra a partir dos 45-50 para planejamento de longevidade e prevenção de doenças típicas do envelhecimento."
   },
   {
-    question: "A partir de que idade devo procurar um geriatra?",
-    answer: "Não existe uma idade rígida. Embora o foco principal seja em pacientes acima de 60 anos, muitos buscam o geriatra a partir dos 45-50 para planejamento de longevidade e prevenção de doenças típicas do envelhecimento."
+    question: "A Dra. Vanessa atende planos de saúde?",
+    answer: "Trabalhamos exclusivamente no modelo particular para garantir a duração e a profundidade que uma consulta geriátrica de excelência exige. Fornecemos nota fiscal detalhada para que você possa solicitar o reembolso junto ao seu convênio."
   },
   {
     question: "Como funciona a primeira consulta?",
     answer: "A primeira consulta é extensa (cerca de 1h30). Realizamos uma Avaliação Geriátrica Ampla, revisamos todos os exames e medicamentos em uso, e conversamos profundamente sobre rotina, humor e memória."
+  },
+  {
+    question: "Como me devo preparar para a primeira consulta?",
+    answer: "É fundamental trazer todas as receitas médicas atuais, caixas de remédios em uso e os exames de laboratório ou imagem realizados nos últimos 12 meses. Isso agiliza a compreensão do quadro clínico."
   }
 ];
 
@@ -36,11 +41,11 @@ export function FAQ() {
           <FadeIn delay={200}>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-border/50 px-4">
+                <AccordionItem key={index} value={`item-${index}`} className="border-primary/10">
                   <AccordionTrigger className="text-left font-headline font-normal py-8 hover:no-underline hover:text-accent tracking-wide text-lg md:text-xl text-primary">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground font-light leading-relaxed pb-8 text-base md:text-lg">
+                  <AccordionContent className="text-primary/60 font-light leading-relaxed pb-8 text-base md:text-lg">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

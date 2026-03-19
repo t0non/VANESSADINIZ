@@ -1,8 +1,10 @@
+
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { Connection } from "@/components/sections/Connection";
-import { Services } from "@/components/sections/Services";
-import { Solution } from "@/components/sections/Solution";
+import { Empathy } from "@/components/sections/Empathy";
+import { Pillars } from "@/components/sections/Pillars";
+import { Authority } from "@/components/sections/Authority";
+import { OfficeExperience } from "@/components/sections/OfficeExperience";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
@@ -11,12 +13,13 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export default function Home() {
   return (
-    <main className="min-h-screen selection:bg-accent/30">
+    <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      <Connection />
-      <Services />
-      <Solution />
+      <Empathy />
+      <Pillars />
+      <Authority />
+      <OfficeExperience />
       <Testimonials />
       <FAQ />
       <CTA />
