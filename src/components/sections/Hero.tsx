@@ -47,10 +47,7 @@ export function Hero() {
                 className="object-cover"
                 data-ai-hint="luxury woman"
               />
-              <div className="absolute inset-0 border-[15px] border-background/20 pointer-events-none"></div>
             </div>
-            {/* Decorative element */}
-            <div className="hidden lg:block absolute -bottom-6 -left-6 w-40 h-40 border border-accent/20 z-[-1]"></div>
           </FadeIn>
         </div>
       </div>
