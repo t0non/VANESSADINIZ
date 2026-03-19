@@ -18,8 +18,8 @@ export function Hero() {
               GERIATRIA E LONGEVIDADE PREMIUM
             </span>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-headline leading-[1.2] mb-16 text-primary max-w-2xl">
-              O privilégio de envelhecer<br className="hidden md:block" />
-              com saúde, autonomia<br className="hidden md:block" />
+              O privilégio de envelhecer<br />
+              com saúde, autonomia<br />
               e propósito.
             </h1>
             <p className="text-lg md:text-xl text-primary/95 font-medium leading-relaxed mb-14 max-w-xl">
