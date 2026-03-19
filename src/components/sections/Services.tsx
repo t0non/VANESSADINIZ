@@ -1,28 +1,28 @@
 "use client";
 
 import { FadeIn } from "@/components/animations/FadeIn";
-import { Diamond, ShieldCheck, Crown, Layers } from "lucide-react";
+import { Diamond, ShieldCheck, Crown, Zap } from "lucide-react";
 
-const services = [
+const pillars = [
   {
     icon: <Diamond className="w-8 h-8 stroke-[1px]" />,
-    title: "Curated Excellence",
-    description: "Every detail meticulously handled to ensure only the highest standard of quality for our community."
+    title: "Design Único",
+    description: "Cada detalhe foi desenhado para se adaptar ao seu estilo de vida com exclusividade absoluta."
   },
   {
-    icon: <Crown className="w-8 h-8 stroke-[1px]" />,
-    title: "Royal Privilege",
-    description: "Unlock access to exclusive circles and opportunities that remain hidden from the ordinary world."
+    icon: <Zap className="w-8 h-8 stroke-[1px]" />,
+    title: "Performance Silenciosa",
+    description: "Resultados visíveis sem atrito. A fluidez que o seu dia a dia exige para manter a sua leveza."
   },
   {
     icon: <ShieldCheck className="w-8 h-8 stroke-[1px]" />,
-    title: "Secure Legacy",
-    description: "Private management of your most valuable assets with absolute discretion and sophisticated technology."
+    title: "Confiança Absoluta",
+    description: "Sinta a segurança de estar sempre um passo à frente com uma estrutura de suporte impecável."
   },
   {
-    icon: <Layers className="w-8 h-8 stroke-[1px]" />,
-    title: "Seamless Flow",
-    description: "An intuitive interface designed to blend perfectly with your high-pace lifestyle and unique needs."
+    icon: <Crown className="w-8 h-8 stroke-[1px]" />,
+    title: "Status & Legado",
+    description: "Uma presença que comunica sem gritar. O reconhecimento de quem entende o valor do detalhe."
   }
 ];
 
@@ -33,26 +33,26 @@ export function Services() {
         <div className="max-w-3xl mb-24">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-headline mb-8 text-primary">
-              Crafted for the <span className="italic">Discerning</span> Few
+              Os Pilares da sua <span className="italic">Elevação</span>
             </h2>
             <p className="text-muted-foreground text-lg font-light leading-relaxed">
-              We provide a suite of elite services designed to streamline your complexity and amplify your potential, all within a serene, minimalist environment.
+              O racional por trás do emocional. Entregamos o extraordinário através de fundamentos sólidos de design e eficiência.
             </p>
           </FadeIn>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {services.map((service, index) => (
+          {pillars.map((pillar, index) => (
             <FadeIn key={index} delay={index * 150}>
               <div className="group p-8 border border-transparent hover:border-accent/10 transition-all duration-500">
                 <div className="mb-8 text-accent group-hover:scale-110 transition-transform duration-500">
-                  {service.icon}
+                  {pillar.icon}
                 </div>
                 <h3 className="text-xl font-headline mb-4 group-hover:text-accent transition-colors">
-                  {service.title}
+                  {pillar.title}
                 </h3>
                 <p className="text-muted-foreground font-light leading-relaxed text-sm">
-                  {service.description}
+                  {pillar.description}
                 </p>
               </div>
             </FadeIn>

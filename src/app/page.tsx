@@ -1,7 +1,10 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
+import { Connection } from "@/components/sections/Connection";
+import { Solution } from "@/components/sections/Solution";
 import { Services } from "@/components/sections/Services";
-import { Portfolio } from "@/components/sections/Portfolio";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
 
@@ -10,8 +13,11 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <Connection />
+      <Solution />
       <Services />
-      <Portfolio />
+      <Testimonials />
+      <FAQ />
       <CTA />
       <Footer />
     </main>

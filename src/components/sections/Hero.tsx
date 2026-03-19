@@ -9,27 +9,27 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/1vgx82.jfif";
 
   return (
-    <section id="experience" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section id="experience" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Side: Content */}
         <div className="lg:col-span-6 z-10">
           <FadeIn>
             <span className="inline-block text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-6">
-              Exclusive Luxury Experience
+              Experiência Exclusiva
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline leading-[1.1] mb-8 text-primary">
-              Elevate Your <br />
-              <span className="italic font-normal">Aura</span> to the Apex
+              A elegância de ser a sua <br />
+              <span className="italic font-normal text-accent">melhor versão.</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-10 max-w-lg">
-              Experience the pinnacle of sophisticated living. Apex Aura blends minimalist design with unparalleled luxury to redefine your everyday existence.
+              Descubra uma experiência pensada para quem não abre mão do cuidado, do detalhe e da exclusividade. Redefina o seu padrão de excelência.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
               <Button className="bg-primary text-white hover:bg-accent h-14 px-10 text-xs uppercase tracking-[0.2em] transition-all duration-300">
-                Begin Journey
+                Descubra a Coleção
               </Button>
               <Button variant="ghost" className="h-14 px-10 text-xs uppercase tracking-[0.2em] hover:text-accent group">
-                The Collections <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                Nossa História <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </Button>
             </div>
           </FadeIn>
@@ -41,11 +41,11 @@ export function Hero() {
             <div className="relative h-full w-full overflow-hidden shadow-2xl">
               <Image
                 src={heroImage}
-                alt="Luxury Lifestyle Apex Aura"
+                alt="A elegância de Apex Aura"
                 fill
                 priority
                 className="object-cover"
-                data-ai-hint="luxury lifestyle"
+                data-ai-hint="luxury woman"
               />
               <div className="absolute inset-0 border-[20px] border-background/20 pointer-events-none"></div>
             </div>
