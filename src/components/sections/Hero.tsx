@@ -24,7 +24,7 @@ export function Hero() {
               Um cuidado médico focado em longevidade e qualidade de vida. Porque você e quem você ama merecem um acompanhamento integral, humano e sem pressa.
             </p>
             <div className="flex flex-col sm:flex-row gap-8">
-              <Button size="lg" className="bg-primary text-white hover:bg-accent h-16 px-12 text-[10px] lettering-wide font-bold rounded-none transition-all duration-500">
+              <Button size="xl" variant="glass" className="text-[10px] lettering-wide font-bold">
                 Agendar uma Avaliação
               </Button>
             </div>
