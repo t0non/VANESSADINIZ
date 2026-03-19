@@ -10,7 +10,7 @@
     {
       "id": "hero",
       "description": "Envelhecimento Ativo e Saudável",
-      "imageUrl": "https://files.catbox.moe/pc66nr.png",
+      "imageUrl": "https://files.catbox.moe/objayu.png",
       "imageHint": "peaceful aging"
     },
     {
@@ -30,12 +30,6 @@
       "description": "Consultório Premium",
       "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop",
       "imageHint": "luxury clinic room"
-    },
-    {
-      "id": "pillars-bg",
-      "description": "Pilares do Cuidado Background",
-      "imageUrl": "https://files.catbox.moe/thg2g3.jpg",
-      "imageHint": "medical clinic texture"
     }
   ]
 }
