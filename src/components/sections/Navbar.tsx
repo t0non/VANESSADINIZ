@@ -30,7 +30,7 @@ export function Navbar() {
       }`}
     >
       <div className="container-premium flex justify-between items-center">
-        <Link href="/" className="relative h-16 w-64 transition-transform hover:scale-105 duration-300">
+        <Link href="/" className="relative h-24 w-80 transition-transform hover:scale-105 duration-300">
           <Image
             src={logoImage}
             alt="Dra. Luísa Mendes Logo"
