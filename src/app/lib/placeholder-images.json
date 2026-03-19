@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -11,6 +12,12 @@
       "description": "Professional geriatric doctor portrait",
       "imageUrl": "https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=800&auto=format&fit=crop",
       "imageHint": "professional doctor"
+    },
+    {
+      "id": "logo",
+      "description": "Dra. Luísa Mendes Logo",
+      "imageUrl": "https://files.catbox.moe/ulpl82.png",
+      "imageHint": "medical logo"
     }
   ]
 }

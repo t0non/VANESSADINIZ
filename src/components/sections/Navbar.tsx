@@ -1,13 +1,18 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const logoImage = PlaceHolderImages.find(img => img.id === "logo")?.imageUrl || "https://files.catbox.moe/ulpl82.png";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,12 +27,18 @@ export function Navbar() {
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
           ? "bg-background/90 backdrop-blur-md py-4 border-b border-border/40" 
-          : "bg-transparent py-8"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="container-premium flex justify-between items-center">
-        <Link href="/" className="text-xl md:text-2xl font-headline tracking-tighter text-primary font-medium">
-          DRA. LUÍSA <span className="text-accent italic font-normal">MENDES</span>
+        <Link href="/" className="relative h-12 w-48 transition-transform hover:scale-105 duration-300">
+          <Image
+            src={logoImage}
+            alt="Dra. Luísa Mendes Logo"
+            fill
+            className="object-contain object-left"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -36,12 +47,12 @@ export function Navbar() {
             { name: "Filosofia", id: "filosofia" },
             { name: "Pilares", id: "pilares" },
             { name: "Sobre", id: "sobre" },
-            { name: "Experiência", id: "experiencia" }
+            { name: "FAQ", id: "faq" }
           ].map((item) => (
             <Link
               key={item.id}
               href={`#${item.id}`}
-              className="text-[10px] uppercase tracking-[0.3em] font-medium text-foreground/70 hover:text-accent transition-colors"
+              className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/70 hover:text-accent transition-colors"
             >
               {item.name}
             </Link>
@@ -60,7 +71,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-background border-b border-border p-12 flex flex-col items-center space-y-8 md:hidden animate-in slide-in-from-top duration-500">
-          {["Filosofia", "Pilares", "Sobre", "Experiência"].map((item) => (
+          {["Filosofia", "Pilares", "Sobre", "FAQ"].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}

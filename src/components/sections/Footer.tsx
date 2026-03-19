@@ -1,16 +1,26 @@
+
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Footer() {
+  const logoImage = PlaceHolderImages.find(img => img.id === "logo")?.imageUrl || "https://files.catbox.moe/ulpl82.png";
+
   return (
     <footer className="bg-background text-foreground py-32 border-t border-border/50">
       <div className="container-premium">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-32">
           <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="text-2xl font-headline tracking-tight text-primary mb-10 block font-medium">
-              DRA. LUÍSA <span className="text-accent italic font-normal">MENDES</span>
+            <Link href="/" className="relative h-14 w-56 mb-10 block transition-transform hover:scale-105 duration-300">
+              <Image
+                src={logoImage}
+                alt="Dra. Luísa Mendes Logo"
+                fill
+                className="object-contain object-left"
+              />
             </Link>
             <p className="text-sm leading-relaxed font-light text-muted-foreground mb-8">
               Geriatria & Longevidade. Um olhar atento, integral e humano sobre a saúde na maturidade.
