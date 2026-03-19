@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/objayu.png";
+  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/1vgx82.jfif";
 
   return (
     <section className="relative min-h-[90vh] flex items-center pt-32 overflow-hidden bg-background">
@@ -24,7 +24,7 @@ export function Hero() {
               Um cuidado médico focado em longevidade e qualidade de vida. Porque você e quem você ama merecem um acompanhamento integral, humano e sem pressa.
             </p>
             <div className="flex flex-col sm:flex-row gap-8">
-              <Button size="xl" variant="glass" className="text-[10px] lettering-wide font-bold">
+              <Button size="xl" variant="default" className="text-[10px] lettering-wide font-bold">
                 Agendar uma Avaliação
               </Button>
             </div>
@@ -32,7 +32,7 @@ export function Hero() {
         </div>
 
         {/* Right: Full Image Container */}
-        <div className="relative h-[40vh] lg:h-[70vh] w-full order-1 lg:order-2 flex justify-center items-center">
+        <div className="relative h-[40vh] lg:h-[65vh] w-full order-1 lg:order-2 flex justify-center items-center">
           <FadeIn delay={300} className="w-full h-full">
             <div className="relative w-full h-full">
               <Image

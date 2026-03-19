@@ -44,7 +44,7 @@ export function Solution() {
               <div className="pt-8 border-t border-border/50">
                 <p className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-1">CRM-SP 123.456 | RQE 78.910</p>
               </div>
-              <Button size="xl" variant="glass" className="text-xs uppercase tracking-[0.2em] font-bold w-fit">
+              <Button size="xl" variant="default" className="text-xs uppercase tracking-[0.2em] font-bold w-fit">
                 Agendar Consulta
               </Button>
             </div>

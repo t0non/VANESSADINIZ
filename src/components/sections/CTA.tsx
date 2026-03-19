@@ -18,8 +18,8 @@ export function CTA() {
           <div className="flex justify-center items-center">
             <Button 
               size="xl"
-              variant="glass"
-              className="bg-white/10 text-white border-white/20 hover:bg-white/20 gap-3 text-[10px] lettering-wide font-bold"
+              variant="accent"
+              className="gap-3 text-[10px] lettering-wide font-bold"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Solicitar Acesso</span>

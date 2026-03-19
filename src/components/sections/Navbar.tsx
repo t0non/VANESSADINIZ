@@ -56,7 +56,7 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <Button variant="glass" className="px-8 h-11 text-[10px] lettering-wide font-semibold">
+          <Button variant="default" className="px-8 h-11 text-[10px] lettering-wide font-semibold">
             Agendar Consulta
           </Button>
         </div>
@@ -80,7 +80,7 @@ export function Navbar() {
               {item}
             </Link>
           ))}
-          <Button variant="glass" className="w-full h-14 text-[10px] lettering-wide font-bold">Agendar Agora</Button>
+          <Button variant="default" className="w-full h-14 text-[10px] lettering-wide font-bold">Agendar Agora</Button>
         </div>
       )}
     </nav>
