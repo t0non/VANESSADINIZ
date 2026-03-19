@@ -1,11 +1,9 @@
-
 "use client";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { MessageCircle } from "lucide-react";
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
@@ -25,8 +23,15 @@ export function Hero() {
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história e bem-estar.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button size="xl" variant="default" className="text-[10px] lettering-wide font-bold gap-3">
-                <MessageCircle className="w-5 h-5" />
+              <Button size="xl" variant="default" className="text-[10px] lettering-wide font-bold gap-3 group">
+                <div className="relative w-5 h-5 transition-transform group-hover:scale-110">
+                  <Image 
+                    src="https://files.catbox.moe/pkq8i0.png" 
+                    alt="WhatsApp" 
+                    fill 
+                    className="object-contain brightness-0 invert" 
+                  />
+                </div>
                 Agendar Avaliação
               </Button>
             </div>

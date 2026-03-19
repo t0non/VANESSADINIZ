@@ -1,9 +1,8 @@
-
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { MessageCircle } from "lucide-react";
 
 export function CTA() {
   return (
@@ -20,9 +19,16 @@ export function CTA() {
             <Button 
               size="xl"
               variant="accent"
-              className="gap-4 text-[12px] lettering-wide font-bold px-16 h-20"
+              className="gap-4 text-[12px] lettering-wide font-bold px-16 h-20 group"
             >
-              <MessageCircle className="w-6 h-6" />
+              <div className="relative w-6 h-6 transition-transform group-hover:scale-110">
+                <Image 
+                  src="https://files.catbox.moe/pkq8i0.png" 
+                  alt="WhatsApp" 
+                  fill 
+                  className="object-contain brightness-0 invert" 
+                />
+              </div>
               <span>Agendar via WhatsApp</span>
             </Button>
           </div>

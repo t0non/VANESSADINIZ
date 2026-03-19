@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -59,7 +58,15 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <Button variant="default" className="px-10 h-12 text-[10px] lettering-wide font-bold uppercase tracking-widest">
+          <Button variant="default" className="px-10 h-12 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-2 group">
+            <div className="relative w-4 h-4 transition-transform group-hover:scale-110">
+              <Image 
+                src="https://files.catbox.moe/pkq8i0.png" 
+                alt="WhatsApp" 
+                fill 
+                className="object-contain brightness-0 invert" 
+              />
+            </div>
             Agendar Consulta
           </Button>
         </div>
@@ -83,7 +90,17 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <Button variant="default" className="w-full h-16 text-[10px] lettering-wide font-bold uppercase tracking-widest">Agendar Agora</Button>
+          <Button variant="default" className="w-full h-16 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group">
+            <div className="relative w-5 h-5">
+              <Image 
+                src="https://files.catbox.moe/pkq8i0.png" 
+                alt="WhatsApp" 
+                fill 
+                className="object-contain brightness-0 invert" 
+              />
+            </div>
+            Agendar Agora
+          </Button>
         </div>
       )}
     </nav>
