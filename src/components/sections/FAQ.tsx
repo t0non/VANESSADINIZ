@@ -20,31 +20,27 @@ const faqs = [
   {
     question: "Como funciona a primeira consulta?",
     answer: "A primeira consulta é extensa (cerca de 1h30). Realizamos uma Avaliação Geriátrica Ampla, revisamos todos os exames e medicamentos em uso, e conversamos profundamente sobre rotina, humor e memória."
-  },
-  {
-    question: "A Dra. realiza visitas domiciliares?",
-    answer: "Sim, realizamos atendimento domiciliar para pacientes com dificuldade de locomoção, garantindo o mesmo padrão de cuidado no conforto e segurança do lar."
   }
 ];
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-32 bg-secondary/10">
-      <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto">
-          <FadeIn className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-headline mb-6 text-primary">Perguntas Frequentes</h2>
-            <p className="text-muted-foreground font-light">As respostas que você precisa para dar o próximo passo com segurança.</p>
+    <section id="faq" className="py-32 bg-background">
+      <div className="container-premium">
+        <div className="max-w-[800px] mx-auto">
+          <FadeIn className="text-center mb-20">
+            <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-4 block opacity-80">Transparência</span>
+            <h2 className="text-3xl md:text-5xl font-headline mb-6 text-primary">Dúvidas Frequentes</h2>
           </FadeIn>
           
           <FadeIn delay={200}>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-border/50 px-2">
-                  <AccordionTrigger className="text-left font-headline font-normal py-6 hover:no-underline hover:text-accent tracking-wide text-lg text-primary">
+                <AccordionItem key={index} value={`item-${index}`} className="border-border/50 px-4">
+                  <AccordionTrigger className="text-left font-headline font-normal py-8 hover:no-underline hover:text-accent tracking-wide text-lg md:text-xl text-primary">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground font-light leading-relaxed pb-6 text-base">
+                  <AccordionContent className="text-muted-foreground font-light leading-relaxed pb-8 text-base md:text-lg">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

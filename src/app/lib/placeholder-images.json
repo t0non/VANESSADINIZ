@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -9,8 +8,8 @@
     },
     {
       "id": "doctor",
-      "description": "Professional geriatric doctor",
-      "imageUrl": "https://picsum.photos/seed/doctor_luisa/800/1000",
+      "description": "Professional geriatric doctor portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=800&auto=format&fit=crop",
       "imageHint": "professional doctor"
     }
   ]

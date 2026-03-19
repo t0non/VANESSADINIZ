@@ -20,16 +20,16 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? "bg-background/90 backdrop-blur-md py-4 border-b border-border/50" : "bg-transparent py-6"
+        isScrolled ? "bg-background/95 backdrop-blur-md py-4 border-b border-border/50" : "bg-transparent py-8"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link href="/" className="text-xl md:text-2xl font-headline tracking-tight text-primary">
-          DRA. LUÍSA <span className="text-accent italic">MENDES</span>
+      <div className="container-premium flex justify-between items-center">
+        <Link href="/" className="text-xl md:text-2xl font-headline tracking-tight text-primary font-medium">
+          DRA. LUÍSA <span className="text-accent italic font-normal">MENDES</span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-10">
+        <div className="hidden md:flex items-center space-x-12">
           {[
             { name: "Filosofia", id: "filosofia" },
             { name: "Pilares", id: "pilares" },
@@ -39,36 +39,36 @@ export function Navbar() {
             <Link
               key={item.id}
               href={`#${item.id}`}
-              className="text-sm tracking-wide font-medium text-foreground/80 hover:text-accent transition-colors"
+              className="text-xs uppercase tracking-[0.2em] font-medium text-foreground/80 hover:text-accent transition-colors"
             >
               {item.name}
             </Link>
           ))}
-          <Button className="bg-primary text-white hover:bg-accent px-8 rounded-none">
+          <Button className="bg-primary text-white hover:bg-accent px-10 rounded-none h-12 text-xs uppercase tracking-widest font-semibold transition-all duration-300">
             Agendar Consulta
           </Button>
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-primary" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X /> : <Menu />}
+        <button className="md:hidden text-primary p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-background border-b border-border p-8 flex flex-col items-center space-y-6 md:hidden">
+        <div className="absolute top-full left-0 w-full bg-background border-b border-border p-12 flex flex-col items-center space-y-8 md:hidden animate-in slide-in-from-top duration-300">
           {["Filosofia", "Pilares", "Sobre", "FAQ"].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-headline text-foreground"
+              className="text-lg font-headline text-foreground hover:text-accent transition-colors"
             >
               {item}
             </Link>
           ))}
-          <Button className="w-full bg-primary text-white rounded-none">Agendar Agora</Button>
+          <Button className="w-full bg-primary text-white rounded-none h-14 text-sm uppercase tracking-widest font-bold">Agendar Agora</Button>
         </div>
       )}
     </nav>
