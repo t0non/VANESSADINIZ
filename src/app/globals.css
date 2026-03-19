@@ -4,26 +4,36 @@
 
 @layer base {
   :root {
-    --background: 35 30% 98%; /* Creme quente claríssimo (Aconchego) */
-    --foreground: 215 25% 15%; /* Marinho acinzentado profundo (Contraste) */
-    --card: 35 30% 98%;
-    --card-foreground: 215 25% 15%;
-    --popover: 35 30% 98%;
-    --popover-foreground: 215 25% 15%;
-    --primary: 131 23% 38%; /* Verde Sálvia solicitado (#4b7753) */
-    --primary-foreground: 35 30% 98%;
-    --secondary: 35 20% 92%; /* Bege Suave */
-    --secondary-foreground: 131 23% 38%;
-    --muted: 35 15% 88%;
-    --muted-foreground: 215 15% 40%;
-    --accent: 35 25% 55%; /* Bronze suave (Elegância) */
-    --accent-foreground: 35 30% 98%;
+    /* Paleta Sálvia Premium */
+    --background: 60 13% 98%;    /* #FBFBF9 - Off-white quente */
+    --foreground: 145 20% 21%;  /* #2A3F32 - Verde Floresta escuro (Contraste) */
+    
+    --card: 60 13% 98%;
+    --card-foreground: 145 20% 21%;
+    
+    --popover: 60 13% 98%;
+    --popover-foreground: 145 20% 21%;
+    
+    --primary: 145 20% 21%;     /* #2A3F32 - Verde Floresta para autoridade */
+    --primary-foreground: 60 13% 98%;
+    
+    --secondary: 110 16% 84%;   /* #D2DCD0 - Verde Sálvia suave */
+    --secondary-foreground: 145 20% 21%;
+    
+    --muted: 110 16% 75%;
+    --muted-foreground: 145 20% 35%;
+    
+    --accent: 29 31% 65%;      /* #C1A68D - Areia/Dourado fosco (Luxo) */
+    --accent-foreground: 60 13% 98%;
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 35 15% 85%;
-    --input: 35 15% 85%;
-    --ring: 131 23% 38%;
-    --radius: 0.25rem;
+    
+    --border: 110 16% 84%;
+    --input: 110 16% 84%;
+    --ring: 145 20% 21%;
+    
+    --radius: 0.125rem; /* Cantos quase retos para sofisticação */
   }
 }
 
@@ -32,7 +42,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground font-body antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline tracking-tight;
@@ -52,7 +62,11 @@
   visibility: visible;
 }
 
-/* Custom utility for restricted containers */
 .container-premium {
   @apply max-w-[1280px] mx-auto px-6 md:px-12;
+}
+
+/* Custom selection color */
+::selection {
+  @apply bg-accent/30 text-primary;
 }
