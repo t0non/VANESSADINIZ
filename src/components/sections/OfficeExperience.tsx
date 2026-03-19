@@ -31,7 +31,7 @@ export function OfficeExperience() {
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center gap-4 group">
                   <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center transition-colors group-hover:bg-accent/20">
-                    <Check className="w-4 h-4 text-accent" />
+                    <div className="w-4 h-4 text-accent"><Check size={16} /></div>
                   </div>
                   <span className="text-primary/80 font-medium tracking-wide text-sm">{feature}</span>
                 </li>
@@ -40,7 +40,7 @@ export function OfficeExperience() {
           </FadeIn>
 
           <FadeIn delay={200} className="order-1 lg:order-2 relative">
-            <div className="aspect-[16/10] relative rounded-sm overflow-hidden border border-primary/5">
+            <div className="aspect-[16/10] relative overflow-hidden">
               <Image
                 src={officeImage}
                 alt="Consultório Premium"
@@ -49,8 +49,6 @@ export function OfficeExperience() {
                 data-ai-hint="luxury clinic room"
               />
             </div>
-            {/* Decoration */}
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/30 -z-10 rounded-sm" />
           </FadeIn>
         </div>
       </div>

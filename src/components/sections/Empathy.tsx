@@ -27,7 +27,7 @@ export function Empathy() {
           </FadeIn>
           
           <FadeIn delay={200} className="order-1 lg:order-2">
-            <div className="aspect-square relative rounded-sm overflow-hidden border border-primary/5">
+            <div className="aspect-square relative overflow-hidden">
               <Image
                 src={empathyImage}
                 alt="Cuidado e acolhimento"
