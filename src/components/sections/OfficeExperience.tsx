@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -41,7 +40,7 @@ export function OfficeExperience() {
           </FadeIn>
 
           <FadeIn delay={200} className="order-1 lg:order-2 relative">
-            <div className="aspect-[16/10] relative rounded-sm overflow-hidden shadow-2xl">
+            <div className="aspect-[16/10] relative rounded-sm overflow-hidden border border-primary/5">
               <Image
                 src={officeImage}
                 alt="Consultório Premium"
