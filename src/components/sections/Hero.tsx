@@ -17,12 +17,12 @@ export function Hero() {
             <span className="inline-block text-accent lettering-wide text-[10px] font-bold mb-6">
               GERIATRIA E LONGEVIDADE PREMIUM
             </span>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-headline leading-[1.15] mb-12 text-primary max-w-2xl">
-              O privilégio de envelhecer <br className="hidden md:block" />
-              com <span className="italic font-normal">saúde, autonomia</span> <br className="hidden md:block" />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-headline leading-[1.2] mb-16 text-primary max-w-2xl">
+              O privilégio de envelhecer<br className="hidden md:block" />
+              com saúde, autonomia<br className="hidden md:block" />
               e propósito.
             </h1>
-            <p className="text-lg md:text-xl text-primary/85 font-normal leading-relaxed mb-14 max-w-xl">
+            <p className="text-lg md:text-xl text-primary/95 font-medium leading-relaxed mb-14 max-w-xl">
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história e bem-estar.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
