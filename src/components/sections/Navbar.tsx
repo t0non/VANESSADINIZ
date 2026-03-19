@@ -25,12 +25,12 @@ export function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
-          ? "bg-background/90 backdrop-blur-md py-4 border-b border-border/40" 
-          : "bg-transparent py-6"
+          ? "bg-background/95 backdrop-blur-md py-4 border-b border-border/40" 
+          : "bg-transparent py-8"
       }`}
     >
       <div className="container-premium flex justify-between items-center">
-        <Link href="/" className="relative h-24 w-80 transition-transform hover:scale-105 duration-300">
+        <Link href="/" className="relative h-24 w-80 md:w-96 transition-transform hover:scale-105 duration-300">
           <Image
             src={logoImage}
             alt="Dra. Luísa Mendes Logo"
@@ -51,12 +51,12 @@ export function Navbar() {
             <Link
               key={item.id}
               href={`#${item.id}`}
-              className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/70 hover:text-accent transition-colors"
+              className="text-[10px] lettering-wide font-medium text-primary/70 hover:text-accent transition-colors"
             >
               {item.name}
             </Link>
           ))}
-          <Button className="bg-primary text-primary-foreground hover:bg-accent hover:text-white px-8 rounded-none h-11 text-[10px] uppercase tracking-[0.2em] font-bold transition-all duration-500 shadow-sm">
+          <Button className="bg-primary text-primary-foreground hover:bg-accent hover:text-white px-8 rounded-none h-11 text-[10px] lettering-wide font-semibold transition-all duration-500 shadow-sm">
             Agendar Consulta
           </Button>
         </div>
@@ -75,12 +75,12 @@ export function Navbar() {
               key={item}
               href={`#${item.toLowerCase()}`}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-headline text-primary hover:text-accent transition-colors"
+              className="text-lg font-headline italic text-primary hover:text-accent transition-colors"
             >
               {item}
             </Link>
           ))}
-          <Button className="w-full bg-primary text-primary-foreground rounded-none h-14 text-xs uppercase tracking-widest font-bold">Agendar Agora</Button>
+          <Button className="w-full bg-primary text-primary-foreground rounded-none h-14 text-[10px] lettering-wide font-bold">Agendar Agora</Button>
         </div>
       )}
     </nav>

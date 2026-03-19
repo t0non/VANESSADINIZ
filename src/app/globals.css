@@ -26,9 +26,6 @@
     --accent: 29 31% 65%;      /* #C1A68D - Areia/Dourado fosco (Luxo) */
     --accent-foreground: 60 13% 98%;
     
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    
     --border: 110 16% 84%;
     --input: 110 16% 84%;
     --ring: 145 20% 21%;
@@ -42,10 +39,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-background text-foreground font-body antialiased tracking-wide font-light;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline tracking-tight;
+    @apply font-headline;
   }
 }
 
@@ -69,4 +66,9 @@
 /* Custom selection color */
 ::selection {
   @apply bg-accent/30 text-primary;
+}
+
+/* Custom classes for Montserrat lettering */
+.lettering-wide {
+  @apply tracking-[0.3em] uppercase;
 }
