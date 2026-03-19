@@ -8,7 +8,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { MessageCircle } from "lucide-react";
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/pc66nr.png";
+  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
     <section className="relative min-h-[90vh] flex items-center pt-32 lg:pt-20 overflow-hidden bg-background">
@@ -38,11 +38,11 @@ export function Hero() {
             <div className="relative w-full h-full">
               <Image
                 src={heroImage}
-                alt="Envelhecimento com dignidade"
+                alt="Dra. Vanessa Diniz"
                 fill
                 priority
                 className="object-contain"
-                data-ai-hint="peaceful elderly"
+                data-ai-hint="professional doctor"
               />
             </div>
           </FadeIn>

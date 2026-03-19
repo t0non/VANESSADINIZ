@@ -17,10 +17,10 @@ export function Authority() {
             <div className="aspect-[4/5] relative overflow-hidden rounded-sm grayscale-[0.1] hover:grayscale-0 transition-all duration-1000 shadow-xl border border-primary/5">
               <Image
                 src={doctorImage}
-                alt="Dra. Vanessa Diniz"
+                alt="Envelhecimento Sereno"
                 fill
                 className="object-cover"
-                data-ai-hint="doctor portrait"
+                data-ai-hint="peaceful aging"
               />
             </div>
           </FadeIn>
