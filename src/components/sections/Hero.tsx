@@ -38,7 +38,7 @@ export function Hero() {
         {/* Right Side: Visual */}
         <div className="lg:col-span-6 relative h-[60vh] lg:h-[85vh] w-full">
           <FadeIn className="h-full w-full" delay={200}>
-            <div className="relative h-full w-full overflow-hidden shadow-2xl">
+            <div className="relative h-full w-full overflow-hidden">
               <Image
                 src={heroImage}
                 alt="A elegância de Apex Aura"
