@@ -36,7 +36,7 @@ export function Hero() {
         </div>
 
         {/* Right Side: Visual */}
-        <div className="lg:col-span-6 relative h-[60vh] lg:h-[85vh] w-full">
+        <div className="lg:col-span-6 relative h-[60vh] lg:h-[75vh] w-full flex items-center justify-center">
           <FadeIn className="h-full w-full" delay={200}>
             <div className="relative h-full w-full overflow-hidden">
               <Image
@@ -47,10 +47,10 @@ export function Hero() {
                 className="object-cover"
                 data-ai-hint="luxury woman"
               />
-              <div className="absolute inset-0 border-[20px] border-background/20 pointer-events-none"></div>
+              <div className="absolute inset-0 border-[15px] border-background/20 pointer-events-none"></div>
             </div>
             {/* Decorative element */}
-            <div className="hidden lg:block absolute -bottom-8 -left-8 w-48 h-48 border border-accent/30 z-[-1]"></div>
+            <div className="hidden lg:block absolute -bottom-6 -left-6 w-40 h-40 border border-accent/20 z-[-1]"></div>
           </FadeIn>
         </div>
       </div>
