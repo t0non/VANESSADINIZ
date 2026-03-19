@@ -1,0 +1,28 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "High-end luxury atmosphere",
+      "imageUrl": "https://files.catbox.moe/1vgx82.jfif",
+      "imageHint": "luxury lifestyle"
+    },
+    {
+      "id": "service-1",
+      "description": "Premium concierge service",
+      "imageUrl": "https://picsum.photos/seed/apex1/800/1000",
+      "imageHint": "concierge architecture"
+    },
+    {
+      "id": "service-2",
+      "description": "Exclusive events",
+      "imageUrl": "https://picsum.photos/seed/apex2/800/1000",
+      "imageHint": "minimalist design"
+    },
+    {
+      "id": "service-3",
+      "description": "Wealth management",
+      "imageUrl": "https://picsum.photos/seed/apex3/800/1000",
+      "imageHint": "modern space"
+    }
+  ]
+}
