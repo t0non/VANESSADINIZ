@@ -14,7 +14,7 @@ export function Authority() {
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <FadeIn className="relative">
-            <div className="aspect-[4/5] relative overflow-hidden rounded-sm grayscale-[0.1] hover:grayscale-0 transition-all duration-1000 shadow-xl">
+            <div className="aspect-[4/5] relative overflow-hidden rounded-sm grayscale-[0.1] hover:grayscale-0 transition-all duration-1000 shadow-xl border border-primary/5">
               <Image
                 src={doctorImage}
                 alt="Dra. Vanessa Diniz"
@@ -44,7 +44,7 @@ export function Authority() {
                 <p className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-1">CRM-SP 123.456 | RQE 78.910</p>
                 <p className="text-[10px] text-primary/50 uppercase tracking-widest font-medium">Médica Geriatra e Especialista em Longevidade</p>
               </div>
-              <Button size="xl" variant="default" className="text-[10px] lettering-wide font-bold w-fit">
+              <Button size="xl" variant="default" className="text-[10px] lettering-wide font-bold w-fit uppercase tracking-widest">
                 Agendar Consulta
               </Button>
             </div>
