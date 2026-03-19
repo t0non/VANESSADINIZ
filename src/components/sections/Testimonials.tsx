@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -25,7 +26,7 @@ const reviews = [
   }
 ];
 
-// Duplicate the reviews for a seamless infinite loop
+// Duplicamos os reviews para um loop infinito fluido
 const infiniteReviews = [...reviews, ...reviews, ...reviews, ...reviews];
 
 export function Testimonials() {
@@ -43,9 +44,9 @@ export function Testimonials() {
                   className="object-contain" 
                 />
               </div>
-              <div className="flex gap-0.5 text-accent">
+              <div className="flex gap-0.5 text-yellow-400">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={14} fill="currentColor" className="text-accent" />
+                  <Star key={i} size={14} fill="currentColor" className="text-yellow-400" />
                 ))}
               </div>
               <span className="text-sm font-bold text-primary">5.0</span>
@@ -62,7 +63,7 @@ export function Testimonials() {
       </div>
 
       <div className="relative w-full">
-        {/* Gradients for smooth fade at edges */}
+        {/* Gradients para suavizar as bordas */}
         <div className="absolute top-0 left-0 w-24 md:w-64 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-24 md:w-64 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
 
@@ -73,9 +74,9 @@ export function Testimonials() {
               className="w-[350px] md:w-[450px] bg-white p-10 rounded-sm shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] border border-primary/5 shrink-0 flex flex-col justify-between"
             >
               <div>
-                <div className="flex gap-0.5 text-accent mb-6">
+                <div className="flex gap-0.5 text-yellow-400 mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} fill="currentColor" className="text-accent" />
+                    <Star key={i} size={14} fill="currentColor" className="text-yellow-400" />
                   ))}
                 </div>
                 <p className="text-primary/80 font-light italic leading-relaxed text-base">
