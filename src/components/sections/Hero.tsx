@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/1vgx82.jfif";
+  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/objayu.png";
 
   return (
     <section id="experience" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
