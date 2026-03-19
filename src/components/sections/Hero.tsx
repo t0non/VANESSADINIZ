@@ -7,10 +7,10 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/1vgx82.jfif";
+  const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "https://files.catbox.moe/objayu.png";
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
+    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-background">
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Side: Content */}
         <div className="lg:col-span-7 z-10">
@@ -33,7 +33,7 @@ export function Hero() {
         </div>
 
         {/* Right Side: Visual */}
-        <div className="lg:col-span-5 relative h-[40vh] lg:h-[60vh] w-full flex justify-center items-center">
+        <div className="lg:col-span-5 relative h-[35vh] lg:h-[55vh] w-full flex justify-center items-center">
           <FadeIn className="h-full w-full flex justify-center items-center" delay={200}>
             <div className="relative h-full w-full">
               <Image
