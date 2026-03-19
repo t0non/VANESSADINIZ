@@ -42,9 +42,23 @@
     @apply bg-background text-foreground font-body antialiased tracking-wide font-light;
   }
   h1, h2, h3, h4, h5, h6 {
-    /* Engrossando de leve para font-medium (500) ou semibold (600) conforme solicitado */
     @apply font-headline font-medium tracking-tight;
   }
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll-marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 
 .fade-in-section {
@@ -64,12 +78,10 @@
   @apply max-w-[1280px] mx-auto px-6 md:px-12;
 }
 
-/* Custom selection color */
 ::selection {
   @apply bg-accent/30 text-primary;
 }
 
-/* Custom classes for Montserrat lettering */
 .lettering-wide {
   @apply tracking-[0.3em] uppercase;
 }
