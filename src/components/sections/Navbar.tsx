@@ -30,22 +30,23 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 py-6 px-4 md:px-8 transition-all duration-500 pointer-events-none">
+    <nav className="fixed top-0 w-full z-50 py-4 md:py-6 px-4 md:px-8 transition-all duration-500 pointer-events-none">
       <div className="max-w-7xl mx-auto flex justify-center">
         <div 
           className={cn(
-            "w-full flex justify-between items-center px-6 md:px-10 py-3 rounded-full transition-all duration-500 pointer-events-auto",
+            "w-full flex justify-center lg:justify-between items-center px-6 md:px-10 py-3 rounded-full transition-all duration-500 pointer-events-auto relative",
             isScrolled 
               ? "bg-white/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]" 
               : "bg-transparent py-4"
           )}
         >
+          {/* Logo - Centralizada no mobile via flex-center no pai, e justify-between no desktop */}
           <Link href="/" className="relative h-10 w-40 md:w-56 transition-transform hover:scale-105 duration-300">
             <Image
               src={logoImage}
               alt="Dra. Vanessa Diniz Logo"
               fill
-              className="object-contain object-left"
+              className="object-contain object-center lg:object-left"
               priority
             />
           </Link>
@@ -74,8 +75,12 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Toggle */}
-          <button className="lg:hidden text-primary p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {/* Mobile Toggle - Posicionado de forma absoluta para não quebrar a centralização da logo */}
+          <button 
+            className="lg:hidden text-primary p-2 absolute right-4 md:right-8" 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Menu"
+          >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
