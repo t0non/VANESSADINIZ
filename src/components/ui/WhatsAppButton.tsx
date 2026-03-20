@@ -29,12 +29,12 @@ interface ChatBubbleProps {
 
 const ChatBubble = ({ name, message, isVisible, className }: ChatBubbleProps) => (
   <div className={cn(
-    "bg-white px-6 py-4 rounded-[24px] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 flex flex-col items-start text-left gap-1",
+    "bg-white px-5 py-3 md:px-6 md:py-4 rounded-[20px] md:rounded-[24px] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-500 flex flex-col items-start text-left gap-0.5 md:gap-1 border border-primary/5",
     isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95 pointer-events-none",
     className
   )}>
-    <span className="text-[11px] font-bold text-primary/40 uppercase tracking-wider">{name}</span>
-    <div className="text-[15px] text-primary/70 leading-snug font-medium font-body">
+    <span className="text-[9px] md:text-[11px] font-bold text-primary/40 uppercase tracking-wider">{name}</span>
+    <div className="text-[14px] md:text-[15px] text-primary/70 leading-snug font-medium font-body">
       {message}
     </div>
   </div>
@@ -56,15 +56,15 @@ export function WhatsAppButton() {
   }, []);
 
   return (
-    <div className="fixed bottom-8 right-8 z-[60]">
+    <div className="fixed bottom-6 right-6 md:bottom-8 right-8 z-[60]">
       <Popover>
         <PopoverTrigger asChild>
           <button
             className="relative flex items-center group outline-none transition-transform hover:scale-105 active:scale-95"
             aria-label="Abrir atendimento"
           >
-            {/* Pilha de Balões (Desktop) */}
-            <div className="hidden md:flex flex-col items-end gap-3 absolute right-[calc(100%+24px)] bottom-6 pointer-events-none w-max">
+            {/* Pilha de Balões - Responsiva */}
+            <div className="flex flex-col items-end gap-2 md:gap-3 absolute bottom-[calc(100%+12px)] right-0 md:right-[calc(100%+24px)] md:bottom-6 pointer-events-none w-max max-w-[80vw]">
               <ChatBubble 
                 name="Vanessa"
                 message={stage === 1 ? <TypingDots /> : "Olá! Tudo bem?"}
@@ -77,7 +77,7 @@ export function WhatsAppButton() {
               />
             </div>
 
-            {/* Avatar Circular - Sem borda */}
+            {/* Avatar Circular */}
             <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl overflow-hidden bg-secondary/20 border-none">
               <Image 
                 src={profileImage} 
@@ -88,7 +88,7 @@ export function WhatsAppButton() {
               />
             </div>
 
-            {/* Indicador Online - Tamanho reduzido e sem borda */}
+            {/* Indicador Online */}
             <div className="absolute bottom-1 right-1 w-3.5 h-3.5 md:w-4 md:h-4 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center border-none">
               <div className="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse"></div>
             </div>
@@ -98,7 +98,7 @@ export function WhatsAppButton() {
           side="top" 
           align="end" 
           sideOffset={24}
-          className="w-[90vw] md:w-[450px] p-8 rounded-[40px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border-none bg-[#FBFBF9] animate-in fade-in zoom-in slide-in-from-bottom-10 duration-500"
+          className="w-[92vw] md:w-[450px] p-8 rounded-[30px] md:rounded-[40px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border-none bg-[#FBFBF9] animate-in fade-in zoom-in slide-in-from-bottom-10 duration-500"
         >
           <div className="mb-8">
             <h3 className="text-2xl font-headline text-[#2A3F32] mb-1 italic">Atendimento Personalizado</h3>
