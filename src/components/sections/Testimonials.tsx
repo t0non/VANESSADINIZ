@@ -1,8 +1,10 @@
 "use client";
 
+import React, { useState } from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { cn } from "@/lib/utils";
 
 const reviews = [
   {
@@ -29,6 +31,8 @@ const reviews = [
 const infiniteReviews = [...reviews, ...reviews, ...reviews, ...reviews, ...reviews];
 
 export function Testimonials() {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
     <section id="depoimentos" className="w-full bg-background py-32 overflow-hidden relative border-y border-primary/5">
       <div className="container-premium mb-20">
@@ -60,12 +64,23 @@ export function Testimonials() {
         </FadeIn>
       </div>
 
-      <div className="relative w-full">
+      <div 
+        className="relative w-full cursor-grab active:cursor-grabbing"
+        onPointerDown={() => setIsPaused(true)}
+        onPointerUp={() => setIsPaused(false)}
+        onPointerLeave={() => setIsPaused(false)}
+      >
         {/* Gradients Suaves nas Bordas para Luxo Visual */}
         <div className="absolute top-0 left-0 w-24 md:w-80 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-24 md:w-80 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
 
-        <div className="animate-marquee gap-6 px-4">
+        <div 
+          className={cn(
+            "animate-marquee gap-6 px-4 transition-[animation-play-state] duration-300",
+            isPaused && "[animation-play-state:paused]"
+          )}
+          style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+        >
           {infiniteReviews.map((review, index) => (
             <div 
               key={index} 
