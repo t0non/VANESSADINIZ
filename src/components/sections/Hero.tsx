@@ -53,8 +53,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Posicionada mais pra cima com escala ajustada para 1.6 */}
-      <div className="lg:hidden w-full overflow-visible -mt-48 mb-16">
+      {/* Imagem Mobile - Posicionada um pouco mais para baixo com escala 1.6 */}
+      <div className="lg:hidden w-full overflow-visible -mt-32 mb-16">
         <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-visible">
           <Image
             src={heroImage}
