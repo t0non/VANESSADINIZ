@@ -53,9 +53,9 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Abaixo do botão no fluxo */}
-      <div className="lg:hidden w-full px-6 pb-20 -mt-4 overflow-visible">
-        <div className="relative w-full aspect-[3/4] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_98%)] overflow-visible">
+      {/* Imagem Mobile - Sem limites de container */}
+      <div className="lg:hidden w-full overflow-visible pb-20">
+        <div className="relative w-full h-[500px] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_98%)] overflow-visible">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
