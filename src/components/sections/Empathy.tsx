@@ -9,9 +9,10 @@ export function Empathy() {
   const empathyImage = PlaceHolderImages.find(img => img.id === "empathy")?.imageUrl || "";
 
   return (
-    <section id="filosofia" className="py-32 md:py-48 bg-background overflow-visible">
-      <div className="container-premium overflow-visible">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 lg:gap-24 items-center">
+    <section id="filosofia" className="py-32 md:py-48 bg-background">
+      <div className="container-premium">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-end">
+          {/* Coluna do Texto */}
           <FadeIn className="order-2 lg:order-1">
             <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-8 block opacity-80">
               Empatia e Acolhimento
@@ -29,15 +30,15 @@ export function Empathy() {
             </div>
           </FadeIn>
           
-          {/* Coluna da Imagem: Escala aumentada e sem limitações de container */}
-          <FadeIn delay={200} className="order-1 lg:order-2 flex items-end justify-center lg:justify-end h-auto relative overflow-visible">
-            <div className="relative w-full h-auto overflow-visible [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
+          {/* Coluna da Imagem: Totalmente Livre */}
+          <FadeIn delay={200} className="order-1 lg:order-2">
+            <div className="[mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]">
               <Image
                 src={empathyImage}
-                alt="Cuidado e acolhimento"
+                alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
                 width={1200}
-                height={1000}
-                className="w-full h-auto object-contain scale-[1.7] lg:scale-[1.8] origin-bottom lg:origin-bottom-right transition-transform duration-1000 hover:scale-[1.85]"
+                height={1200}
+                className="w-full h-auto object-contain"
                 data-ai-hint="elderly couple"
                 priority
               />
