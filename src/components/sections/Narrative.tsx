@@ -83,13 +83,13 @@ export function Narrative() {
             </h2>
 
             {/* Mobile Image: Positioned specifically between headline and text */}
-            <div className="lg:hidden relative w-full h-[60vh] mb-12 overflow-visible flex items-end justify-center">
+            <div className="lg:hidden relative w-full h-[70vh] mb-12 overflow-visible flex items-end justify-center">
                <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
                 <Image
                   src="https://files.catbox.moe/cmawq4.png"
                   alt="Dra. Vanessa Diniz"
                   fill
-                  className="object-contain object-bottom scale-[2.4] origin-bottom"
+                  className="object-contain object-bottom scale-[2.6] origin-bottom"
                   priority
                 />
               </div>
@@ -100,7 +100,7 @@ export function Narrative() {
                 Não somos capazes de parar o tempo, mas podemos repensar os estigmas que foram construídos sobre este processo e assim desfrutar uma vida ativa, dinâmica e feliz.
               </p>
               <p>
-                Com cuidado geriátrico especializado, baseado em ciência, é SIM possível envelhecer com saúde, preservar a independência e a autonomia.
+                Com cuidado geriátrico especializado, baseado em ciência, é SIM possível envelhecer with saúde, preservar a independência e a autonomia.
               </p>
             </div>
 
