@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -16,12 +17,12 @@ export function Authority() {
           {/* Coluna da Imagem (Desktop Only) */}
           <FadeIn className="relative hidden lg:flex items-end justify-center lg:order-1 self-stretch">
             <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:h-full min-h-[500px] lg:min-h-[800px] flex items-end">
-              <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]">
+              <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]">
                 <Image
                   src={doctorImage}
                   alt="Dra. Vanessa Diniz"
                   fill
-                  className="object-contain object-bottom scale-[1.75] origin-bottom -translate-y-32 lg:-translate-y-44 transition-transform duration-1000 hover:scale-[1.8] hover:-translate-y-48"
+                  className="object-contain object-bottom scale-[1.3] origin-bottom -translate-y-48 transition-transform duration-1000"
                   data-ai-hint="professional doctor"
                   priority
                 />
@@ -31,12 +32,12 @@ export function Authority() {
 
           {/* Coluna do Texto (Mobile & Desktop) */}
           <FadeIn delay={200} className="lg:order-2 py-6 md:py-12 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-6 block opacity-80">A Especialista</span>
+            <span className="text-accent text-[11px] uppercase tracking-[0.4em] font-bold mb-6 block opacity-80">A Especialista</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline mb-0 lg:mb-8 text-primary leading-tight">
               Experiência clínica guiada pelo <span className="italic font-normal">afeto e pela ciência.</span>
             </h2>
 
-            {/* Imagem Mobile (Posicionada com margem negativa agressiva e escala aumentada) */}
+            {/* Imagem Mobile */}
             <div className="lg:hidden w-full -mt-10 mb-6 overflow-hidden">
                <div className="relative w-full aspect-[4/5] flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
                 <Image
@@ -65,8 +66,8 @@ export function Authority() {
                 <p className="text-xs text-primary/50 uppercase tracking-widest font-medium">Médica Geriatra e Especialista em Longevidade</p>
               </div>
               
-              <Button size="xl" variant="default" className="text-sm lettering-wide font-bold w-fit uppercase tracking-widest gap-4 group px-12 h-20 shadow-xl rounded-full bg-primary hover:bg-[#1A2820] transition-all duration-500">
-                <div className="relative w-6 h-6 transition-transform group-hover:scale-110">
+              <Button size="xl" variant="default" className="rounded-full bg-primary hover:bg-[#1A2820] transition-all duration-500 shadow-xl group px-12 h-20 hover:scale-105">
+                <div className="relative w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:scale-110">
                   <Image 
                     src="https://files.catbox.moe/pkq8i0.png" 
                     alt="WhatsApp" 
@@ -74,7 +75,7 @@ export function Authority() {
                     className="object-contain brightness-0 invert" 
                   />
                 </div>
-                Agendar Consulta
+                <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.2em]">Agendar Consulta</span>
               </Button>
             </div>
           </FadeIn>

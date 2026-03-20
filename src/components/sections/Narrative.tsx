@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -63,12 +64,12 @@ export function Narrative() {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left: Image Container - Desktop Only */}
         <div className="hidden lg:flex relative h-screen items-end justify-center overflow-visible">
-          <div className="relative w-full h-full flex items-end -translate-y-32 [mask-image:linear-gradient(to_bottom,black_70%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
+          <div className="relative w-full h-full flex items-end -translate-y-40 [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
             <Image
               src="https://files.catbox.moe/cmawq4.png"
               alt="Dra. Vanessa Diniz"
               fill
-              className="object-contain object-bottom scale-[1.7] origin-bottom transition-transform duration-1000"
+              className="object-contain object-bottom scale-[1.3] origin-bottom transition-transform duration-1000"
               priority
             />
           </div>
@@ -81,7 +82,7 @@ export function Narrative() {
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
 
-            {/* Mobile Image: Positioned specifically between headline and text */}
+            {/* Mobile Image */}
             <div className="lg:hidden relative w-full h-[70vh] mb-4 overflow-visible flex items-end justify-center -mt-28">
                <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
                 <Image
@@ -126,7 +127,7 @@ export function Narrative() {
               variant="default"
               className="bg-[#2A3F32] hover:bg-[#1A2820] text-white rounded-full px-16 h-20 flex items-center gap-4 w-fit shadow-xl group transition-all duration-500 hover:scale-105"
             >
-              <div className="relative w-6 h-6 transition-transform group-hover:scale-110">
+              <div className="relative w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:scale-110">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
                   alt="WhatsApp" 
@@ -134,7 +135,7 @@ export function Narrative() {
                   className="object-contain brightness-0 invert" 
                 />
               </div>
-              <span className="text-[12px] uppercase tracking-[0.2em] font-bold">Agendar consulta</span>
+              <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.2em]">Agendar consulta</span>
             </Button>
           </FadeIn>
         </div>
