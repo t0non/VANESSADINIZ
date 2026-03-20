@@ -36,7 +36,7 @@ export function Hero() {
               <Button 
                 size="xl" 
                 variant="default"
-                className="bg-primary hover:bg-[#1A2820] text-white rounded-full flex items-center justify-center gap-4 transition-all duration-500 shadow-2xl group hover:scale-105"
+                className="bg-primary hover:bg-[#1A2820] text-white rounded-full flex items-center justify-center gap-4 transition-all duration-500 shadow-2xl group hover:scale-105 border-none"
               >
                 <div className="relative w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:scale-110">
                   <Image 
@@ -53,14 +53,14 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Agora abaixo do botão no fluxo (z-10 no mobile) */}
+      {/* Imagem Mobile - Abaixo do botão no fluxo */}
       <div className="lg:hidden w-full px-6 pb-20 -mt-4 overflow-visible">
         <div className="relative w-full aspect-[3/4] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_98%)] overflow-visible">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[3.0] origin-bottom"
+            className="object-contain object-bottom scale-[2.6] origin-bottom"
             priority
           />
         </div>
