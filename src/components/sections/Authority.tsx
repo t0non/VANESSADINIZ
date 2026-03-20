@@ -17,7 +17,7 @@ export function Authority() {
           {/* Coluna da Imagem (Desktop Only) */}
           <FadeIn className="relative hidden lg:flex items-end justify-center lg:order-1 self-stretch">
             <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:h-full min-h-[500px] lg:min-h-[800px] flex items-end">
-              <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]">
+              <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]">
                 <Image
                   src={doctorImage}
                   alt="Dra. Vanessa Diniz"
@@ -39,7 +39,7 @@ export function Authority() {
 
             {/* Imagem Mobile */}
             <div className="lg:hidden w-full -mt-10 mb-6 overflow-hidden">
-               <div className="relative w-full aspect-[4/5] flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
+               <div className="relative w-full aspect-[4/5] flex items-end [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]">
                 <Image
                   src={doctorImage}
                   alt="Dra. Vanessa Diniz"
