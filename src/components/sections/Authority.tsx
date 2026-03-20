@@ -32,19 +32,19 @@ export function Authority() {
           {/* Coluna do Texto (Mobile & Desktop) */}
           <FadeIn delay={200} className="lg:order-2 py-12 flex flex-col items-center lg:items-start text-center lg:text-left">
             <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-6 block opacity-80">A Especialista</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline mb-8 text-primary leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline mb-4 lg:mb-8 text-primary leading-tight">
               Experiência clínica guiada pelo <span className="italic font-normal">afeto e pela ciência.</span>
             </h2>
 
             {/* Imagem Mobile (Inserida entre Headline e Texto) */}
-            <div className="lg:hidden w-full mb-10 overflow-hidden">
-               <div className="relative w-full aspect-[4/5] flex items-end [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]">
+            <div className="lg:hidden w-full mb-4 overflow-hidden">
+               <div className="relative w-full aspect-[4/5] flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
                 <Image
                   src={doctorImage}
                   alt="Dra. Vanessa Diniz"
                   width={800}
                   height={1000}
-                  className="w-full h-auto object-contain object-bottom scale-[1.3] origin-bottom"
+                  className="w-full h-auto object-contain object-bottom scale-[1.6] origin-bottom"
                   data-ai-hint="professional doctor"
                 />
               </div>
