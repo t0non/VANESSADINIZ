@@ -36,13 +36,13 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section id="pilares" className="relative w-full py-40 overflow-hidden bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('https://files.catbox.moe/thg2g3.jpg')" }}>
+    <section id="pilares" className="relative w-full pt-20 pb-32 md:pt-32 md:pb-40 overflow-hidden bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('https://files.catbox.moe/thg2g3.jpg')" }}>
       
       {/* Overlay Verde Premium com Degradê */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#2A3F32]/95 via-[#2A3F32]/85 to-[#1A2820]/95 z-0"></div>
 
       <div className="relative z-20 container-premium">
-        <div className="text-center mb-24">
+        <div className="text-center mb-16 md:mb-24">
           <FadeIn>
             <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-4 block">Metodologia</span>
             <h2 className="text-3xl md:text-5xl font-headline text-[#FBFBF9] mb-6">
@@ -51,7 +51,7 @@ export function Pillars() {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 md:mb-20">
           {pillars.map((pillar, index) => (
             <FadeIn key={index} delay={index * 150}>
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-12 rounded-sm text-center hover:bg-white/10 transition-all duration-500 group h-full">
