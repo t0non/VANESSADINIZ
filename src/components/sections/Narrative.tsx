@@ -89,7 +89,7 @@ export function Narrative() {
                   src="https://files.catbox.moe/cmawq4.png"
                   alt="Dra. Vanessa Diniz"
                   fill
-                  className="object-contain object-bottom scale-[2.2] origin-bottom"
+                  className="object-contain object-bottom scale-[2.4] origin-bottom"
                   priority
                 />
               </div>
