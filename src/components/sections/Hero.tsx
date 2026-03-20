@@ -53,14 +53,14 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Posicionada mais pra cima com margem negativa agressiva */}
+      {/* Imagem Mobile - Posicionada mais pra cima com escala aumentada */}
       <div className="lg:hidden w-full overflow-visible -mt-48 mb-16">
         <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-visible">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[1.2] origin-bottom"
+            className="object-contain object-bottom scale-[2.2] origin-bottom"
             style={{ 
               maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)'
