@@ -29,6 +29,12 @@
       "description": "Consultório Premium",
       "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop",
       "imageHint": "luxury clinic room"
+    },
+    {
+      "id": "chat-profile",
+      "description": "Dra. Vanessa Diniz - Perfil Chat",
+      "imageUrl": "https://files.catbox.moe/e9jr9a.png",
+      "imageHint": "doctor profile"
     }
   ]
 }
