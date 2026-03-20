@@ -10,7 +10,7 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background">
+    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-visible">
       
       {/* Container de Conteúdo */}
       <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-0 lg:pb-20 px-6 md:px-12">
@@ -21,7 +21,7 @@ export function Hero() {
               Geriatria e Longevidade Premium
             </span>
             
-            {/* Título Principal (H1) - Monumental e Elegante (Sem itálicos conforme solicitado) */}
+            {/* Título Principal (H1) - Monumental e Elegante (Sem itálicos) */}
             <h1 className="text-[46px] md:text-5xl lg:text-[72px] font-headline leading-[1.25] text-primary mb-8 max-w-[850px]">
               O privilégio de envelhecer com saúde, autonomia e propósito.
             </h1>
@@ -53,7 +53,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Escala 1.6 e Margem Negativa para proximidade ideal */}
+      {/* Imagem Mobile - Escala 1.6 e Posicionamento Elevado */}
       <div className="lg:hidden w-full overflow-visible -mt-32 mb-16">
         <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-visible">
           <Image
@@ -70,7 +70,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Desktop - Posicionada MAIS PARA CIMA (Removido translate-y-40) */}
+      {/* Imagem Desktop - Posicionada MAIS PARA CIMA */}
       <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10 overflow-hidden">
         <FadeIn 
           delay={300} 
