@@ -12,21 +12,28 @@ import {
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
 
+const TypingDots = () => (
+  <div className="flex gap-1.5 items-center h-4 px-2">
+    <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:0ms]"></div>
+    <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:150ms]"></div>
+    <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:300ms]"></div>
+  </div>
+);
+
 export function WhatsAppButton() {
-  const [status, setStatus] = useState<'hidden' | 'typing' | 'message'>('hidden');
+  const [stage, setStage] = useState(0); // 0: nada, 1: typing1, 2: msg1, 3: typing2, 4: msg1+msg2
   const doctorImage = PlaceHolderImages.find(img => img.id === "doctor")?.imageUrl || "";
 
   useEffect(() => {
-    // Sequência de animação ao carregar
-    const timer1 = setTimeout(() => setStatus('typing'), 1500);
-    const timer2 = setTimeout(() => setStatus('message'), 4000);
-    const timer3 = setTimeout(() => setStatus('hidden'), 10000);
+    // Sequência de animação
+    const timers = [
+      setTimeout(() => setStage(1), 1000),  // Começa a digitar 1
+      setTimeout(() => setStage(2), 2500),  // Mostra msg 1
+      setTimeout(() => setStage(3), 3500),  // Começa a digitar 2
+      setTimeout(() => setStage(4), 5500),  // Mostra msg 2
+    ];
 
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-    };
+    return () => timers.forEach(t => clearTimeout(t));
   }, []);
 
   return (
@@ -37,21 +44,27 @@ export function WhatsAppButton() {
             className="relative flex items-center group outline-none transition-transform hover:scale-105 active:scale-95"
             aria-label="Abrir widget de atendimento"
           >
-            {/* Balão de Mensagem / Digitando */}
-            <div className={cn(
-              "hidden md:block absolute right-full mr-4 bg-white text-primary text-[12px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 whitespace-nowrap pointer-events-none",
-              status !== 'hidden' 
-                ? "opacity-100 translate-x-0" 
-                : "opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0"
-            )}>
-              {status === 'typing' ? (
-                <div className="flex gap-1.5 items-center h-4 px-2">
-                  <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:0ms]"></div>
-                  <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:150ms]"></div>
-                  <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:300ms]"></div>
+            {/* Pilha de Balões de Mensagem */}
+            <div className="hidden md:flex flex-col items-end gap-2 absolute right-full mr-4 bottom-4 pointer-events-none">
+              
+              {/* Balão 1 */}
+              {(stage >= 1) && (
+                <div className={cn(
+                  "bg-white text-primary text-[11px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 whitespace-nowrap",
+                  stage >= 2 ? "opacity-100 translate-y-0" : "opacity-100 translate-y-2"
+                )}>
+                  {stage === 1 ? <TypingDots /> : "Olá, tudo bem?"}
                 </div>
-              ) : (
-                "Como podemos ajudar?"
+              )}
+
+              {/* Balão 2 */}
+              {(stage >= 3) && (
+                <div className={cn(
+                  "bg-white text-primary text-[11px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 whitespace-nowrap",
+                  stage >= 4 ? "opacity-100 translate-y-0" : "opacity-100 translate-y-2"
+                )}>
+                  {stage === 3 ? <TypingDots /> : "Como podemos te ajudar hoje?"}
+                </div>
               )}
             </div>
 
