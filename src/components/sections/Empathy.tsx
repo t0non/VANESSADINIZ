@@ -9,7 +9,7 @@ export function Empathy() {
   const empathyImage = PlaceHolderImages.find(img => img.id === "empathy")?.imageUrl || "";
 
   return (
-    <section id="filosofia" className="py-32 md:py-48 bg-background overflow-hidden">
+    <section id="filosofia" className="py-32 md:py-48 bg-background">
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <FadeIn className="order-2 lg:order-1">
@@ -29,13 +29,14 @@ export function Empathy() {
             </div>
           </FadeIn>
           
-          <FadeIn delay={200} className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full aspect-[4/3] lg:aspect-[5/4] transition-transform duration-700 [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]">
+          <FadeIn delay={200} className="order-1 lg:order-2 flex items-end justify-center lg:justify-end">
+            <div className="relative w-full transition-transform duration-1000 [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
               <Image
                 src={empathyImage}
                 alt="Cuidado e acolhimento"
-                fill
-                className="object-contain lg:object-right scale-125 origin-right transition-transform duration-1000 hover:scale-[1.3]"
+                width={1000}
+                height={800}
+                className="w-full h-auto object-contain scale-150 origin-bottom transition-transform duration-1000 hover:scale-[1.55]"
                 data-ai-hint="elderly couple"
                 priority
               />
