@@ -43,7 +43,7 @@ const specialties = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.829 1.58-2.126a8.204 8.204 0 004.14-3.153M6.168 12.528a8.204 8.204 0 004.14 3.153c.922.297 1.58 1.143 1.58 2.126v.192M14.25 12.528A8.204 8.204 0 0118.39 9.375c.922-.297 1.58-1.143 1.58-2.126v-.192m-9.84-2.157A8.204 8.204 0 002.04 9.375C1.118 9.672.46 10.518.46 11.5v.192m13.79-2.157A8.204 8.204 0 0114.25 6v-.192c0-.983-.658-1.829-1.58-2.126M6.168 9.375A8.204 8.204 0 0010.31 6.222C11.232 5.925 11.89 5.079 11.89 4.096v-.192"/>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.829 1.58-2.126a8.204 8.204 0 004.14-3.153M6.168 12.528a8.204 8.204 0 004.14 3.153c.922.297 1.58 1.143 1.58 2.126v.192M14.25 12.528A8.204 8.204 0 0118.39 9.375c.922-.297 1.58-1.143 1.58-2.126v-.192m-9.84-2.157A8.204 8.204 0 002.04 9.375C1.118 9.672.46 10.518.46 11.5v.192m13.79-2.157A8.204 8.204 0 002.04 9.375C1.118 9.672.46 10.518.46 11.5v.192m13.79-2.157A8.204 8.204 0 0114.25 6v-.192c0-.983-.658-1.829-1.58-2.126M6.168 9.375A8.204 8.204 0 0010.31 6.222C11.232 5.925 11.89 5.079 11.89 4.096v-.192"/>
       </svg>
     ),
     text: "Rastreamento de falhas de memória",
@@ -78,7 +78,7 @@ export function Narrative() {
         {/* Right: Content Container */}
         <div className="p-8 md:p-16 lg:p-24 xl:p-32 flex flex-col justify-center bg-[#FBFBF9]">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline leading-tight mb-10 text-[#2A3F32] pt-16 md:pt-0">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline leading-tight mb-10 text-[#2A3F32] pt-32 md:pt-0">
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
 
