@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -16,10 +15,10 @@ const specialties = [
 
 export function Narrative() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#FBFBF9] pt-0 pb-24 lg:py-0">
+    <section className="relative w-full overflow-x-hidden bg-[#FBFBF9] pt-0 pb-24 lg:py-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Imagem Desktop - Escala Monumental e Fusão */}
-        <div className="hidden lg:flex relative h-screen items-end justify-center overflow-visible">
+        <div className="hidden lg:flex relative h-screen items-end justify-center overflow-hidden">
           <div className="relative w-full h-full flex items-end -translate-y-40 [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
             <Image
               src="https://files.catbox.moe/cmawq4.png"
@@ -38,8 +37,8 @@ export function Narrative() {
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
 
-            {/* Imagem Mobile com Escala e Fusão Corrigidas */}
-            <div className="lg:hidden relative w-full h-[70vh] mb-4 overflow-visible flex items-end justify-center -mt-28">
+            {/* Imagem Mobile com container anti-scroll */}
+            <div className="lg:hidden relative w-full h-[70vh] mb-4 overflow-x-hidden flex items-end justify-center -mt-28">
                <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
                 <Image
                   src="https://files.catbox.moe/cmawq4.png"
@@ -79,7 +78,7 @@ export function Narrative() {
             <Button 
               size="xl" 
               variant="default"
-              className="bg-[#2A3F32] hover:bg-[#1A2820] text-white rounded-full px-16 h-20 flex items-center gap-4 w-fit shadow-xl group transition-all duration-500 hover:scale-105"
+              className="bg-[#2A3F32] hover:bg-[#1A2820] text-white rounded-full px-16 h-20 flex items-center gap-4 w-fit shadow-xl group transition-all duration-500 hover:scale-105 border-none"
             >
               <div className="relative w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:scale-110">
                 <Image 

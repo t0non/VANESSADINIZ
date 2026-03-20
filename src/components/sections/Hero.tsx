@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -10,12 +9,12 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-visible">
+    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-x-hidden">
       
       {/* Container de Conteúdo */}
-      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-10 lg:pb-20 px-6 md:px-12 overflow-visible">
-        <div className="lg:w-[60%] flex flex-col text-center lg:text-left overflow-visible">
-          <FadeIn className="flex flex-col items-center lg:items-start overflow-visible">
+      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-10 lg:pb-20 px-6 md:px-12">
+        <div className="lg:w-[60%] flex flex-col text-center lg:text-left">
+          <FadeIn className="flex flex-col items-center lg:items-start">
             {/* Subtítulo Superior (Kicker) */}
             <span className="text-accent text-[11px] md:text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block opacity-80">
               Geriatria e Longevidade Premium
@@ -53,9 +52,9 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Empurrada mais para baixo (mt-64) para evitar sobreposição */}
-      <div className="lg:hidden w-full overflow-visible pb-32 mt-64">
-        <div className="relative w-full aspect-square flex items-end justify-center overflow-visible">
+      {/* Imagem Mobile - Com container de bloqueio lateral */}
+      <div className="lg:hidden w-full overflow-x-hidden overflow-y-visible pb-32 mt-64">
+        <div className="relative w-full aspect-square flex items-end justify-center">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
@@ -70,13 +69,13 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Desktop - Reposicionada para baixo (translate-y-40) */}
-      <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10 overflow-visible">
+      {/* Imagem Desktop - Reposicionada para baixo */}
+      <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10 overflow-hidden">
         <FadeIn 
           delay={300} 
-          className="w-full h-full relative flex items-end overflow-visible"
+          className="w-full h-full relative flex items-end"
         >
-          <div className="relative w-full h-full flex items-end translate-y-40 overflow-visible">
+          <div className="relative w-full h-full flex items-end translate-y-40">
             <Image
               src={heroImage}
               alt="Dra. Vanessa Diniz"

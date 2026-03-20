@@ -38,8 +38,11 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply overflow-x-hidden;
+  }
   body {
-    @apply text-foreground font-body antialiased tracking-wide font-light;
+    @apply text-foreground font-body antialiased tracking-wide font-light overflow-x-hidden;
     /* Degradê sutil de página */
     background: radial-gradient(circle at 50% 0%, hsl(var(--secondary) / 0.15) 0%, transparent 70%),
                 linear-gradient(to bottom, hsl(var(--background)), hsl(var(--secondary) / 0.05));
