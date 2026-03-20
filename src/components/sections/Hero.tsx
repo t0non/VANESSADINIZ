@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -10,7 +9,7 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-hidden">
+    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-visible">
       
       {/* Container de Conteúdo */}
       <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-10 lg:pb-20 px-6 md:px-12">
@@ -55,30 +54,30 @@ export function Hero() {
 
       {/* Imagem Mobile - Sem limites de container e com escala 2.6 */}
       <div className="lg:hidden w-full overflow-visible pb-20">
-        <div className="relative w-full h-[500px] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_98%)] overflow-visible">
+        <div className="relative w-full h-[500px] flex items-end overflow-visible">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[2.6] origin-bottom"
+            className="object-contain object-bottom scale-[2.6] origin-bottom [mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)]"
             priority
           />
         </div>
       </div>
 
       {/* Imagem Desktop - Mantida como absoluta para layout lateral */}
-      <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10">
+      <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10 overflow-visible">
         <FadeIn 
           delay={300} 
-          className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_95%)]"
+          className="w-full h-full relative flex items-end overflow-visible"
         >
-          <div className="relative w-full h-full flex items-end -translate-y-10">
+          <div className="relative w-full h-full flex items-end -translate-y-10 overflow-visible">
             <Image
               src={heroImage}
               alt="Dra. Vanessa Diniz"
               fill
               priority
-              className="object-contain object-bottom scale-[1.4] origin-bottom"
+              className="object-contain object-bottom scale-[1.4] origin-bottom [mask-image:linear-gradient(to_bottom,black_50%,transparent_95%)]"
               data-ai-hint="professional doctor"
             />
           </div>

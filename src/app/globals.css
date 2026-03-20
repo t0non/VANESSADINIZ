@@ -61,8 +61,6 @@
   animation: scroll-marquee 40s linear infinite;
 }
 
-/* Removido a pausa no hover para evitar travamentos no touch de dispositivos móveis */
-
 .fade-in-section {
   opacity: 0;
   transform: translateY(20px);
