@@ -35,24 +35,24 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-center">
         <div 
           className={cn(
-            "w-full flex justify-center items-center px-6 md:px-10 py-3 rounded-full transition-all duration-500 pointer-events-auto relative",
+            "w-full flex justify-center lg:justify-start items-center px-6 md:px-10 py-3 rounded-full transition-all duration-500 pointer-events-auto relative",
             isScrolled 
               ? "bg-white/40 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]" 
               : "bg-transparent py-4"
           )}
         >
-          {/* Logo - Agora sempre centralizada */}
-          <Link href="/" className="relative h-[60px] w-40 md:w-56 transition-transform hover:scale-105 duration-300 z-10">
+          {/* Logo - Centralizada no mobile, esquerda no PC */}
+          <Link href="/" className="relative h-[60px] w-40 md:w-56 transition-transform hover:scale-105 duration-300 z-10 lg:ml-0">
             <Image
               src={logoImage}
               alt="Dra. Vanessa Diniz Logo"
               fill
-              className="object-contain object-center"
+              className="object-contain object-center lg:object-left"
               priority
             />
           </Link>
 
-          {/* Desktop Nav - Posicionada à direita sem quebrar a centralização da logo */}
+          {/* Desktop Nav - Posicionada à direita */}
           <div className="hidden lg:flex items-center space-x-8 absolute right-10">
             {navLinks.map((item) => (
               <Link

@@ -26,7 +26,7 @@ export function Hero() {
               O privilégio de envelhecer com <span className="italic font-normal">saúde, autonomia e propósito.</span>
             </h1>
 
-            {/* Texto de Apoio (Subheadline) - Reduzido para elegância */}
+            {/* Texto de Apoio (Subheadline) - Reduzido para elegância e hierarquia */}
             <p className="text-sm md:text-xl text-primary/60 font-body leading-[1.6] max-w-[320px] lg:max-w-xl mb-10">
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história.
             </p>
@@ -53,8 +53,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Reposicionada mais abaixo (mt-40) */}
-      <div className="lg:hidden w-full overflow-visible pb-32 mt-40">
+      {/* Imagem Mobile - Empurrada mais para baixo (mt-64) para evitar sobreposição */}
+      <div className="lg:hidden w-full overflow-visible pb-32 mt-64">
         <div className="relative w-full aspect-square flex items-end justify-center overflow-visible">
           <Image
             src={heroImage}
@@ -70,7 +70,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Desktop - Reposicionada mais abaixo (translate-y-40) */}
+      {/* Imagem Desktop - Reposicionada para baixo (translate-y-40) */}
       <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10 overflow-visible">
         <FadeIn 
           delay={300} 
