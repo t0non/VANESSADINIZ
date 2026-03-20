@@ -30,9 +30,9 @@ export function Empathy() {
             </div>
           </FadeIn>
           
-          {/* Coluna da Imagem: Totalmente Livre */}
+          {/* Coluna da Imagem: Totalmente Livre e sem cortes */}
           <FadeIn delay={200} className="order-1 lg:order-2">
-            <div className="[mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]">
+            <div className="[mask-image:linear-gradient(to_bottom,black_35%,rgba(0,0,0,0.8)_60%,rgba(0,0,0,0.2)_90%,transparent_100%)]">
               <Image
                 src={empathyImage}
                 alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
