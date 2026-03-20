@@ -30,12 +30,12 @@ export function Empathy() {
           </FadeIn>
           
           <FadeIn delay={200} className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full aspect-[4/3] lg:aspect-[5/4] transition-transform duration-700 hover:scale-[1.02]">
+            <div className="relative w-full aspect-[4/3] lg:aspect-[5/4] transition-transform duration-700 [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]">
               <Image
                 src={empathyImage}
                 alt="Cuidado e acolhimento"
                 fill
-                className="object-contain lg:object-right"
+                className="object-contain lg:object-right scale-125 origin-right transition-transform duration-1000 hover:scale-[1.3]"
                 data-ai-hint="elderly couple"
                 priority
               />
