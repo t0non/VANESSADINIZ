@@ -20,17 +20,37 @@ const TypingDots = () => (
   </div>
 );
 
+interface ChatBubbleProps {
+  name: string;
+  message: React.ReactNode;
+  isVisible: boolean;
+  className?: string;
+}
+
+const ChatBubble = ({ name, message, isVisible, className }: ChatBubbleProps) => (
+  <div className={cn(
+    "bg-white px-5 py-4 rounded-3xl shadow-xl border border-border/30 transition-all duration-500 flex flex-col items-start gap-1 max-w-[280px]",
+    isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95 pointer-events-none",
+    className
+  )}>
+    <span className="text-[13px] font-bold text-primary/90">{name}</span>
+    <div className="text-[14px] text-primary/70 leading-relaxed">
+      {message}
+    </div>
+  </div>
+);
+
 export function WhatsAppButton() {
   const [stage, setStage] = useState(0); // 0: nada, 1: typing1, 2: msg1, 3: typing2, 4: msg1+msg2
   const doctorImage = PlaceHolderImages.find(img => img.id === "doctor")?.imageUrl || "";
 
   useEffect(() => {
-    // Sequência de animação
+    // Sequência de animação humanizada
     const timers = [
-      setTimeout(() => setStage(1), 1000),  // Começa a digitar 1
-      setTimeout(() => setStage(2), 2500),  // Mostra msg 1
-      setTimeout(() => setStage(3), 3500),  // Começa a digitar 2
-      setTimeout(() => setStage(4), 5500),  // Mostra msg 2
+      setTimeout(() => setStage(1), 1500),  // Começa a digitar 1
+      setTimeout(() => setStage(2), 3000),  // Mostra msg 1
+      setTimeout(() => setStage(3), 4000),  // Começa a digitar 2
+      setTimeout(() => setStage(4), 6000),  // Mostra msg 2
     ];
 
     return () => timers.forEach(t => clearTimeout(t));
@@ -45,30 +65,24 @@ export function WhatsAppButton() {
             aria-label="Abrir widget de atendimento"
           >
             {/* Pilha de Balões de Mensagem */}
-            <div className="hidden md:flex flex-col items-end gap-2 absolute right-full mr-4 bottom-4 pointer-events-none">
+            <div className="hidden md:flex flex-col items-end gap-3 absolute right-full mr-6 bottom-6 pointer-events-none">
               
               {/* Balão 1 */}
-              {(stage >= 1) && (
-                <div className={cn(
-                  "bg-white text-primary text-[11px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 whitespace-nowrap",
-                  stage >= 2 ? "opacity-100 translate-y-0" : "opacity-100 translate-y-2"
-                )}>
-                  {stage === 1 ? <TypingDots /> : "Olá, tudo bem?"}
-                </div>
-              )}
+              <ChatBubble 
+                name="Vanessa"
+                message={stage === 1 ? <TypingDots /> : "Olá! Tudo bem?"}
+                isVisible={stage >= 1}
+              />
 
               {/* Balão 2 */}
-              {(stage >= 3) && (
-                <div className={cn(
-                  "bg-white text-primary text-[11px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 whitespace-nowrap",
-                  stage >= 4 ? "opacity-100 translate-y-0" : "opacity-100 translate-y-2"
-                )}>
-                  {stage === 3 ? <TypingDots /> : "Como podemos te ajudar hoje?"}
-                </div>
-              )}
+              <ChatBubble 
+                name="Vanessa"
+                message={stage === 3 ? <TypingDots /> : "Como podemos te ajudar hoje?"}
+                isVisible={stage >= 3}
+              />
             </div>
 
-            {/* Container da Imagem de Perfil Circular */}
+            {/* Container da Imagem de Perfil Circular (Estilo da Foto) */}
             <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white shadow-2xl overflow-hidden bg-secondary/20">
               <Image 
                 src={doctorImage} 
@@ -78,9 +92,9 @@ export function WhatsAppButton() {
               />
             </div>
 
-            {/* Indicador de Status Online (Ponto Verde) */}
+            {/* Indicador de Status Online (Canto Inferior Direito) */}
             <div className="absolute bottom-1 right-1 w-5 h-5 md:w-6 md:h-6 bg-[#25D366] rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <div className="w-2.5 h-2.5 bg-white rounded-full animate-pulse opacity-80"></div>
             </div>
           </button>
         </PopoverTrigger>
@@ -88,7 +102,7 @@ export function WhatsAppButton() {
           side="top" 
           align="end" 
           sideOffset={20}
-          className="w-[90vw] md:w-[600px] p-8 rounded-3xl shadow-2xl border-primary/5 bg-[#FBFBF9] animate-in fade-in zoom-in slide-in-from-bottom-10 duration-500"
+          className="w-[90vw] md:w-[600px] p-8 rounded-[40px] shadow-2xl border-primary/5 bg-[#FBFBF9] animate-in fade-in zoom-in slide-in-from-bottom-10 duration-500"
         >
           <div className="mb-8">
             <h3 className="text-2xl font-headline text-[#2A3F32] mb-2 italic">Atendimento Personalizado</h3>
