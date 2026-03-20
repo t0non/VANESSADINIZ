@@ -72,14 +72,14 @@ export function Hero() {
         </FadeIn>
       </div>
 
-      {/* Imagem Mobile - Enquadramento Ideal (Sem corte na cabeça) */}
+      {/* Imagem Mobile - Enquadramento Monumental e Elevado */}
       <div className="lg:hidden w-full h-[60vh] relative flex items-end justify-center z-10 mt-auto overflow-visible">
-        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
+        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_95%)]">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[1.85] origin-bottom -translate-y-20"
+            className="object-contain object-bottom scale-[2.2] origin-bottom -translate-y-32"
             priority
           />
         </div>
