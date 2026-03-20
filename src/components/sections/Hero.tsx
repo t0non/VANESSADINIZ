@@ -22,12 +22,12 @@ export function Hero() {
             </span>
             
             {/* Título Principal (H1) - Monumental e Elegante */}
-            <h1 className="text-[46px] md:text-5xl lg:text-[72px] font-headline leading-[1.05] text-primary mb-8 max-w-[850px]">
+            <h1 className="text-[46px] md:text-5xl lg:text-[72px] font-headline leading-[1.25] text-primary mb-8 max-w-[850px]">
               O privilégio de envelhecer com <span className="italic font-normal">saúde, autonomia e propósito.</span>
             </h1>
 
             {/* Texto de Apoio (Subheadline) - Reduzido para elegância */}
-            <p className="text-sm md:text-xl text-primary/60 font-body leading-relaxed max-w-[320px] lg:max-w-xl mb-12">
+            <p className="text-sm md:text-xl text-primary/60 font-body leading-[1.6] max-w-[320px] lg:max-w-xl mb-10">
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história.
             </p>
 
