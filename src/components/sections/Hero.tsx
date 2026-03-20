@@ -13,7 +13,7 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col bg-background overflow-hidden">
       
       {/* Container de Conteúdo */}
-      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-56 pb-20 px-6 md:px-12">
+      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-20 px-6 md:px-12">
         <div className="lg:w-[60%] flex flex-col text-center lg:text-left">
           <FadeIn className="flex flex-col items-center lg:items-start">
             {/* Subtítulo Superior (Kicker) */}
@@ -57,15 +57,15 @@ export function Hero() {
       <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10">
         <FadeIn 
           delay={300} 
-          className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]"
+          className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_95%)]"
         >
-          <div className="relative w-full h-full flex items-end -translate-y-48">
+          <div className="relative w-full h-full flex items-end -translate-y-40">
             <Image
               src={heroImage}
               alt="Dra. Vanessa Diniz"
               fill
               priority
-              className="object-contain object-bottom scale-[1.3] origin-bottom"
+              className="object-contain object-bottom scale-[1.4] origin-bottom"
               data-ai-hint="professional doctor"
             />
           </div>
