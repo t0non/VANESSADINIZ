@@ -1,6 +1,7 @@
 
 "use client";
 
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { 
@@ -9,9 +10,24 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { cn } from "@/lib/utils";
 
 export function WhatsAppButton() {
+  const [status, setStatus] = useState<'hidden' | 'typing' | 'message'>('hidden');
   const doctorImage = PlaceHolderImages.find(img => img.id === "doctor")?.imageUrl || "";
+
+  useEffect(() => {
+    // Sequência de animação ao carregar
+    const timer1 = setTimeout(() => setStatus('typing'), 1500);
+    const timer2 = setTimeout(() => setStatus('message'), 4000);
+    const timer3 = setTimeout(() => setStatus('hidden'), 10000);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+    };
+  }, []);
 
   return (
     <div className="fixed bottom-10 right-10 z-[60]">
@@ -21,9 +37,22 @@ export function WhatsAppButton() {
             className="relative flex items-center group outline-none transition-transform hover:scale-105 active:scale-95"
             aria-label="Abrir widget de atendimento"
           >
-            {/* Mensagem flutuante lateral */}
-            <div className="hidden md:block absolute right-full mr-4 bg-white text-primary text-[12px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 pointer-events-none whitespace-nowrap">
-              Como podemos ajudar?
+            {/* Balão de Mensagem / Digitando */}
+            <div className={cn(
+              "hidden md:block absolute right-full mr-4 bg-white text-primary text-[12px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 whitespace-nowrap pointer-events-none",
+              status !== 'hidden' 
+                ? "opacity-100 translate-x-0" 
+                : "opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0"
+            )}>
+              {status === 'typing' ? (
+                <div className="flex gap-1.5 items-center h-4 px-2">
+                  <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:0ms]"></div>
+                  <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:150ms]"></div>
+                  <div className="w-1.5 h-1.5 bg-primary/40 rounded-full animate-bounce [animation-duration:1s] [animation-delay:300ms]"></div>
+                </div>
+              ) : (
+                "Como podemos ajudar?"
+              )}
             </div>
 
             {/* Container da Imagem de Perfil Circular */}
@@ -147,4 +176,3 @@ export function WhatsAppButton() {
     </div>
   );
 }
-
