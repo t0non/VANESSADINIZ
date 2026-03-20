@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -13,13 +14,13 @@ export function Authority() {
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <FadeIn className="relative">
-            <div className="aspect-[4/5] relative overflow-hidden grayscale-[0.1] hover:grayscale-0 transition-all duration-1000">
+            <div className="aspect-[4/5] relative overflow-hidden transition-all duration-1000">
               <Image
                 src={doctorImage}
-                alt="Envelhecimento Sereno"
+                alt="Dra. Vanessa Diniz"
                 fill
-                className="object-cover"
-                data-ai-hint="peaceful aging"
+                className="object-contain object-bottom"
+                data-ai-hint="professional doctor"
               />
             </div>
           </FadeIn>
