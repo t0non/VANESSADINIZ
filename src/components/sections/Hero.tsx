@@ -10,7 +10,7 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-x-hidden">
+    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background">
       
       {/* Container de Conteúdo */}
       <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-0 lg:pb-20 px-6 md:px-12">
@@ -53,8 +53,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Posicionada muito próxima ao botão com escala 1.2 */}
-      <div className="lg:hidden w-full overflow-visible mt-2 mb-16">
+      {/* Imagem Mobile - Posicionada com mt-0 para máxima proximidade com o botão */}
+      <div className="lg:hidden w-full overflow-visible mt-0 mb-16">
         <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-visible">
           <Image
             src={heroImage}
