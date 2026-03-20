@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -9,7 +10,7 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-x-hidden">
+    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background">
       
       {/* Container de Conteúdo */}
       <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-10 lg:pb-20 px-6 md:px-12">
@@ -52,9 +53,9 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Com container de bloqueio lateral */}
-      <div className="lg:hidden w-full overflow-x-hidden overflow-y-visible pb-32 mt-64">
-        <div className="relative w-full aspect-square flex items-end justify-center">
+      {/* Imagem Mobile - Com container de visibilidade total para evitar cortes */}
+      <div className="lg:hidden w-full overflow-visible pb-32 mt-64">
+        <div className="relative w-full aspect-square flex items-end justify-center overflow-visible">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
