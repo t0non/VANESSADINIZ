@@ -22,7 +22,7 @@ export function Authority() {
                   src={doctorImage}
                   alt="Dra. Vanessa Diniz"
                   fill
-                  className="object-contain object-bottom scale-[1.3] origin-bottom -translate-y-48 transition-transform duration-1000"
+                  className="object-contain object-bottom scale-[1.5] origin-bottom -translate-y-64 transition-transform duration-1000"
                   data-ai-hint="professional doctor"
                   priority
                 />
