@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -9,14 +10,14 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen flex flex-col lg:flex-row lg:items-center pt-24 md:pt-32 lg:pt-0 overflow-hidden bg-background">
+    <section className="relative h-screen lg:min-h-screen flex flex-col lg:flex-row lg:items-center overflow-hidden bg-background">
       
       {/* Container de Conteúdo */}
-      <div className="container-premium relative z-20 w-full flex flex-col justify-center">
+      <div className="container-premium relative z-20 w-full flex flex-col pt-24 lg:pt-0 lg:justify-center">
         <div className="lg:w-[60%] flex flex-col justify-center text-center lg:text-left">
-          <FadeIn className="space-y-6 md:space-y-10">
+          <FadeIn className="space-y-4 md:space-y-10">
             <div>
-              <span className="inline-block text-accent lettering-wide text-[12px] md:text-[14px] font-bold mb-4 md:mb-6">
+              <span className="inline-block text-accent lettering-wide text-[11px] md:text-[14px] font-bold mb-2 md:mb-6">
                 GERIATRIA E LONGEVIDADE PREMIUM
               </span>
               
@@ -27,13 +28,13 @@ export function Hero() {
               </h1>
             </div>
 
-            <p className="text-base md:text-xl text-primary/80 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
+            <p className="text-sm md:text-xl text-primary/80 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0 px-4 lg:px-0">
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história e bem-estar.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 md:gap-6 pt-2 md:pt-4">
-              <Button size="xl" variant="default" className="text-sm md:text-base lettering-wide font-bold gap-4 group px-10 md:px-16 h-16 md:h-20 w-full sm:w-fit">
-                <div className="relative w-6 h-6 md:w-8 md:h-8 transition-transform group-hover:scale-110">
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 md:gap-6 pt-4">
+              <Button size="xl" variant="default" className="text-xs md:text-base lettering-wide font-bold gap-4 group px-10 md:px-16 h-14 md:h-20 w-[85%] sm:w-fit mx-auto lg:mx-0">
+                <div className="relative w-5 h-5 md:w-8 md:h-8 transition-transform group-hover:scale-110">
                   <Image 
                     src="https://files.catbox.moe/pkq8i0.png" 
                     alt="WhatsApp" 
@@ -67,15 +68,17 @@ export function Hero() {
         </FadeIn>
       </div>
 
-      {/* Imagem da Médica - Mobile (Visível e integrada ao fluxo) */}
-      <div className="lg:hidden w-full h-[40vh] md:h-[50vh] relative mt-8 flex items-end justify-center px-6 z-10 [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
-        <Image
-          src={heroImage}
-          alt="Dra. Vanessa Diniz"
-          fill
-          className="object-contain object-bottom scale-110 origin-bottom"
-          priority
-        />
+      {/* Imagem da Médica - Mobile (Fixa na base da tela) */}
+      <div className="lg:hidden mt-auto w-full h-[42vh] relative flex items-end justify-center z-10">
+        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]">
+          <Image
+            src={heroImage}
+            alt="Dra. Vanessa Diniz"
+            fill
+            className="object-contain object-bottom scale-[1.15] origin-bottom"
+            priority
+          />
+        </div>
       </div>
 
       {/* Sutil textura de fundo */}
