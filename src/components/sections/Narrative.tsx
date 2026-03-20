@@ -63,12 +63,12 @@ export function Narrative() {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left: Image Container - Desktop Only */}
         <div className="hidden lg:flex relative h-screen items-end justify-center overflow-visible">
-          <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
+          <div className="relative w-full h-full flex items-end -translate-y-32 [mask-image:linear-gradient(to_bottom,black_70%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
             <Image
               src="https://files.catbox.moe/cmawq4.png"
               alt="Dra. Vanessa Diniz"
               fill
-              className="object-contain object-bottom scale-[1.1] origin-bottom transition-transform duration-1000 hover:scale-[1.15]"
+              className="object-contain object-bottom scale-[1.7] origin-bottom transition-transform duration-1000"
               priority
             />
           </div>
