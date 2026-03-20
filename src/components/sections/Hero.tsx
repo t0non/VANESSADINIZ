@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -12,21 +13,21 @@ export function Hero() {
     <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-visible">
       
       {/* Container de Conteúdo */}
-      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-10 lg:pb-20 px-6 md:px-12">
-        <div className="lg:w-[60%] flex flex-col text-center lg:text-left">
-          <FadeIn className="flex flex-col items-center lg:items-start">
+      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-10 lg:pb-20 px-6 md:px-12 overflow-visible">
+        <div className="lg:w-[60%] flex flex-col text-center lg:text-left overflow-visible">
+          <FadeIn className="flex flex-col items-center lg:items-start overflow-visible">
             {/* Subtítulo Superior (Kicker) */}
             <span className="text-accent text-[11px] md:text-[13px] font-bold uppercase tracking-[0.3em] mb-4 block opacity-80">
               Geriatria e Longevidade Premium
             </span>
             
             {/* Título Principal (H1) - Monumental e Elegante */}
-            <h1 className="text-[34px] md:text-5xl lg:text-[72px] font-headline leading-[1.1] text-primary mb-8 max-w-[850px]">
+            <h1 className="text-[46px] md:text-5xl lg:text-[72px] font-headline leading-[1.05] text-primary mb-8 max-w-[850px]">
               O privilégio de envelhecer com <span className="italic font-normal">saúde, autonomia e propósito.</span>
             </h1>
 
-            {/* Texto de Apoio */}
-            <p className="text-[16px] md:text-xl text-primary/60 font-body leading-relaxed max-w-sm lg:max-w-xl mb-12">
+            {/* Texto de Apoio (Subheadline) - Reduzido para elegância */}
+            <p className="text-sm md:text-xl text-primary/60 font-body leading-relaxed max-w-[320px] lg:max-w-xl mb-12">
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história.
             </p>
 
@@ -53,13 +54,17 @@ export function Hero() {
       </div>
 
       {/* Imagem Mobile - Sem limites de container e com escala 2.6 */}
-      <div className="lg:hidden w-full overflow-visible pb-20">
-        <div className="relative w-full h-[500px] flex items-end overflow-visible">
+      <div className="lg:hidden w-full overflow-visible pb-32">
+        <div className="relative w-full aspect-square flex items-end justify-center overflow-visible">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[2.6] origin-bottom [mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)]"
+            className="object-contain object-bottom scale-[2.6] origin-bottom"
+            style={{ 
+              maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+            }}
             priority
           />
         </div>
@@ -77,7 +82,11 @@ export function Hero() {
               alt="Dra. Vanessa Diniz"
               fill
               priority
-              className="object-contain object-bottom scale-[1.4] origin-bottom [mask-image:linear-gradient(to_bottom,black_50%,transparent_95%)]"
+              className="object-contain object-bottom scale-[1.4] origin-bottom"
+              style={{ 
+                maskImage: 'linear-gradient(to bottom, black 60%, transparent 95%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 95%)'
+              }}
               data-ai-hint="professional doctor"
             />
           </div>
