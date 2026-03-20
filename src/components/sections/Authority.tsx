@@ -14,12 +14,12 @@ export function Authority() {
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <FadeIn className="relative">
-            <div className="aspect-square lg:aspect-[4/5] relative overflow-hidden transition-all duration-1000 flex items-end">
+            <div className="aspect-square lg:aspect-[3/4] relative overflow-hidden transition-all duration-1000 flex items-end">
               <Image
                 src={doctorImage}
                 alt="Dra. Vanessa Diniz"
                 fill
-                className="object-contain object-bottom scale-[1.4] origin-bottom transition-transform duration-1000 hover:scale-[1.45]"
+                className="object-contain object-bottom scale-[1.9] origin-bottom transition-transform duration-1000 hover:scale-[1.95]"
                 data-ai-hint="professional doctor"
               />
             </div>
