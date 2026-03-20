@@ -64,7 +64,7 @@ export function Narrative() {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left: Image Container - Desktop Only */}
         <div className="hidden lg:flex relative h-screen items-end justify-center overflow-visible">
-          <div className="relative w-full h-full flex items-end -translate-y-40 [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]">
+          <div className="relative w-full h-full flex items-end -translate-y-40 [mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
             <Image
               src="https://files.catbox.moe/cmawq4.png"
               alt="Dra. Vanessa Diniz"
@@ -84,7 +84,7 @@ export function Narrative() {
 
             {/* Mobile Image */}
             <div className="lg:hidden relative w-full h-[70vh] mb-4 overflow-visible flex items-end justify-center -mt-28">
-               <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]">
+               <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
                 <Image
                   src="https://files.catbox.moe/cmawq4.png"
                   alt="Dra. Vanessa Diniz"

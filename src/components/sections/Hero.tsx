@@ -57,7 +57,7 @@ export function Hero() {
       <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10">
         <FadeIn 
           delay={300} 
-          className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]"
+          className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]"
         >
           <div className="relative w-full h-full flex items-end -translate-y-24">
             <Image
@@ -74,7 +74,7 @@ export function Hero() {
 
       {/* Composição da Imagem - Mobile (Abaixo do conteúdo, com escala corrigida para evitar cortes) */}
       <div className="lg:hidden w-full h-[55vh] relative flex items-end justify-center z-10 mt-auto">
-        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_40%,transparent_100%)]">
+        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"

@@ -25,7 +25,7 @@ export function Empathy() {
             
             {/* Imagem Mobile: Posicionada estrategicamente entre a headline e o texto */}
             <FadeIn delay={100} className="lg:hidden mb-4">
-              <div className="[mask-image:linear-gradient(to_bottom,black_35%,rgba(0,0,0,0.8)_60%,rgba(0,0,0,0.2)_90%,transparent_100%)]">
+              <div className="[mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
                 <Image
                   src={empathyImage}
                   alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
@@ -50,7 +50,7 @@ export function Empathy() {
           
           {/* Imagem Desktop: Mantida na lateral para equilíbrio visual em telas grandes */}
           <FadeIn delay={300} className="hidden lg:block">
-            <div className="[mask-image:linear-gradient(to_bottom,black_35%,rgba(0,0,0,0.8)_60%,rgba(0,0,0,0.2)_90%,transparent_100%)]">
+            <div className="[mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
               <Image
                 src={empathyImage}
                 alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
