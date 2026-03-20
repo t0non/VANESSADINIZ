@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -40,8 +41,8 @@ export function Navbar() {
               : "bg-transparent py-4"
           )}
         >
-          {/* Logo - Centralizada no mobile via flex-center no pai, e justify-between no desktop */}
-          <Link href="/" className="relative h-10 w-40 md:w-56 transition-transform hover:scale-105 duration-300">
+          {/* Logo - Centralizada no mobile, à esquerda no desktop */}
+          <Link href="/" className="relative h-[60px] w-40 md:w-56 transition-transform hover:scale-105 duration-300">
             <Image
               src={logoImage}
               alt="Dra. Vanessa Diniz Logo"
@@ -62,7 +63,7 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button variant="default" className="px-8 h-10 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-2 group rounded-full">
+            <Button variant="default" className="bg-[#2D4035] hover:bg-[#1A2820] px-8 h-10 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-2 group rounded-full text-white">
               <div className="relative w-4 h-4 transition-transform group-hover:scale-110">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
@@ -75,9 +76,9 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Toggle - Posicionado de forma absoluta para não quebrar a centralização da logo */}
+          {/* Mobile Toggle - Absoluto para não quebrar a centralização */}
           <button 
-            className="lg:hidden text-primary p-2 absolute right-4 md:right-8" 
+            className="lg:hidden text-primary p-2 absolute right-4 md:right-8 pointer-events-auto" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
@@ -99,7 +100,7 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <Button variant="default" className="w-full h-14 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group rounded-full">
+          <Button className="bg-[#2D4035] hover:bg-[#1A2820] w-full h-14 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group rounded-full text-white">
             <div className="relative w-5 h-5">
               <Image 
                 src="https://files.catbox.moe/pkq8i0.png" 
