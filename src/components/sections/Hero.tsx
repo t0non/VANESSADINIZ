@@ -23,7 +23,7 @@ export function Hero() {
             
             {/* Título Principal (H1) - Monumental e Elegante */}
             <h1 className="text-[46px] md:text-5xl lg:text-[72px] font-headline leading-[1.25] text-primary mb-8 max-w-[850px]">
-              O privilégio de envelhecer com <span className="italic font-normal">saúde, autonomia e propósito.</span>
+              O privilégio de envelhecer com saúde, autonomia e propósito.
             </h1>
 
             {/* Texto de Apoio (Subheadline) - Reduzido para elegância e hierarquia */}
