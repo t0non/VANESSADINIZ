@@ -89,7 +89,7 @@ export function WhatsAppButton() {
             </div>
 
             {/* Indicador Online - Tamanho reduzido e sem borda */}
-            <div className="absolute bottom-1 right-1 w-4 h-4 md:w-5 md:h-5 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center border-none">
+            <div className="absolute bottom-1 right-1 w-3.5 h-3.5 md:w-4 md:h-4 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center border-none">
               <div className="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse"></div>
             </div>
           </button>
