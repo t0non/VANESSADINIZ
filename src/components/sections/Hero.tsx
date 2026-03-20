@@ -59,7 +59,7 @@ export function Hero() {
           delay={300} 
           className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_50%,transparent_95%)]"
         >
-          <div className="relative w-full h-full flex items-end -translate-y-40">
+          <div className="relative w-full h-full flex items-end -translate-y-10">
             <Image
               src={heroImage}
               alt="Dra. Vanessa Diniz"
