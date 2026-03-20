@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,68 +30,71 @@ export function Navbar() {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled 
-          ? "bg-background/95 backdrop-blur-md py-4 border-b border-primary/5" 
-          : "bg-transparent py-8"
-      }`}
-    >
-      <div className="container-premium flex justify-between items-center">
-        <Link href="/" className="relative h-16 w-60 md:w-80 transition-transform hover:scale-105 duration-300">
-          <Image
-            src={logoImage}
-            alt="Dra. Vanessa Diniz Logo"
-            fill
-            className="object-contain object-left"
-            priority
-          />
-        </Link>
+    <nav className="fixed top-0 w-full z-50 py-6 px-4 md:px-8 transition-all duration-500 pointer-events-none">
+      <div className="max-w-7xl mx-auto flex justify-center">
+        <div 
+          className={cn(
+            "w-full flex justify-between items-center px-6 md:px-10 py-3 rounded-full transition-all duration-500 pointer-events-auto",
+            isScrolled 
+              ? "bg-white/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]" 
+              : "bg-transparent py-4"
+          )}
+        >
+          <Link href="/" className="relative h-10 w-40 md:w-56 transition-transform hover:scale-105 duration-300">
+            <Image
+              src={logoImage}
+              alt="Dra. Vanessa Diniz Logo"
+              fill
+              className="object-contain object-left"
+              priority
+            />
+          </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center space-x-12">
-          {navLinks.map((item) => (
-            <Link
-              key={item.id}
-              href={`#${item.id}`}
-              className="text-[10px] lettering-wide font-bold text-primary/70 hover:text-accent transition-colors uppercase tracking-widest"
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Button variant="default" className="px-10 h-12 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-2 group">
-            <div className="relative w-4 h-4 transition-transform group-hover:scale-110">
-              <Image 
-                src="https://files.catbox.moe/pkq8i0.png" 
-                alt="WhatsApp" 
-                fill 
-                className="object-contain brightness-0 invert" 
-              />
-            </div>
-            Agendar Consulta
-          </Button>
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center space-x-10">
+            {navLinks.map((item) => (
+              <Link
+                key={item.id}
+                href={`#${item.id}`}
+                className="text-[10px] lettering-wide font-bold text-primary/70 hover:text-accent transition-colors uppercase tracking-[0.2em]"
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Button variant="default" className="px-8 h-10 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-2 group rounded-full">
+              <div className="relative w-4 h-4 transition-transform group-hover:scale-110">
+                <Image 
+                  src="https://files.catbox.moe/pkq8i0.png" 
+                  alt="WhatsApp" 
+                  fill 
+                  className="object-contain brightness-0 invert" 
+                />
+              </div>
+              Agendar
+            </Button>
+          </div>
+
+          {/* Mobile Toggle */}
+          <button className="lg:hidden text-primary p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-
-        {/* Mobile Toggle */}
-        <button className="lg:hidden text-primary p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-background border-b border-primary/5 p-12 flex flex-col items-center space-y-8 lg:hidden animate-in slide-in-from-top duration-500 shadow-2xl">
+        <div className="absolute top-full left-4 right-4 mt-4 bg-white/90 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 flex flex-col items-center space-y-6 lg:hidden animate-in fade-in slide-in-from-top-4 duration-500 shadow-2xl pointer-events-auto">
           {navLinks.map((item) => (
             <Link
               key={item.id}
               href={`#${item.id}`}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-headline italic text-primary hover:text-accent transition-colors"
+              className="text-lg font-headline text-primary hover:text-accent transition-colors"
             >
               {item.name}
             </Link>
           ))}
-          <Button variant="default" className="w-full h-16 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group">
+          <Button variant="default" className="w-full h-14 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group rounded-full">
             <div className="relative w-5 h-5">
               <Image 
                 src="https://files.catbox.moe/pkq8i0.png" 
