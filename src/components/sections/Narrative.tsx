@@ -68,7 +68,7 @@ export function Narrative() {
               src="https://files.catbox.moe/cmawq4.png"
               alt="Dra. Vanessa Diniz"
               fill
-              className="object-contain object-bottom scale-[2.0] lg:scale-[1.1] origin-bottom transition-transform duration-1000 hover:scale-[2.05] lg:hover:scale-[1.15]"
+              className="object-contain object-bottom scale-[2.2] lg:scale-[1.1] origin-bottom transition-transform duration-1000 hover:scale-[2.25] lg:hover:scale-[1.15]"
               priority
             />
           </div>
