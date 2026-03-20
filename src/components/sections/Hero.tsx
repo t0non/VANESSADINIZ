@@ -10,7 +10,7 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background">
+    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-x-hidden">
       
       {/* Container de Conteúdo */}
       <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-10 lg:pb-20 px-6 md:px-12">
@@ -53,17 +53,17 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Com container de visibilidade total para evitar cortes */}
-      <div className="lg:hidden w-full overflow-visible pb-32 mt-64">
-        <div className="relative w-full aspect-square flex items-end justify-center overflow-visible">
+      {/* Imagem Mobile - Com escala reduzida e melhor posicionamento */}
+      <div className="lg:hidden w-full overflow-visible mt-20 mb-20">
+        <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-visible">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[2.6] origin-bottom"
+            className="object-contain object-bottom scale-[1.2] origin-bottom"
             style={{ 
-              maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+              maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)'
             }}
             priority
           />
