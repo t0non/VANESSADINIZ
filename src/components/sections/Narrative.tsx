@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -61,14 +62,14 @@ export function Narrative() {
   return (
     <section className="relative w-full overflow-hidden bg-[#FBFBF9] pt-0 pb-24 lg:py-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-        {/* Left: Image Container - Presença monumental da especialista */}
-        <div className="relative h-[70vh] lg:h-screen flex items-end justify-center overflow-visible">
+        {/* Left: Image Container - Desktop Only */}
+        <div className="hidden lg:flex relative h-screen items-end justify-center overflow-visible">
           <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
             <Image
               src="https://files.catbox.moe/cmawq4.png"
               alt="Dra. Vanessa Diniz"
               fill
-              className="object-contain object-bottom scale-[2.2] lg:scale-[1.1] origin-bottom transition-transform duration-1000 hover:scale-[2.25] lg:hover:scale-[1.15]"
+              className="object-contain object-bottom scale-[1.1] origin-bottom transition-transform duration-1000 hover:scale-[1.15]"
               priority
             />
           </div>
@@ -80,6 +81,19 @@ export function Narrative() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline leading-tight mb-10 text-[#2A3F32]">
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
+
+            {/* Mobile Image: Positioned specifically between headline and text */}
+            <div className="lg:hidden relative w-full h-[60vh] mb-12 overflow-visible flex items-end justify-center">
+               <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
+                <Image
+                  src="https://files.catbox.moe/cmawq4.png"
+                  alt="Dra. Vanessa Diniz"
+                  fill
+                  className="object-contain object-bottom scale-[2.2] origin-bottom"
+                  priority
+                />
+              </div>
+            </div>
             
             <div className="space-y-6 text-[#4B5563] font-body font-light text-base md:text-lg leading-[1.8] mb-16 max-w-2xl">
               <p>
