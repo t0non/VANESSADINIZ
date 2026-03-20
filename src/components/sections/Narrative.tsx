@@ -33,18 +33,18 @@ export function Narrative() {
         {/* Coluna de Conteúdo */}
         <div className="p-8 md:p-16 lg:p-24 xl:p-32 flex flex-col justify-center bg-[#FBFBF9]">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline leading-tight mb-2 text-[#2A3F32] pt-8 md:pt-0">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline leading-tight mb-8 text-[#2A3F32] pt-8 md:pt-0">
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
 
-            {/* Imagem Mobile com container anti-scroll */}
-            <div className="lg:hidden relative w-full h-[70vh] mb-4 overflow-x-hidden flex items-end justify-center -mt-28">
-               <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
+            {/* Imagem Mobile - Reduzida e Reposicionada para não cobrir texto */}
+            <div className="lg:hidden relative w-full h-[45vh] mb-12 overflow-visible flex items-end justify-center">
+               <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]">
                 <Image
                   src="https://files.catbox.moe/cmawq4.png"
                   alt="Dra. Vanessa Diniz"
                   fill
-                  className="object-contain object-bottom scale-[2.6] origin-bottom"
+                  className="object-contain object-bottom scale-[1.4] origin-bottom"
                   priority
                 />
               </div>
