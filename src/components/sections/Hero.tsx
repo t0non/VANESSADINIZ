@@ -53,8 +53,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Sem limites de container e com escala 2.6, agora mais abaixo */}
-      <div className="lg:hidden w-full overflow-visible pb-32 mt-20">
+      {/* Imagem Mobile - Reposicionada mais abaixo (mt-40) */}
+      <div className="lg:hidden w-full overflow-visible pb-32 mt-40">
         <div className="relative w-full aspect-square flex items-end justify-center overflow-visible">
           <Image
             src={heroImage}
@@ -70,13 +70,13 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Desktop - Mantida como absoluta para layout lateral, agora mais abaixo */}
+      {/* Imagem Desktop - Reposicionada mais abaixo (translate-y-40) */}
       <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10 overflow-visible">
         <FadeIn 
           delay={300} 
           className="w-full h-full relative flex items-end overflow-visible"
         >
-          <div className="relative w-full h-full flex items-end translate-y-10 overflow-visible">
+          <div className="relative w-full h-full flex items-end translate-y-40 overflow-visible">
             <Image
               src={heroImage}
               alt="Dra. Vanessa Diniz"

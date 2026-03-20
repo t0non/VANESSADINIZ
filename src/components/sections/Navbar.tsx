@@ -35,25 +35,25 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-center">
         <div 
           className={cn(
-            "w-full flex justify-center lg:justify-between items-center px-6 md:px-10 py-3 rounded-full transition-all duration-500 pointer-events-auto relative",
+            "w-full flex justify-center items-center px-6 md:px-10 py-3 rounded-full transition-all duration-500 pointer-events-auto relative",
             isScrolled 
               ? "bg-white/40 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]" 
               : "bg-transparent py-4"
           )}
         >
-          {/* Logo - Centralizada no mobile, à esquerda no desktop */}
-          <Link href="/" className="relative h-[60px] w-40 md:w-56 transition-transform hover:scale-105 duration-300">
+          {/* Logo - Agora sempre centralizada */}
+          <Link href="/" className="relative h-[60px] w-40 md:w-56 transition-transform hover:scale-105 duration-300 z-10">
             <Image
               src={logoImage}
               alt="Dra. Vanessa Diniz Logo"
               fill
-              className="object-contain object-center lg:object-left"
+              className="object-contain object-center"
               priority
             />
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-10">
+          {/* Desktop Nav - Posicionada à direita sem quebrar a centralização da logo */}
+          <div className="hidden lg:flex items-center space-x-8 absolute right-10">
             {navLinks.map((item) => (
               <Link
                 key={item.id}
@@ -76,7 +76,7 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Toggle - Absoluto para não quebrar a centralização */}
+          {/* Mobile Toggle - Absoluto na lateral */}
           <button 
             className="lg:hidden text-primary p-2 absolute right-4 md:right-8 pointer-events-auto" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
