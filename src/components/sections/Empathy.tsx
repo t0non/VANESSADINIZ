@@ -24,7 +24,7 @@ export function Empathy() {
             </FadeIn>
             
             {/* Imagem Mobile: Posicionada estrategicamente entre a headline e o texto */}
-            <FadeIn delay={100} className="lg:hidden mb-12">
+            <FadeIn delay={100} className="lg:hidden mb-4">
               <div className="[mask-image:linear-gradient(to_bottom,black_35%,rgba(0,0,0,0.8)_60%,rgba(0,0,0,0.2)_90%,transparent_100%)]">
                 <Image
                   src={empathyImage}
