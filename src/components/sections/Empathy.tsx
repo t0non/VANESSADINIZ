@@ -29,14 +29,15 @@ export function Empathy() {
             </div>
           </FadeIn>
           
-          <FadeIn delay={200} className="order-1 lg:order-2 flex items-end justify-center lg:justify-end">
-            <div className="relative w-full transition-transform duration-1000 [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
+          {/* Coluna da Imagem: Altura livre e alinhamento na base para evitar cortes */}
+          <FadeIn delay={200} className="order-1 lg:order-2 flex items-end justify-center lg:justify-end h-auto">
+            <div className="relative w-full h-auto [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]">
               <Image
                 src={empathyImage}
                 alt="Cuidado e acolhimento"
-                width={1000}
-                height={800}
-                className="w-full h-auto object-contain scale-150 origin-bottom transition-transform duration-1000 hover:scale-[1.55]"
+                width={1200}
+                height={1000}
+                className="w-full h-auto object-contain"
                 data-ai-hint="elderly couple"
                 priority
               />
