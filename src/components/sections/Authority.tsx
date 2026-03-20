@@ -13,13 +13,13 @@ export function Authority() {
     <section id="sobre" className="py-32 bg-secondary/10 overflow-hidden">
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <FadeIn className="relative">
-            <div className="aspect-square lg:aspect-[3/4] relative overflow-hidden transition-all duration-1000 flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
+          <FadeIn className="relative h-full flex items-end justify-center">
+            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[700px] transition-all duration-1000 flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
               <Image
                 src={doctorImage}
                 alt="Dra. Vanessa Diniz"
                 fill
-                className="object-contain object-bottom scale-[2.3] origin-bottom transition-transform duration-1000 hover:scale-[2.35]"
+                className="object-contain object-bottom scale-[1.1] lg:scale-[1.2] origin-bottom transition-transform duration-1000 hover:scale-[1.25]"
                 data-ai-hint="professional doctor"
               />
             </div>
