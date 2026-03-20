@@ -26,21 +26,21 @@ const specialties = [
 
 export function Narrative() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#8CA4B0]">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#8CA4B0] via-[#8CA4B0] to-[#7A93A1]">
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        {/* Left: Image Container */}
-        <div className="relative h-[60vh] lg:h-auto min-h-[500px]">
+        {/* Left: Image Container Refined with Mask and Scale */}
+        <div className="relative h-[70vh] lg:h-auto min-h-[600px] flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
           <Image
-            src="https://files.catbox.moe/objayu.png"
-            alt="Envelhecimento Ativo"
+            src="https://files.catbox.moe/cmawq4.png"
+            alt="Dra. Vanessa Diniz"
             fill
-            className="object-cover"
+            className="object-contain object-bottom scale-[1.3] origin-bottom transition-transform duration-1000 hover:scale-[1.35]"
             priority
           />
         </div>
 
         {/* Right: Content Container */}
-        <div className="p-12 md:p-24 flex flex-col justify-center text-white">
+        <div className="p-12 md:p-24 flex flex-col justify-center text-white relative z-10">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-headline leading-tight mb-8">
               Vamos mudar a narrativa sobre o envelhecimento?
@@ -74,9 +74,9 @@ export function Narrative() {
 
             <Button 
               size="xl" 
-              className="bg-[#2D4F60] hover:bg-[#1A303B] text-white rounded-full px-12 h-16 flex items-center gap-4 w-fit"
+              className="bg-[#2D4F60] hover:bg-[#1A303B] text-white rounded-full px-12 h-16 flex items-center gap-4 w-fit shadow-xl group transition-all"
             >
-              <div className="relative w-7 h-7">
+              <div className="relative w-7 h-7 transition-transform group-hover:scale-110">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
                   alt="WhatsApp" 
@@ -89,6 +89,9 @@ export function Narrative() {
           </FadeIn>
         </div>
       </div>
+      
+      {/* Subtle Texture Overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] z-0" />
     </section>
   );
 }
