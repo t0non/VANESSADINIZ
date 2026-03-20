@@ -10,22 +10,26 @@ export function Authority() {
   const doctorImage = PlaceHolderImages.find(img => img.id === "doctor")?.imageUrl || "";
 
   return (
-    <section id="sobre" className="py-32 bg-secondary/10 overflow-hidden">
+    <section id="sobre" className="py-32 bg-secondary/10 overflow-visible">
       <div className="container-premium">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          <FadeIn className="relative h-full flex items-end justify-center">
-            <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[850px] transition-all duration-1000 flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-end">
+          {/* Coluna da Imagem: Totalmente Livre para evitar cortes */}
+          <FadeIn className="relative flex items-end justify-center order-2 lg:order-1">
+            <div className="relative w-full [mask-image:linear-gradient(to_bottom,black_50%,rgba(0,0,0,0.9)_70%,rgba(0,0,0,0.4)_85%,transparent_100%)]">
               <Image
                 src={doctorImage}
                 alt="Dra. Vanessa Diniz"
-                fill
-                className="object-contain object-bottom scale-[1.3] lg:scale-[2.2] origin-bottom transition-transform duration-1000 hover:scale-[2.25]"
+                width={1000}
+                height={1200}
+                className="w-full h-auto object-contain object-bottom transition-transform duration-1000 hover:scale-[1.02]"
                 data-ai-hint="professional doctor"
+                priority
               />
             </div>
           </FadeIn>
 
-          <FadeIn delay={200}>
+          {/* Coluna do Texto */}
+          <FadeIn delay={200} className="order-1 lg:order-2 pb-12 lg:pb-24">
             <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-6 block opacity-80">A Especialista</span>
             <h2 className="text-4xl md:text-5xl font-headline mb-10 text-primary leading-tight">
               Experiência clínica guiada pelo <span className="italic font-normal">afeto e pela ciência.</span>
