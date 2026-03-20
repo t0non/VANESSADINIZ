@@ -18,9 +18,9 @@ export function Narrative() {
   return (
     <section className="relative w-full overflow-x-hidden bg-[#FBFBF9] pt-0 pb-24 lg:py-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-        {/* Imagem Desktop - Escala Monumental e Fusão */}
-        <div className="hidden lg:flex relative h-screen items-end justify-center overflow-hidden">
-          <div className="relative w-full h-full flex items-end -translate-y-40 [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
+        {/* Imagem Desktop - Sem cortes e com escala imponente */}
+        <div className="hidden lg:flex relative h-screen items-end justify-center">
+          <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
             <Image
               src="https://files.catbox.moe/cmawq4.png"
               alt="Dra. Vanessa Diniz"
@@ -38,7 +38,7 @@ export function Narrative() {
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
 
-            {/* Imagem Mobile - Escala aumentada para 1.8 conforme solicitado */}
+            {/* Imagem Mobile - Escala 1.8x e posicionamento equilibrado */}
             <div className="lg:hidden relative w-full h-[45vh] mb-16 overflow-visible flex items-end justify-center">
                <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]">
                 <Image
