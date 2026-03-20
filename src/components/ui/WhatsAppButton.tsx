@@ -77,8 +77,8 @@ export function WhatsAppButton() {
               />
             </div>
 
-            {/* Avatar Circular */}
-            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl overflow-hidden bg-secondary/20">
+            {/* Avatar Circular - Sem borda */}
+            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl overflow-hidden bg-secondary/20 border-none">
               <Image 
                 src={profileImage} 
                 alt="Dra. Vanessa Diniz" 
@@ -88,9 +88,9 @@ export function WhatsAppButton() {
               />
             </div>
 
-            {/* Indicador Online */}
-            <div className="absolute bottom-1 right-1 w-5 h-5 md:w-6 md:h-6 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center">
-              <div className="w-2 h-2 bg-white/40 rounded-full animate-pulse"></div>
+            {/* Indicador Online - Tamanho reduzido e sem borda */}
+            <div className="absolute bottom-1 right-1 w-4 h-4 md:w-5 md:h-5 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center border-none">
+              <div className="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse"></div>
             </div>
           </button>
         </PopoverTrigger>
