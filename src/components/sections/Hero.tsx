@@ -61,7 +61,7 @@ export function Hero() {
               alt="Dra. Vanessa Diniz"
               fill
               priority
-              className="object-contain object-bottom scale-[1.5] origin-bottom transition-transform duration-1000 hover:scale-[1.55]"
+              className="object-contain object-bottom scale-[1.3] origin-bottom transition-transform duration-1000 hover:scale-[1.35]"
               data-ai-hint="professional doctor"
             />
           </div>
