@@ -53,7 +53,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Sem limites de container */}
+      {/* Imagem Mobile - Sem limites de container e com escala 2.6 */}
       <div className="lg:hidden w-full overflow-visible pb-20">
         <div className="relative w-full h-[500px] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_98%)] overflow-visible">
           <Image
