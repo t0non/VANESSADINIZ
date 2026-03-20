@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -21,7 +20,7 @@ export function Authority() {
                   src={doctorImage}
                   alt="Dra. Vanessa Diniz"
                   fill
-                  className="object-contain object-bottom scale-[1.75] origin-bottom -translate-y-32 lg:-translate-y-40 transition-transform duration-1000 hover:scale-[1.8] hover:-translate-y-44"
+                  className="object-contain object-bottom scale-[1.75] origin-bottom -translate-y-32 lg:-translate-y-44 transition-transform duration-1000 hover:scale-[1.8] hover:-translate-y-48"
                   data-ai-hint="professional doctor"
                   priority
                 />
