@@ -72,8 +72,8 @@ export function Hero() {
         </FadeIn>
       </div>
 
-      {/* Imagem Mobile - Enquadramento Monumental e Elevado */}
-      <div className="lg:hidden w-full h-[60vh] relative flex items-end justify-center z-10 mt-auto overflow-visible">
+      {/* Imagem Mobile - Enquadramento Monumental e Sem Cortes (Container de Altura Total) */}
+      <div className="lg:hidden absolute inset-0 w-full h-full flex items-end justify-center z-10 pointer-events-none">
         <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_95%)]">
           <Image
             src={heroImage}
