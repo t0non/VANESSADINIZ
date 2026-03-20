@@ -12,7 +12,7 @@ export function Empathy() {
     <section id="filosofia" className="py-24 md:py-48 bg-background">
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-          {/* Coluna do Conteúdo Textual */}
+          {/* Conteúdo Textual */}
           <div className="flex flex-col">
             <FadeIn>
               <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-8 block opacity-80 text-center lg:text-left">
@@ -23,7 +23,7 @@ export function Empathy() {
               </h2>
             </FadeIn>
             
-            {/* Imagem Mobile: Posicionada estrategicamente entre a headline e o texto */}
+            {/* Imagem Mobile com Máscara de Fusão */}
             <FadeIn delay={100} className="lg:hidden mb-4">
               <div className="[mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
                 <Image
@@ -37,7 +37,6 @@ export function Empathy() {
               </div>
             </FadeIn>
 
-            {/* Texto de Apoio */}
             <FadeIn delay={200} className="space-y-10 text-lg md:text-xl text-primary/60 font-light leading-relaxed max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
               <p>
                 Envelhecer não precisa ser sinônimo de perda. Muitas vezes, o excesso de medicamentos (polifarmácia) e a fragmentação do cuidado médico trazem mais ansiedade do que saúde.
@@ -48,9 +47,9 @@ export function Empathy() {
             </FadeIn>
           </div>
           
-          {/* Imagem Desktop: Mantida na lateral para equilíbrio visual em telas grandes */}
+          {/* Imagem Desktop com Fusão */}
           <FadeIn delay={300} className="hidden lg:block">
-            <div className="[mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
+            <div className="[mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
               <Image
                 src={empathyImage}
                 alt="Dra. Vanessa Diniz - Cuidado e acolhimento"

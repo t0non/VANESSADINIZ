@@ -14,15 +14,15 @@ export function Authority() {
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
-          {/* Coluna da Imagem (Desktop Only) */}
+          {/* Imagem Desktop - Escala de Autoridade e Fusão Premium */}
           <FadeIn className="relative hidden lg:flex items-end justify-center lg:order-1 self-stretch">
-            <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:h-full min-h-[500px] lg:min-h-[800px] flex items-end">
-              <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_20%,transparent_75%)]">
+            <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_20%,transparent_75%)]">
+              <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:h-full min-h-[800px] flex items-end">
                 <Image
                   src={doctorImage}
                   alt="Dra. Vanessa Diniz"
                   fill
-                  className="object-contain object-bottom scale-[1.5] origin-bottom -translate-y-64 transition-transform duration-1000"
+                  className="object-contain object-bottom scale-[1.5] origin-bottom -translate-y-64"
                   data-ai-hint="professional doctor"
                   priority
                 />
@@ -30,14 +30,14 @@ export function Authority() {
             </div>
           </FadeIn>
 
-          {/* Coluna do Texto (Mobile & Desktop) */}
+          {/* Coluna de Texto */}
           <FadeIn delay={200} className="lg:order-2 py-6 md:py-12 flex flex-col items-center lg:items-start text-center lg:text-left">
             <span className="text-accent text-[11px] uppercase tracking-[0.4em] font-bold mb-6 block opacity-80">A Especialista</span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline mb-0 lg:mb-8 text-primary leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline mb-8 lg:mb-12 text-primary leading-tight">
               Experiência clínica guiada pelo <span className="italic font-normal">afeto e pela ciência.</span>
             </h2>
 
-            {/* Imagem Mobile */}
+            {/* Imagem Mobile com Fusão */}
             <div className="lg:hidden w-full -mt-10 mb-6 overflow-hidden">
                <div className="relative w-full aspect-[4/5] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_20%,transparent_80%)]">
                 <Image
@@ -51,7 +51,7 @@ export function Authority() {
               </div>
             </div>
 
-            <div className="space-y-8 text-primary/70 text-lg md:text-xl font-light leading-relaxed mb-12">
+            <div className="space-y-8 text-primary/70 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-xl">
               <p>
                 Dra. Vanessa Diniz acredita que a medicina na maturidade exige mais do que protocolos técnicos: exige escuta ativa e tempo valorizado.
               </p>

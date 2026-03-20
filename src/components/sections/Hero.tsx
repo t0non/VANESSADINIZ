@@ -13,7 +13,7 @@ export function Hero() {
     <section className="relative min-h-screen flex flex-col bg-background overflow-hidden">
       
       {/* Container de Conteúdo */}
-      <div className="container-premium relative z-20 w-full flex flex-col pt-40 lg:pt-64 pb-20 px-6 md:px-12">
+      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-56 pb-20 px-6 md:px-12">
         <div className="lg:w-[60%] flex flex-col text-center lg:text-left">
           <FadeIn className="flex flex-col items-center lg:items-start">
             {/* Subtítulo Superior (Kicker) */}
@@ -21,17 +21,17 @@ export function Hero() {
               Geriatria e Longevidade Premium
             </span>
             
-            {/* Título Principal (H1) */}
+            {/* Título Principal (H1) - Monumental e Elegante */}
             <h1 className="text-[34px] md:text-5xl lg:text-[72px] font-headline leading-[1.1] text-primary mb-8 max-w-[850px]">
               O privilégio de envelhecer com <span className="italic font-normal">saúde, autonomia e propósito.</span>
             </h1>
 
-            {/* Texto de Apoio (Corpo) */}
+            {/* Texto de Apoio */}
             <p className="text-[16px] md:text-xl text-primary/60 font-body leading-relaxed max-w-sm lg:max-w-xl mb-12">
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história.
             </p>
 
-            {/* Call to Action (Botão) - Padrão Premium Vanessa Diniz */}
+            {/* CTA Principal */}
             <div className="flex justify-center lg:justify-start w-full">
               <Button 
                 size="xl" 
@@ -53,13 +53,13 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Composição da Imagem - Desktop (Posicionamento Absoluto Elevado e Monumental) */}
+      {/* Imagem Desktop - Presença Monumental e Fusão Suave */}
       <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10">
         <FadeIn 
           delay={300} 
-          className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]"
+          className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]"
         >
-          <div className="relative w-full h-full flex items-end -translate-y-24">
+          <div className="relative w-full h-full flex items-end -translate-y-48">
             <Image
               src={heroImage}
               alt="Dra. Vanessa Diniz"
@@ -72,20 +72,20 @@ export function Hero() {
         </FadeIn>
       </div>
 
-      {/* Composição da Imagem - Mobile (Abaixo do conteúdo, com escala corrigida para evitar cortes) */}
-      <div className="lg:hidden w-full h-[55vh] relative flex items-end justify-center z-10 mt-auto">
-        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
+      {/* Imagem Mobile - Enquadramento Ideal (Sem corte na cabeça) */}
+      <div className="lg:hidden w-full h-[60vh] relative flex items-end justify-center z-10 mt-auto overflow-visible">
+        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[1.7] origin-bottom -translate-y-8"
+            className="object-contain object-bottom scale-[1.85] origin-bottom -translate-y-20"
             priority
           />
         </div>
       </div>
 
-      {/* Sutil textura de fundo */}
+      {/* Textura de Fundo Sutil */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] z-0" />
     </section>
   );
