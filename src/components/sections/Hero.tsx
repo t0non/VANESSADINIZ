@@ -54,13 +54,13 @@ export function Hero() {
       </div>
 
       {/* Imagem Mobile - Agora abaixo do botão no fluxo (z-10 no mobile) */}
-      <div className="lg:hidden w-full px-6 pb-20 -mt-4">
-        <div className="relative w-full aspect-[3/4] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_98%)]">
+      <div className="lg:hidden w-full px-6 pb-20 -mt-4 overflow-visible">
+        <div className="relative w-full aspect-[3/4] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_98%)] overflow-visible">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-110 origin-bottom"
+            className="object-contain object-bottom scale-[3.0] origin-bottom"
             priority
           />
         </div>
