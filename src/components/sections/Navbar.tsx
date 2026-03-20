@@ -41,8 +41,13 @@ export function Navbar() {
               : "bg-transparent py-4"
           )}
         >
-          {/* Logo - Centralizada no mobile, esquerda no PC */}
-          <Link href="/" className="relative h-[60px] w-40 md:w-56 transition-transform hover:scale-105 duration-300 z-10 lg:ml-0">
+          {/* Logo - Centralizada no mobile com mx-auto, esquerda no PC com lg:mx-0 */}
+          <Link 
+            href="/" 
+            className={cn(
+              "relative h-[60px] w-40 md:w-56 transition-transform hover:scale-105 duration-300 z-10 mx-auto lg:mx-0 lg:ml-0"
+            )}
+          >
             <Image
               src={logoImage}
               alt="Dra. Vanessa Diniz Logo"
@@ -63,7 +68,7 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button variant="default" className="bg-[#2D4035] hover:bg-[#1A2820] px-8 h-10 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-2 group rounded-full text-white">
+            <Button variant="default" className="bg-[#2D4035] hover:bg-[#1A2820] px-8 h-10 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-2 group rounded-full text-white border-none">
               <div className="relative w-4 h-4 transition-transform group-hover:scale-110">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
@@ -100,7 +105,7 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <Button className="bg-[#2D4035] hover:bg-[#1A2820] w-full h-14 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group rounded-full text-white">
+          <Button className="bg-[#2D4035] hover:bg-[#1A2820] w-full h-14 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group rounded-full text-white border-none">
             <div className="relative w-5 h-5">
               <Image 
                 src="https://files.catbox.moe/pkq8i0.png" 
