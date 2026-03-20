@@ -7,26 +7,26 @@ import { Heart, ShieldPlus, User, CheckCheck } from "lucide-react";
 
 const specialties = [
   {
-    icon: <Heart className="w-5 h-5 text-slate-400" />,
+    icon: <Heart className="w-5 h-5 text-accent" />,
     text: "Prevenção e rastreamento de doenças",
   },
   {
-    icon: <ShieldPlus className="w-5 h-5 text-slate-400" />,
+    icon: <ShieldPlus className="w-5 h-5 text-accent" />,
     text: "Construção do envelhecimento bem sucedido",
   },
   {
-    icon: <User className="w-5 h-5 text-slate-400" />,
+    icon: <User className="w-5 h-5 text-accent" />,
     text: "Saúde da mulher pós menopausa",
   },
   {
-    icon: <CheckCheck className="w-5 h-5 text-slate-400" />,
+    icon: <CheckCheck className="w-5 h-5 text-accent" />,
     text: "Manejo e controle de doenças crônicas",
   },
 ];
 
 export function Narrative() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#8CA4B0] via-[#8CA4B0] to-[#7A93A1]">
+    <section className="relative w-full overflow-hidden bg-accent">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left: Image Container Refined with Mask and Scale */}
         <div className="relative h-[70vh] lg:h-auto min-h-[600px] flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
@@ -40,7 +40,7 @@ export function Narrative() {
         </div>
 
         {/* Right: Content Container */}
-        <div className="p-12 md:p-24 flex flex-col justify-center text-white relative z-10">
+        <div className="p-12 md:p-24 flex flex-col justify-center text-primary relative z-10">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-headline leading-tight mb-8">
               Vamos mudar a narrativa sobre o envelhecimento?
@@ -60,7 +60,7 @@ export function Narrative() {
               {specialties.map((item, index) => (
                 <div 
                   key={index} 
-                  className="bg-white rounded-full py-4 px-8 flex items-center gap-4 text-slate-600 shadow-sm transition-transform hover:scale-[1.02]"
+                  className="bg-white/90 backdrop-blur-sm rounded-full py-4 px-8 flex items-center gap-4 text-primary shadow-sm transition-transform hover:scale-[1.02]"
                 >
                   <div className="shrink-0">
                     {item.icon}
@@ -74,7 +74,8 @@ export function Narrative() {
 
             <Button 
               size="xl" 
-              className="bg-[#2D4F60] hover:bg-[#1A303B] text-white rounded-full px-12 h-16 flex items-center gap-4 w-fit shadow-xl group transition-all"
+              variant="default"
+              className="rounded-full px-12 h-16 flex items-center gap-4 w-fit shadow-xl group transition-all"
             >
               <div className="relative w-7 h-7 transition-transform group-hover:scale-110">
                 <Image 
@@ -91,7 +92,7 @@ export function Narrative() {
       </div>
       
       {/* Subtle Texture Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] z-0" />
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] z-0" />
     </section>
   );
 }
