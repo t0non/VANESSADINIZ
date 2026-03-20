@@ -71,8 +71,12 @@ export function Pillars() {
 
         <div className="flex justify-center">
           <FadeIn delay={600}>
-            <Button variant="accent" size="xl" className="text-sm lettering-wide font-bold px-16 h-20 gap-4 group rounded-full shadow-xl">
-              <div className="relative w-6 h-6 transition-transform group-hover:scale-110">
+            <Button 
+              variant="accent" 
+              size="xl" 
+              className="text-[10px] md:text-sm lettering-wide font-bold px-8 md:px-16 h-14 md:h-20 gap-3 md:gap-4 group rounded-full shadow-xl w-fit max-w-[90vw] mx-auto"
+            >
+              <div className="relative w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:scale-110">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
                   alt="WhatsApp" 
@@ -80,7 +84,7 @@ export function Pillars() {
                   className="object-contain brightness-0 invert" 
                 />
               </div>
-              Saber mais sobre as consultas
+              <span className="truncate">Saber mais sobre as consultas</span>
             </Button>
           </FadeIn>
         </div>
