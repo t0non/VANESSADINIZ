@@ -72,13 +72,13 @@ export function Hero() {
       </div>
 
       {/* Composição da Imagem - Mobile (Abaixo do conteúdo, com fade out) */}
-      <div className="lg:hidden w-full h-[45vh] relative flex items-end justify-center z-10 mt-auto">
-        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]">
+      <div className="lg:hidden w-full h-[55vh] relative flex items-end justify-center z-10 mt-auto">
+        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_65%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[1.5] origin-bottom"
+            className="object-contain object-bottom scale-[2.2] origin-bottom"
             priority
           />
         </div>
