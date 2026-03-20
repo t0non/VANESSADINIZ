@@ -13,7 +13,7 @@ export function Hero() {
     <section className="relative h-screen lg:min-h-screen flex flex-col lg:flex-row lg:items-center overflow-hidden bg-background">
       
       {/* Container de Conteúdo */}
-      <div className="container-premium relative z-20 w-full flex flex-col pt-24 lg:pt-0 lg:justify-center">
+      <div className="container-premium relative z-20 w-full flex flex-col pt-20 lg:pt-0 lg:justify-center">
         <div className="lg:w-[60%] flex flex-col justify-center text-center lg:text-left">
           <FadeIn className="space-y-4 md:space-y-10">
             <div>
@@ -68,14 +68,14 @@ export function Hero() {
         </FadeIn>
       </div>
 
-      {/* Imagem da Médica - Mobile (Fixa na base da tela e ampliada) */}
+      {/* Imagem da Médica - Mobile (Fixa na base da tela e ampliada monumentalmente) */}
       <div className="lg:hidden mt-auto w-full h-[50vh] relative flex items-end justify-center z-10">
         <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_65%,transparent_100%)]">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[1.5] origin-bottom"
+            className="object-contain object-bottom scale-[1.75] origin-bottom"
             priority
           />
         </div>
