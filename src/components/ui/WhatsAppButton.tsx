@@ -29,12 +29,12 @@ interface ChatBubbleProps {
 
 const ChatBubble = ({ name, message, isVisible, className }: ChatBubbleProps) => (
   <div className={cn(
-    "bg-white px-4 py-2.5 rounded-2xl shadow-lg border border-primary/5 transition-all duration-500 flex flex-col items-start text-left gap-0.5",
+    "bg-white px-6 py-4 rounded-[24px] shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] transition-all duration-500 flex flex-col items-start text-left gap-1",
     isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95 pointer-events-none",
     className
   )}>
-    <span className="text-[10px] font-bold text-primary/60 uppercase tracking-tight">{name}</span>
-    <div className="text-[13px] text-primary/80 leading-snug font-medium">
+    <span className="text-[11px] font-bold text-primary/40 uppercase tracking-wider">{name}</span>
+    <div className="text-[15px] text-primary/70 leading-snug font-medium font-body">
       {message}
     </div>
   </div>
@@ -64,10 +64,10 @@ export function WhatsAppButton() {
             aria-label="Abrir atendimento"
           >
             {/* Pilha de Balões (Desktop) */}
-            <div className="hidden md:flex flex-col items-end gap-2 absolute right-[calc(100%+16px)] bottom-4 pointer-events-none w-max">
+            <div className="hidden md:flex flex-col items-end gap-3 absolute right-[calc(100%+24px)] bottom-6 pointer-events-none w-max">
               <ChatBubble 
                 name="Vanessa"
-                message={stage === 1 ? <TypingDots /> : "Olá, tudo bem?"}
+                message={stage === 1 ? <TypingDots /> : "Olá! Tudo bem?"}
                 isVisible={stage >= 1}
               />
               <ChatBubble 
@@ -78,7 +78,7 @@ export function WhatsAppButton() {
             </div>
 
             {/* Avatar Circular */}
-            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white shadow-2xl overflow-hidden bg-secondary/20">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl overflow-hidden bg-secondary/20">
               <Image 
                 src={profileImage} 
                 alt="Dra. Vanessa Diniz" 
@@ -89,23 +89,23 @@ export function WhatsAppButton() {
             </div>
 
             {/* Indicador Online */}
-            <div className="absolute bottom-1 right-1 w-5 h-5 md:w-6 md:h-6 bg-[#25D366] rounded-full border-2 border-white shadow-lg flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse opacity-80"></div>
+            <div className="absolute bottom-1 right-1 w-5 h-5 md:w-6 md:h-6 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center">
+              <div className="w-2 h-2 bg-white/40 rounded-full animate-pulse"></div>
             </div>
           </button>
         </PopoverTrigger>
         <PopoverContent 
           side="top" 
           align="end" 
-          sideOffset={20}
-          className="w-[90vw] md:w-[450px] p-6 rounded-[32px] shadow-2xl border-primary/5 bg-[#FBFBF9] animate-in fade-in zoom-in slide-in-from-bottom-10 duration-500"
+          sideOffset={24}
+          className="w-[90vw] md:w-[450px] p-8 rounded-[40px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border-none bg-[#FBFBF9] animate-in fade-in zoom-in slide-in-from-bottom-10 duration-500"
         >
-          <div className="mb-6">
-            <h3 className="text-xl font-headline text-[#2A3F32] mb-1 italic">Atendimento Personalizado</h3>
-            <p className="text-xs text-[#4B5563] font-light">Selecione o assunto para iniciar a conversa no WhatsApp:</p>
+          <div className="mb-8">
+            <h3 className="text-2xl font-headline text-[#2A3F32] mb-1 italic">Atendimento Personalizado</h3>
+            <p className="text-sm text-[#4B5563] font-light">Selecione o assunto para iniciar a conversa:</p>
           </div>
 
-          <div className="grid grid-cols-1 gap-2.5">
+          <div className="grid grid-cols-1 gap-3">
             {[
               { text: "Avaliação Geriátrica Ampla", icon: "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" },
               { text: "Prevenção de doenças", icon: "M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.746 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" },
@@ -117,23 +117,23 @@ export function WhatsAppButton() {
                 key={idx}
                 href={`https://wa.me/5511987654321?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${encodeURIComponent(item.text)}.`}
                 target="_blank"
-                className="flex items-center gap-3 bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100 transition duration-300 hover:shadow-md hover:border-[#C5A880]/20 group"
+                className="flex items-center gap-4 bg-white px-6 py-4 rounded-full shadow-sm border border-gray-100 transition duration-300 hover:shadow-md hover:border-[#C5A880]/20 group"
               >
                 <div className="flex-shrink-0 text-[#2A3F32] group-hover:text-[#C5A880] transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.2">
                     <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                   </svg>
                 </div>
-                <span className="font-sans text-[13px] text-[#2A3F32] font-medium leading-tight">{item.text}</span>
+                <span className="font-sans text-[14px] text-[#2A3F32] font-medium leading-tight">{item.text}</span>
               </Link>
             ))}
           </div>
 
-          <div className="mt-8 pt-4 border-t border-primary/5 flex items-center justify-between">
-            <p className="text-[9px] uppercase tracking-widest text-[#2A3F32]/40 font-bold">Dra. Vanessa Diniz | Geriatria</p>
+          <div className="mt-10 pt-6 border-t border-primary/5 flex items-center justify-between">
+            <p className="text-[10px] uppercase tracking-widest text-[#2A3F32]/40 font-bold">Dra. Vanessa Diniz | Geriatria</p>
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></div>
-              <span className="text-[9px] text-[#25D366] font-bold uppercase tracking-widest">Online agora</span>
+              <span className="text-[10px] text-[#25D366] font-bold uppercase tracking-widest">Online agora</span>
             </div>
           </div>
         </PopoverContent>
