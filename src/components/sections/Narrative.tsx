@@ -8,45 +8,48 @@ import { Heart, ShieldPlus, User, CheckCheck } from "lucide-react";
 
 const specialties = [
   {
-    icon: <Heart className="w-5 h-5 text-accent" />,
+    icon: <Heart className="w-5 h-5" strokeWidth={1} />,
     text: "Prevenção e rastreamento de doenças",
   },
   {
-    icon: <ShieldPlus className="w-5 h-5 text-accent" />,
+    icon: <ShieldPlus className="w-5 h-5" strokeWidth={1} />,
     text: "Construção do envelhecimento bem sucedido",
   },
   {
-    icon: <User className="w-5 h-5 text-accent" />,
+    icon: <User className="w-5 h-5" strokeWidth={1} />,
     text: "Saúde da mulher pós menopausa",
   },
   {
-    icon: <CheckCheck className="w-5 h-5 text-accent" />,
+    icon: <CheckCheck className="w-5 h-5" strokeWidth={1} />,
     text: "Manejo e controle de doenças crônicas",
   },
 ];
 
 export function Narrative() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#F5F1EE]">
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+    <section className="relative w-full overflow-hidden bg-[#FBFBF9] py-24 lg:py-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left: Image Container Refined with Mask and Scale */}
-        <div className="relative h-[70vh] lg:h-auto min-h-[600px] flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
-          <Image
-            src="https://files.catbox.moe/cmawq4.png"
-            alt="Dra. Vanessa Diniz"
-            fill
-            className="object-contain object-bottom scale-[1.3] origin-bottom transition-transform duration-1000 hover:scale-[1.35]"
-            priority
-          />
+        <div className="relative h-[60vh] lg:h-screen flex items-end justify-center overflow-visible">
+          <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
+            <Image
+              src="https://files.catbox.moe/cmawq4.png"
+              alt="Dra. Vanessa Diniz"
+              fill
+              className="object-contain object-bottom scale-[1.1] origin-bottom transition-transform duration-1000 hover:scale-[1.15]"
+              priority
+            />
+          </div>
         </div>
 
         {/* Right: Content Container */}
-        <div className="p-12 md:p-24 flex flex-col justify-center text-primary relative z-10">
+        <div className="p-8 md:p-16 lg:p-24 xl:p-32 flex flex-col justify-center bg-[#FBFBF9]">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-headline leading-tight mb-8">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline leading-tight mb-10 text-[#2A3F32]">
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
-            <div className="space-y-6 text-sm md:text-base font-light text-primary/70 mb-12 max-w-xl">
+            
+            <div className="space-y-6 text-[#4B5563] font-body font-light text-base md:text-lg leading-[1.8] mb-16 max-w-2xl">
               <p>
                 Não somos capazes de parar o tempo, mas podemos repensar os estigmas que foram construídos sobre este processo e assim desfrutar uma vida ativa, dinâmica e feliz.
               </p>
@@ -55,18 +58,18 @@ export function Narrative() {
               </p>
             </div>
 
-            <h3 className="text-3xl font-headline mb-8">Minhas especialidades</h3>
+            <h3 className="text-2xl font-headline mb-8 text-[#2A3F32] italic">Minhas especialidades</h3>
             
-            <div className="space-y-4 mb-12">
+            <div className="flex flex-col mb-16">
               {specialties.map((item, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/95 backdrop-blur-sm rounded-full py-4 px-8 flex items-center gap-4 text-primary shadow-sm transition-transform hover:scale-[1.02]"
+                  className="flex items-center gap-6 py-5 border-b border-gray-100 group transition-all duration-300"
                 >
-                  <div className="shrink-0">
+                  <div className="shrink-0 text-[#C1A68D] transition-transform duration-300 group-hover:scale-110">
                     {item.icon}
                   </div>
-                  <span className="font-medium tracking-tight text-sm md:text-base">
+                  <span className="font-body font-medium text-[#2A3F32] text-sm md:text-base tracking-wide uppercase text-[10px] md:text-[12px]">
                     {item.text}
                   </span>
                 </div>
@@ -76,9 +79,9 @@ export function Narrative() {
             <Button 
               size="xl" 
               variant="default"
-              className="rounded-full px-12 h-16 flex items-center gap-4 w-fit shadow-lg group transition-all"
+              className="bg-[#2A3F32] hover:bg-[#1A2820] text-white rounded-full px-16 h-20 flex items-center gap-4 w-fit shadow-xl group transition-all duration-500 hover:scale-105"
             >
-              <div className="relative w-7 h-7 transition-transform group-hover:scale-110">
+              <div className="relative w-6 h-6 transition-transform group-hover:scale-110">
                 <Image 
                   src="https://files.catbox.moe/pkq8i0.png" 
                   alt="WhatsApp" 
@@ -86,14 +89,14 @@ export function Narrative() {
                   className="object-contain brightness-0 invert" 
                 />
               </div>
-              <span className="text-sm uppercase tracking-widest font-bold">Agendar consulta</span>
+              <span className="text-[12px] uppercase tracking-[0.2em] font-bold">Agendar consulta</span>
             </Button>
           </FadeIn>
         </div>
       </div>
       
       {/* Subtle Texture Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] z-0" />
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] z-0" />
     </section>
   );
 }
