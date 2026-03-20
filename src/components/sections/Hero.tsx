@@ -13,7 +13,7 @@ export function Hero() {
     <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-x-hidden">
       
       {/* Container de Conteúdo */}
-      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-6 lg:pb-20 px-6 md:px-12">
+      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-0 lg:pb-20 px-6 md:px-12">
         <div className="lg:w-[60%] flex flex-col text-center lg:text-left">
           <FadeIn className="flex flex-col items-center lg:items-start">
             {/* Subtítulo Superior (Kicker) */}
@@ -53,7 +53,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Posicionada rente ao botão com escala 1.2 */}
+      {/* Imagem Mobile - Posicionada muito próxima ao botão com escala 1.2 */}
       <div className="lg:hidden w-full overflow-visible mt-6 mb-16">
         <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-visible">
           <Image
