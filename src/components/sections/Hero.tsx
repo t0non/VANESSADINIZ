@@ -10,10 +10,10 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === "hero")?.imageUrl || "";
 
   return (
-    <section className="relative min-h-screen flex flex-col bg-background overflow-hidden">
+    <section className="relative min-h-screen lg:h-screen flex flex-col bg-background overflow-hidden">
       
       {/* Container de Conteúdo */}
-      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-20 px-6 md:px-12">
+      <div className="container-premium relative z-20 w-full flex flex-col pt-36 lg:pt-52 pb-10 lg:pb-20 px-6 md:px-12">
         <div className="lg:w-[60%] flex flex-col text-center lg:text-left">
           <FadeIn className="flex flex-col items-center lg:items-start">
             {/* Subtítulo Superior (Kicker) */}
@@ -53,7 +53,20 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Desktop - Presença Monumental e Fusão Suave */}
+      {/* Imagem Mobile - Agora abaixo do botão no fluxo (z-10 no mobile) */}
+      <div className="lg:hidden w-full px-6 pb-20 -mt-4">
+        <div className="relative w-full aspect-[3/4] flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_98%)]">
+          <Image
+            src={heroImage}
+            alt="Dra. Vanessa Diniz"
+            fill
+            className="object-contain object-bottom scale-110 origin-bottom"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Imagem Desktop - Mantida como absoluta para layout lateral */}
       <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10">
         <FadeIn 
           delay={300} 
@@ -70,19 +83,6 @@ export function Hero() {
             />
           </div>
         </FadeIn>
-      </div>
-
-      {/* Imagem Mobile - Enquadramento Monumental e Sem Cortes (Container de Altura Total) */}
-      <div className="lg:hidden absolute inset-0 w-full h-full flex items-end justify-center z-10 pointer-events-none">
-        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_95%)]">
-          <Image
-            src={heroImage}
-            alt="Dra. Vanessa Diniz"
-            fill
-            className="object-contain object-bottom scale-[2.2] origin-bottom -translate-y-32"
-            priority
-          />
-        </div>
       </div>
 
       {/* Textura de Fundo Sutil */}
