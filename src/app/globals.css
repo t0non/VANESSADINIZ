@@ -61,9 +61,7 @@
   animation: scroll-marquee 40s linear infinite;
 }
 
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
+/* Removido a pausa no hover para evitar travamentos no touch de dispositivos móveis */
 
 .fade-in-section {
   opacity: 0;
