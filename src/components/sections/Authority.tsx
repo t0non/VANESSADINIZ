@@ -9,7 +9,7 @@ export function Authority() {
   const doctorImage = PlaceHolderImages.find(img => img.id === "doctor")?.imageUrl || "";
 
   return (
-    <section id="sobre" className="py-32 bg-background overflow-hidden">
+    <section id="sobre" className="pt-20 pb-32 md:pt-24 bg-background overflow-hidden">
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
@@ -30,7 +30,7 @@ export function Authority() {
           </FadeIn>
 
           {/* Coluna do Texto (Mobile & Desktop) */}
-          <FadeIn delay={200} className="lg:order-2 py-12 flex flex-col items-center lg:items-start text-center lg:text-left">
+          <FadeIn delay={200} className="lg:order-2 py-6 md:py-12 flex flex-col items-center lg:items-start text-center lg:text-left">
             <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-6 block opacity-80">A Especialista</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline mb-0 lg:mb-8 text-primary leading-tight">
               Experiência clínica guiada pelo <span className="italic font-normal">afeto e pela ciência.</span>
