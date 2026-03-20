@@ -78,7 +78,7 @@ export function Narrative() {
         {/* Right: Content Container */}
         <div className="p-8 md:p-16 lg:p-24 xl:p-32 flex flex-col justify-center bg-[#FBFBF9]">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline leading-tight mb-10 text-[#2A3F32]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline leading-tight mb-10 text-[#2A3F32] pt-16 md:pt-0">
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
 
