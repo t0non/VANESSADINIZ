@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section className="relative min-h-[100vh] flex items-center pt-32 lg:pt-0 overflow-hidden bg-background">
       
-      {/* Container de Conteúdo - Mantém o alinhamento e margens padrão */}
+      {/* Container de Conteúdo - Alinhamento e proporção ajustados para Desktop */}
       <div className="container-premium relative z-20 w-full">
         <div className="lg:w-[60%] flex flex-col justify-center">
           <FadeIn className="space-y-10">
@@ -21,7 +21,7 @@ export function Hero() {
                 GERIATRIA E LONGEVIDADE PREMIUM
               </span>
               
-              <h1 className="text-4xl md:text-5xl lg:text-[72px] font-headline leading-[1.1] text-primary w-full">
+              <h1 className="text-4xl md:text-5xl lg:text-[64px] font-headline leading-[1.15] text-primary w-full max-w-[800px]">
                 O privilégio de envelhecer<br />
                 com saúde, autonomia<br />
                 e propósito.
@@ -49,8 +49,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem da Médica - Desktop (Gigante e Absoluta) */}
-      <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[90vh] items-end justify-center pointer-events-none z-10">
+      {/* Imagem da Médica - Desktop (Posicionamento Absoluto Refinado) */}
+      <div className="hidden lg:flex absolute bottom-0 right-0 w-[45%] h-[85vh] items-end justify-center pointer-events-none z-10">
         <FadeIn 
           delay={300} 
           className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]"
@@ -61,20 +61,20 @@ export function Hero() {
               alt="Dra. Vanessa Diniz"
               fill
               priority
-              className="object-contain object-bottom scale-[1.7] origin-bottom transition-transform duration-1000 hover:scale-[1.75]"
+              className="object-contain object-bottom scale-[1.4] origin-bottom transition-transform duration-1000 hover:scale-[1.45]"
               data-ai-hint="professional doctor"
             />
           </div>
         </FadeIn>
       </div>
 
-      {/* Imagem da Médica - Mobile (Relativa para fluxo de página) */}
-      <div className="lg:hidden w-full h-[55vh] relative mt-12 flex items-end justify-center px-6 z-10 [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
+      {/* Imagem da Médica - Mobile (Mantida a estrutura original de fluxo) */}
+      <div className="lg:hidden w-full h-[50vh] relative mt-12 flex items-end justify-center px-6 z-10 [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]">
         <Image
           src={heroImage}
           alt="Dra. Vanessa Diniz"
           fill
-          className="object-contain object-bottom scale-125 origin-bottom"
+          className="object-contain object-bottom scale-110 origin-bottom"
         />
       </div>
 
