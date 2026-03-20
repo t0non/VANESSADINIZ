@@ -8,28 +8,37 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export function WhatsAppButton() {
+  const doctorImage = PlaceHolderImages.find(img => img.id === "doctor")?.imageUrl || "";
+
   return (
     <div className="fixed bottom-10 right-10 z-[60]">
       <Popover>
         <PopoverTrigger asChild>
           <button
-            className="flex items-center gap-3 group outline-none"
+            className="relative flex items-center group outline-none transition-transform hover:scale-105 active:scale-95"
             aria-label="Abrir widget de atendimento"
           >
-            <div className="hidden md:block bg-white text-primary text-[10px] md:text-[12px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 opacity-90 group-hover:opacity-100">
+            {/* Mensagem flutuante lateral */}
+            <div className="hidden md:block absolute right-full mr-4 bg-white text-primary text-[12px] uppercase tracking-widest font-bold px-6 py-3 rounded-full shadow-xl border border-border/50 transition-all duration-500 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 pointer-events-none whitespace-nowrap">
               Como podemos ajudar?
             </div>
-            <div className="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-500 flex items-center justify-center">
-              <div className="relative w-7 h-7">
-                <Image 
-                  src="https://files.catbox.moe/pkq8i0.png" 
-                  alt="WhatsApp" 
-                  fill 
-                  className="object-contain brightness-0 invert" 
-                />
-              </div>
+
+            {/* Container da Imagem de Perfil Circular */}
+            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white shadow-2xl overflow-hidden bg-secondary/20">
+              <Image 
+                src={doctorImage} 
+                alt="Dra. Vanessa Diniz" 
+                fill 
+                className="object-cover object-top" 
+              />
+            </div>
+
+            {/* Indicador de Status Online (Ponto Verde) */}
+            <div className="absolute bottom-1 right-1 w-5 h-5 md:w-6 md:h-6 bg-[#25D366] rounded-full border-2 border-white shadow-lg flex items-center justify-center">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             </div>
           </button>
         </PopoverTrigger>
@@ -138,3 +147,4 @@ export function WhatsAppButton() {
     </div>
   );
 }
+
