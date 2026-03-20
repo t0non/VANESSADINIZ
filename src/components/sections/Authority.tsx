@@ -13,14 +13,14 @@ export function Authority() {
     <section id="sobre" className="py-32 bg-secondary/10 overflow-hidden">
       <div className="container-premium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Coluna da Imagem: Agora com altura flexível para acompanhar o texto */}
+          {/* Coluna da Imagem: Com escala aumentada para maior destaque */}
           <FadeIn className="relative flex items-end justify-center order-2 lg:order-1 self-stretch">
-            <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:h-full min-h-[500px] lg:min-h-[800px] flex items-end [mask-image:linear-gradient(to_bottom,black_80%,rgba(0,0,0,0.8)_90%,transparent_100%)]">
+            <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:h-full min-h-[500px] lg:min-h-[800px] flex items-end [mask-image:linear-gradient(to_bottom,black_85%,rgba(0,0,0,0.8)_92%,transparent_100%)]">
               <Image
                 src={doctorImage}
                 alt="Dra. Vanessa Diniz"
                 fill
-                className="object-contain object-bottom transition-transform duration-1000 hover:scale-[1.02]"
+                className="object-contain object-bottom scale-[1.2] origin-bottom transition-transform duration-1000 hover:scale-[1.25]"
                 data-ai-hint="professional doctor"
                 priority
               />
