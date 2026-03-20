@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -26,7 +27,7 @@ const specialties = [
 
 export function Narrative() {
   return (
-    <section className="relative w-full overflow-hidden bg-accent">
+    <section className="relative w-full overflow-hidden bg-[#F5F1EE]">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left: Image Container Refined with Mask and Scale */}
         <div className="relative h-[70vh] lg:h-auto min-h-[600px] flex items-end [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
@@ -45,7 +46,7 @@ export function Narrative() {
             <h2 className="text-4xl md:text-5xl font-headline leading-tight mb-8">
               Vamos mudar a narrativa sobre o envelhecimento?
             </h2>
-            <div className="space-y-6 text-sm md:text-base font-light opacity-90 mb-12 max-w-xl">
+            <div className="space-y-6 text-sm md:text-base font-light text-primary/70 mb-12 max-w-xl">
               <p>
                 Não somos capazes de parar o tempo, mas podemos repensar os estigmas que foram construídos sobre este processo e assim desfrutar uma vida ativa, dinâmica e feliz.
               </p>
@@ -60,7 +61,7 @@ export function Narrative() {
               {specialties.map((item, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/90 backdrop-blur-sm rounded-full py-4 px-8 flex items-center gap-4 text-primary shadow-sm transition-transform hover:scale-[1.02]"
+                  className="bg-white/95 backdrop-blur-sm rounded-full py-4 px-8 flex items-center gap-4 text-primary shadow-sm transition-transform hover:scale-[1.02]"
                 >
                   <div className="shrink-0">
                     {item.icon}
@@ -75,7 +76,7 @@ export function Narrative() {
             <Button 
               size="xl" 
               variant="default"
-              className="rounded-full px-12 h-16 flex items-center gap-4 w-fit shadow-xl group transition-all"
+              className="rounded-full px-12 h-16 flex items-center gap-4 w-fit shadow-lg group transition-all"
             >
               <div className="relative w-7 h-7 transition-transform group-hover:scale-110">
                 <Image 
@@ -92,7 +93,7 @@ export function Narrative() {
       </div>
       
       {/* Subtle Texture Overlay */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] z-0" />
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] z-0" />
     </section>
   );
 }
