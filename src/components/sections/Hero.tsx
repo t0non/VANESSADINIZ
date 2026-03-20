@@ -21,12 +21,12 @@ export function Hero() {
               Geriatria e Longevidade Premium
             </span>
             
-            {/* Título Principal (H1) - Monumental e Elegante */}
+            {/* Título Principal (H1) - Monumental e Elegante (Sem itálicos conforme solicitado) */}
             <h1 className="text-[46px] md:text-5xl lg:text-[72px] font-headline leading-[1.25] text-primary mb-8 max-w-[850px]">
               O privilégio de envelhecer com saúde, autonomia e propósito.
             </h1>
 
-            {/* Texto de Apoio (Subheadline) - Reduzido para elegância e hierarquia */}
+            {/* Texto de Apoio (Subheadline) */}
             <p className="text-sm md:text-xl text-primary/60 font-body leading-[1.6] max-w-[320px] lg:max-w-xl mb-10">
               Cuidado médico integral para quem busca viver a melhor versão da maturidade. Um acompanhamento sem pressa, focado na sua história.
             </p>
@@ -53,7 +53,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Mobile - Posicionada um pouco mais para baixo com escala 1.6 */}
+      {/* Imagem Mobile - Escala 1.6 e Margem Negativa para proximidade ideal */}
       <div className="lg:hidden w-full overflow-visible -mt-32 mb-16">
         <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-visible">
           <Image
@@ -70,13 +70,13 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Imagem Desktop - Reposicionada para baixo */}
+      {/* Imagem Desktop - Posicionada MAIS PARA CIMA (Removido translate-y-40) */}
       <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[95vh] items-end justify-center pointer-events-none z-10 overflow-hidden">
         <FadeIn 
           delay={300} 
           className="w-full h-full relative flex items-end"
         >
-          <div className="relative w-full h-full flex items-end translate-y-40">
+          <div className="relative w-full h-full flex items-end translate-y-0">
             <Image
               src={heroImage}
               alt="Dra. Vanessa Diniz"
