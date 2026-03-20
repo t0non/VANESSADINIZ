@@ -37,7 +37,7 @@ export function Navbar() {
           className={cn(
             "w-full flex justify-center lg:justify-between items-center px-6 md:px-10 py-3 rounded-full transition-all duration-500 pointer-events-auto relative",
             isScrolled 
-              ? "bg-white/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]" 
+              ? "bg-white/40 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]" 
               : "bg-transparent py-4"
           )}
         >
@@ -89,7 +89,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-4 right-4 mt-4 bg-white/90 backdrop-blur-2xl border border-white/20 rounded-3xl p-10 flex flex-col items-center space-y-6 lg:hidden animate-in fade-in slide-in-from-top-4 duration-500 shadow-2xl pointer-events-auto">
+        <div className="absolute top-full left-4 right-4 mt-4 bg-white/90 backdrop-blur-md border border-white/20 rounded-3xl p-10 flex flex-col items-center space-y-6 lg:hidden animate-in fade-in slide-in-from-top-4 duration-500 shadow-2xl pointer-events-auto">
           {navLinks.map((item) => (
             <Link
               key={item.id}
