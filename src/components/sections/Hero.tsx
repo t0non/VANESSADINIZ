@@ -50,7 +50,7 @@ export function Hero() {
       </div>
 
       {/* Imagem da Médica - Desktop (Posicionamento Absoluto Refinado) */}
-      <div className="hidden lg:flex absolute bottom-0 right-0 w-[45%] h-[85vh] items-end justify-center pointer-events-none z-10">
+      <div className="hidden lg:flex absolute bottom-0 right-0 w-[50%] h-[90vh] items-end justify-center pointer-events-none z-10">
         <FadeIn 
           delay={300} 
           className="w-full h-full relative flex items-end [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]"
@@ -61,7 +61,7 @@ export function Hero() {
               alt="Dra. Vanessa Diniz"
               fill
               priority
-              className="object-contain object-bottom scale-[1.4] origin-bottom transition-transform duration-1000 hover:scale-[1.45]"
+              className="object-contain object-bottom scale-[1.7] origin-bottom transition-transform duration-1000 hover:scale-[1.75]"
               data-ai-hint="professional doctor"
             />
           </div>
