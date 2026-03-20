@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -60,10 +59,10 @@ const specialties = [
 
 export function Narrative() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#FBFBF9] py-24 lg:py-0">
+    <section className="relative w-full overflow-hidden bg-[#FBFBF9] pt-0 pb-24 lg:py-0">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left: Image Container */}
-        <div className="relative h-[60vh] lg:h-screen flex items-end justify-center overflow-visible">
+        <div className="relative h-[45vh] lg:h-screen flex items-end justify-center overflow-visible">
           <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_75%,rgba(0,0,0,0.8)_85%,transparent_100%)]">
             <Image
               src="https://files.catbox.moe/cmawq4.png"
