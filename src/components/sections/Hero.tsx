@@ -68,14 +68,14 @@ export function Hero() {
         </FadeIn>
       </div>
 
-      {/* Imagem da Médica - Mobile (Fixa na base da tela) */}
-      <div className="lg:hidden mt-auto w-full h-[42vh] relative flex items-end justify-center z-10">
-        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]">
+      {/* Imagem da Médica - Mobile (Fixa na base da tela e ampliada) */}
+      <div className="lg:hidden mt-auto w-full h-[50vh] relative flex items-end justify-center z-10">
+        <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_65%,transparent_100%)]">
           <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[1.15] origin-bottom"
+            className="object-contain object-bottom scale-[1.5] origin-bottom"
             priority
           />
         </div>
