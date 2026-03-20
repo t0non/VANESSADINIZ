@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 export function CTA() {
   return (
-    <section className="py-40 bg-primary text-primary-foreground relative overflow-hidden">
+    <section className="py-40 bg-gradient-to-br from-primary via-primary to-[#1A2820] text-primary-foreground relative overflow-hidden">
       <div className="container-premium relative z-10 text-center">
         <FadeIn>
           <h2 className="text-4xl md:text-6xl font-headline mb-10 max-w-4xl mx-auto leading-tight italic">

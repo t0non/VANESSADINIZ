@@ -38,8 +38,8 @@ export function Pillars() {
   return (
     <section id="pilares" className="relative w-full py-40 overflow-hidden bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('https://files.catbox.moe/thg2g3.jpg')" }}>
       
-      {/* Overlay Verde Premium */}
-      <div className="absolute inset-0 bg-[#2A3F32]/90 z-0"></div>
+      {/* Overlay Verde Premium com Degradê */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2A3F32]/95 via-[#2A3F32]/85 to-[#1A2820]/95 z-0"></div>
 
       <div className="relative z-20 container-premium">
         <div className="text-center mb-24">
@@ -54,7 +54,7 @@ export function Pillars() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {pillars.map((pillar, index) => (
             <FadeIn key={index} delay={index * 150}>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-12 rounded-sm text-center hover:bg-white/10 transition duration-500 group h-full">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-12 rounded-sm text-center hover:bg-white/10 transition-all duration-500 group h-full">
                 <div className="flex justify-center mb-8 text-accent transition-transform duration-500 group-hover:scale-110">
                   {pillar.icon}
                 </div>
