@@ -78,7 +78,7 @@ export function Hero() {
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
-            className="object-contain object-bottom scale-[2.2] origin-bottom"
+            className="object-contain object-bottom scale-[2.0] origin-bottom"
             priority
           />
         </div>
