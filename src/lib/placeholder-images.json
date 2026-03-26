@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "logo",
+      "description": "Dra. Vanessa Diniz Logo",
+      "imageUrl": "https://files.catbox.moe/ulpl82.png",
+      "imageHint": "medical logo"
+    },
+    {
+      "id": "hero",
+      "description": "Dra. Vanessa Diniz",
+      "imageUrl": "https://files.catbox.moe/cmawq4.png",
+      "imageHint": "professional doctor"
+    },
+    {
+      "id": "doctor",
+      "description": "Dra. Vanessa Diniz - Experiência Clínica",
+      "imageUrl": "https://files.catbox.moe/nuwrcf.png",
+      "imageHint": "professional doctor"
+    },
+    {
+      "id": "empathy",
+      "description": "Dra. Vanessa Diniz - Um olhar integral",
+      "imageUrl": "https://files.catbox.moe/srj2qi.png",
+      "imageHint": "elderly couple"
+    },
+    {
+      "id": "office",
+      "description": "Consultório Premium",
+      "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop",
+      "imageHint": "luxury clinic room"
+    },
+    {
+      "id": "chat-profile",
+      "description": "Dra. Vanessa Diniz - Perfil Chat",
+      "imageUrl": "https://files.catbox.moe/e9jr9a.png",
+      "imageHint": "doctor profile"
+    }
+  ]
+}
