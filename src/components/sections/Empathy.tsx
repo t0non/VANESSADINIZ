@@ -25,16 +25,18 @@ export function Empathy() {
             
             {/* Imagem Mobile com Máscara de Fusão */}
             <FadeIn delay={100} className="lg:hidden mb-4">
-              <div className="[mask-image:linear-gradient(to_bottom,black_10%,black_40%,transparent_90%)]">
-                <Image
-                  src={empathyImage}
-                  alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
-                  width={1200}
-                  height={1200}
-                  className="w-full h-auto object-contain"
-                  data-ai-hint="elderly couple"
-                />
-              </div>
+              <Image
+                src={empathyImage}
+                alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
+                width={1200}
+                height={1200}
+                className="w-full h-auto object-contain"
+                style={{ 
+                  maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
+                }}
+                data-ai-hint="elderly couple"
+              />
             </FadeIn>
 
             <FadeIn delay={200} className="space-y-10 text-lg md:text-xl text-primary/60 font-light leading-relaxed max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
@@ -49,17 +51,19 @@ export function Empathy() {
           
           {/* Imagem Desktop com Fusão */}
           <FadeIn delay={300} className="hidden lg:block">
-            <div className="[mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
-              <Image
-                src={empathyImage}
-                alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
-                width={1200}
-                height={1200}
-                className="w-full h-auto object-contain"
-                data-ai-hint="elderly couple"
-                priority
-              />
-            </div>
+            <Image
+              src={empathyImage}
+              alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
+              width={1200}
+              height={1200}
+              className="w-full h-auto object-contain"
+              style={{ 
+                maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
+              }}
+              data-ai-hint="elderly couple"
+              priority
+            />
           </FadeIn>
         </div>
       </div>

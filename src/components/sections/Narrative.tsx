@@ -21,12 +21,16 @@ export function Narrative() {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Imagem Desktop - Sem cortes e com escala imponente */}
         <div className="hidden lg:flex relative h-screen items-end justify-center">
-          <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_40%,transparent_90%)]">
+          <div className="relative w-full h-full flex items-end">
             <Image
-              src="https://files.catbox.moe/cmawq4.png"
+              src="/areas/Narrativa.png"
               alt="Dra. Vanessa Diniz"
               fill
-              className="object-contain object-bottom scale-[1.5] origin-bottom"
+              className="object-contain object-bottom scale-[1.0] origin-bottom translate-x-12 -translate-y-10"
+              style={{ 
+                maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+              }}
               priority
             />
           </div>
@@ -41,12 +45,16 @@ export function Narrative() {
 
             {/* Imagem Mobile - Escala 1.8x e posicionamento equilibrado */}
             <div className="lg:hidden relative w-full h-[45vh] mb-16 overflow-visible flex items-end justify-center">
-               <div className="relative w-full h-full flex items-end [mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]">
+               <div className="relative w-full h-full flex items-end">
                 <Image
-                  src="https://files.catbox.moe/cmawq4.png"
+                  src="/areas/Narrativa.png"
                   alt="Dra. Vanessa Diniz"
                   fill
-                  className="object-contain object-bottom scale-[1.8] origin-bottom"
+                  className="object-contain object-bottom scale-[1.0] origin-bottom translate-x-6 -translate-y-6"
+                  style={{ 
+                    maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+                  }}
                   priority
                 />
               </div>
@@ -54,10 +62,10 @@ export function Narrative() {
             
             <div className="space-y-6 text-[#4B5563] font-body font-light text-base md:text-lg leading-[1.8] mb-16 max-w-2xl">
               <p>
-                Não somos capazes de parar o tempo, mas podemos repensar os estigmas que foram construídos sobre este processo e assim desfrutar uma vida ativa, dinâmica e feliz.
+                Não somos capazes de parar o tempo, mas podemos <strong className="font-medium text-[#2A3F32]">repensar os estigmas</strong> que foram construídos sobre este processo e assim desfrutar uma <strong className="font-medium text-[#2A3F32]">vida ativa, dinâmica e feliz</strong>.
               </p>
               <p>
-                Com cuidado geriátrico especializado, baseado em ciência, é SIM possível envelhecer com saúde, preservar a independência e a autonomia.
+                Com <strong className="font-medium text-[#2A3F32]">cuidado geriátrico especializado</strong>, baseado em ciência, é SIM possível <strong className="font-medium text-[#2A3F32]">envelhecer com saúde</strong>, preservar a <strong className="font-medium text-[#2A3F32]">independência e a autonomia</strong>.
               </p>
             </div>
 
@@ -83,7 +91,7 @@ export function Narrative() {
                 variant="default"
                 className="bg-[#2A3F32] hover:bg-[#1A2820] text-white rounded-full px-16 h-20 flex items-center gap-4 w-fit shadow-xl group transition-all duration-500 hover:scale-105 border-none"
               >
-                <div className="relative w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:scale-110">
+                <div className="relative w-7 h-7 md:w-8 md:h-8 transition-transform group-hover:scale-110">
                   <Image 
                     src="https://files.catbox.moe/pkq8i0.png" 
                     alt="WhatsApp" 

@@ -18,7 +18,7 @@ export function Solution() {
             <div className="aspect-[4/5] relative overflow-hidden rounded-sm grayscale-[0.3] hover:grayscale-0 transition-all duration-1000">
               <Image
                 src={doctorImage}
-                alt="Dra. Luísa Mendes"
+                alt="Dra. Vanessa Diniz"
                 fill
                 className="object-cover"
                 data-ai-hint="doctor portrait"

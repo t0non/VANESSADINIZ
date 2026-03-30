@@ -19,11 +19,11 @@ export function CTA() {
           <div className="flex justify-center items-center w-full max-w-md mx-auto">
             <Link href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
               <Button 
-                size="xl"
+                size="xl" 
                 variant="accent"
-                className="w-full md:w-auto gap-5 text-sm md:text-lg lettering-wide font-bold px-10 md:px-16 h-20 md:h-24 group rounded-full"
+                className="bg-[#CDB596] hover:bg-[#B89B7A] text-white rounded-full flex items-center justify-center gap-4 transition-all duration-500 shadow-2xl group hover:scale-105 border-none px-12 h-16 md:h-20"
               >
-                <div className="relative w-6 h-6 md:w-8 md:h-8 transition-transform group-hover:scale-110">
+                <div className="relative w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:scale-110 shrink-0">
                   <Image 
                     src="https://files.catbox.moe/pkq8i0.png" 
                     alt="WhatsApp" 
@@ -31,7 +31,7 @@ export function CTA() {
                     className="object-contain brightness-0 invert" 
                   />
                 </div>
-                <span>Agendar via WhatsApp</span>
+                <span className="text-[11px] md:text-[14px] font-bold uppercase tracking-[0.2em] whitespace-nowrap">Agendar via WhatsApp</span>
               </Button>
             </Link>
           </div>

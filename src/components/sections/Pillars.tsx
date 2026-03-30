@@ -1,93 +1,129 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { Button } from "@/components/ui/button";
 
-const pillars = [
+const areas = [
   {
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.829 1.58-2.126a8.204 8.204 0 004.14-3.153M6.168 12.528a8.204 8.204 0 004.14 3.153c.922.297 1.58 1.143 1.58 2.126v.192M14.25 12.528A8.204 8.204 0 0118.39 9.375c.922-.297 1.58-1.143 1.58-2.126v-.192m-9.84-2.157A8.204 8.204 0 002.04 9.375C1.118 9.672.46 10.518.46 11.5v.192m13.79-2.157A8.204 8.204 0 0114.25 6v-.192c0-.983-.658-1.829-1.58-2.126M6.168 9.375A8.204 8.204 0 0010.31 6.222C11.232 5.925 11.89 5.079 11.89 4.096v-.192"/>
-      </svg>
-    ),
-    title: "Avaliação Geriátrica",
-    description: "Mapeamento completo da saúde física e cognitiva para um cuidado personalizado e profundo."
+    title: "Planejamento de envelhecimento saudável e prevenção de doenças",
+    image: "/areas/envelhecimento.png",
+    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Planejamento%20de%20Envelhecimento%20Saud%C3%A1vel.",
   },
   {
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    ),
-    title: "Prevenção e Longevidade",
-    description: "Estratégias científicas para preservar a memória e garantir independência na maturidade."
+    title: "Alterações de memória e demências, como a Doença de Alzheimer",
+    image: "/areas/alzheimer.png",
+    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Altera%C3%A7%C3%B5es%20de%20Mem%C3%B3ria.",
   },
   {
-    icon: (
-      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-      </svg>
-    ),
-    title: "Acolhimento Familiar",
-    description: "Orientação clara e apoio constante aos familiares de quem cuidamos."
-  }
+    title: "Alterações motoras, como a Doença de Parkinson",
+    image: "/areas/parkinson.png",
+    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Altera%C3%A7%C3%B5es%20Motoras.",
+  },
+  {
+    title: "Depressão, ansiedade e outros transtornos psiquiátricos no idoso",
+    image: "/areas/depressao.png",
+    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Sa%C3%BAde%20Mental%20no%20Idoso.",
+  },
+  {
+    title: "Osteoporose. Prevenção de quedas e fraturas",
+    image: "/areas/osteoporose.png",
+    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Osteoporose%20e%20Preven%C3%A7%C3%A3o%20de%20Quedas.",
+  },
+  {
+    title: "Infecções urinárias de repetição e incontinência urinária",
+    image: "/areas/infeccao.png",
+    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Infec%C3%A7%C3%B5es%20Urin%C3%A1rias.",
+  },
+  {
+    title: "Acompanhamento de doenças crônicas: diabetes, hipertensão, disfunção hormonal e outras",
+    image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&q=80",
+    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Doen%C3%A7as%20Cr%C3%B4nicas.",
+  },
+  {
+    title: "Doenças em fase avançada e finitude",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Cuidados%20em%20Fase%20Avan%C3%A7ada.",
+  },
 ];
 
 export function Pillars() {
   return (
-    <section id="pilares" className="relative w-full pt-20 pb-32 md:pt-32 md:pb-40 overflow-hidden bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('https://files.catbox.moe/thg2g3.jpg')" }}>
-      
-      {/* Overlay Verde Premium com Degradê */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#2A3F32]/95 via-[#2A3F32]/85 to-[#1A2820]/95 z-0"></div>
+    <section id="pilares" className="relative w-full py-24 md:py-36 bg-[#F8F7F4] overflow-hidden">
+      <div className="container-premium">
 
-      <div className="relative z-20 container-premium">
-        <div className="text-center mb-16 md:mb-24">
-          <FadeIn>
-            <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-4 block">Metodologia</span>
-            <h2 className="text-3xl md:text-5xl font-headline text-[#FBFBF9] mb-6">
-              Os Pilares do Nosso Cuidado
-            </h2>
-          </FadeIn>
-        </div>
+        {/* Cabeçalho */}
+        <FadeIn className="text-center mb-16 md:mb-24">
+          <span className="text-accent text-[10px] uppercase tracking-[0.4em] font-bold mb-4 block">
+            Áreas de Atuação
+          </span>
+          <h2 className="text-3xl md:text-5xl font-headline text-primary mb-6 leading-tight max-w-3xl mx-auto">
+            Principais condições que acompanho no{" "}
+            <span className="italic font-normal">cuidado da pessoa idosa</span>
+          </h2>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 md:mb-20">
-          {pillars.map((pillar, index) => (
-            <FadeIn key={index} delay={index * 150}>
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-12 rounded-sm text-center hover:bg-white/10 transition-all duration-500 group h-full">
-                <div className="flex justify-center mb-8 text-accent transition-transform duration-500 group-hover:scale-110">
-                  {pillar.icon}
+        {/* Grid de Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {areas.map((area, index) => (
+            <FadeIn key={index} delay={index * 80}>
+              <Link
+                href={area.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block relative overflow-hidden rounded-2xl aspect-[3/4] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
+              >
+                {/* Foto */}
+                <Image
+                  src={area.image}
+                  alt={area.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+
+                {/* Overlay Gradiente sempre visível na base */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A2820]/90 via-[#2A3F32]/30 to-transparent" />
+
+                {/* Hover overlay adicional */}
+                <div className="absolute inset-0 bg-[#2A3F32]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Conteúdo de Texto na Base */}
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                  <h3 className="text-white font-headline text-base md:text-lg leading-snug mb-3">
+                    {area.title}
+                  </h3>
+                  <div className="flex items-center gap-2 text-white/70 text-[10px] uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">
+                    <span>Saiba mais</span>
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </div>
-                <h3 className="text-xl font-headline text-[#FBFBF9] mb-6 tracking-wide">
-                  {pillar.title}
-                </h3>
-                <p className="text-[#FBFBF9]/70 font-light leading-relaxed text-sm">
-                  {pillar.description}
-                </p>
-              </div>
+              </Link>
             </FadeIn>
           ))}
         </div>
 
-        <div className="flex justify-center">
-          <FadeIn delay={600}>
-            <Button 
-              variant="accent" 
-              size="xl" 
-              className="text-[10px] md:text-sm lettering-wide font-bold px-8 md:px-16 h-14 md:h-20 gap-3 md:gap-4 group rounded-full shadow-xl w-fit max-w-[90vw] mx-auto"
-            >
-              <div className="relative w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:scale-110">
-                <Image 
-                  src="https://files.catbox.moe/pkq8i0.png" 
-                  alt="WhatsApp" 
-                  fill 
-                  className="object-contain brightness-0 invert" 
-                />
-              </div>
-              <span className="truncate">Saber mais sobre as consultas</span>
-            </Button>
-          </FadeIn>
-        </div>
+        {/* CTA abaixo */}
+        <FadeIn delay={400} className="flex justify-center mt-16 md:mt-20">
+          <Link
+            href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-primary hover:bg-[#1A2820] text-white px-12 h-16 rounded-full font-bold text-[11px] uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 shadow-xl"
+          >
+            <div className="relative w-7 h-7 transition-transform group-hover:scale-110">
+              <Image
+                src="https://files.catbox.moe/pkq8i0.png"
+                alt="WhatsApp"
+                fill
+                className="object-contain brightness-0 invert"
+              />
+            </div>
+            Agendar Consulta
+          </Link>
+        </FadeIn>
       </div>
     </section>
   );

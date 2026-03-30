@@ -27,7 +27,7 @@ export function Footer() {
               Geriatria & Longevidade. Um olhar atento, integral e humano sobre a saúde na maturidade.
             </p>
             <div className="flex space-x-8 justify-center md:justify-start">
-              <Link href="#" className="text-primary/40 hover:text-accent transition-colors"><Instagram size={20} strokeWidth={1.5} /></Link>
+              <Link href="https://instagram.com/dravanessadinizgeriatra" target="_blank" rel="noopener noreferrer" className="text-primary/40 hover:text-accent transition-colors"><Instagram size={20} strokeWidth={1.5} /></Link>
               <Link href="#" className="text-primary/40 hover:text-accent transition-colors"><Linkedin size={20} strokeWidth={1.5} /></Link>
               <Link href="#" className="text-primary/40 hover:text-accent transition-colors"><Mail size={20} strokeWidth={1.5} /></Link>
             </div>
@@ -39,11 +39,15 @@ export function Footer() {
             <ul className="space-y-6 text-sm font-light text-primary/60">
               <li className="flex flex-col md:flex-row items-center md:items-start gap-4">
                 <MapPin className="w-4 h-4 text-accent shrink-0 md:mt-1" />
-                <span className="leading-relaxed">Consultório Particular<br />Belo Horizonte, MG</span>
+                <span className="leading-relaxed">Rua Jaceguai, 208 – Sala 1408<br />Instituto Hiraki – Bairro Prado<br />Belo Horizonte, MG</span>
               </li>
               <li className="flex flex-col md:flex-row items-center md:items-start gap-4">
                 <Phone className="w-4 h-4 text-accent shrink-0" />
-                <span>(31) 3157-6255</span>
+                <span>
+                  <a href="tel:+553131576255" className="hover:text-accent transition-colors">(31) 3157-6255</a>
+                  {" · "}
+                  <a href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
+                </span>
               </li>
             </ul>
           </div>
@@ -63,7 +67,7 @@ export function Footer() {
           <div className="flex flex-col items-center md:items-start">
             <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-accent mb-10">Atendimento</h4>
             <p className="text-sm font-light text-primary/60 mb-4">Segunda a Sexta</p>
-            <p className="text-xl font-headline text-primary mb-2">09h às 18h</p>
+            <p className="text-xl font-headline text-primary mb-2">08h às 18h</p>
             <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-primary mt-10">CRM-MG 78668</p>
           </div>
         </div>

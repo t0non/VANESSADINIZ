@@ -7,10 +7,10 @@ import { Authority } from "@/components/sections/Authority";
 import { Narrative } from "@/components/sections/Narrative";
 import { OfficeExperience } from "@/components/sections/OfficeExperience";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { InstagramFeed } from "@/components/sections/InstagramFeed";
 import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -23,10 +23,10 @@ export default function Home() {
       <Narrative />
       <OfficeExperience />
       <Testimonials />
+      <InstagramFeed />
       <FAQ />
       <CTA />
       <Footer />
-      <WhatsAppButton />
     </main>
   );
 }
