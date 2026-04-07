@@ -15,7 +15,7 @@ const modalities = [
       "Instituto Hiraki – Bairro Prado",
       "Belo Horizonte, MG",
     ],
-    cta: "Agendar consulta presencial",
+    cta: "Agendar consulta",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta%20presencial.",
     accent: true,
   },
@@ -28,7 +28,7 @@ const modalities = [
       "Atendimento humanizado",
       "Avaliação completa em domicílio",
     ],
-    cta: "Agendar visita domiciliar",
+    cta: "Agendar visita",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta%20domiciliar.",
     accent: false,
   },
@@ -126,7 +126,7 @@ export function OfficeExperience() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center justify-center gap-3 h-14 rounded-full text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-500 hover:scale-[1.03] ${
+                  className={`inline-flex items-center justify-center gap-3 h-14 px-10 rounded-full text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-500 hover:scale-[1.03] ${
                     item.accent
                       ? "bg-accent text-white hover:bg-accent/90 shadow-lg"
                       : "bg-primary text-white hover:bg-[#1A2820] shadow-md"
@@ -138,6 +138,7 @@ export function OfficeExperience() {
                       alt="WhatsApp"
                       fill
                       className="object-contain brightness-0 invert"
+                      sizes="24px"
                     />
                   </div>
                   {item.cta}

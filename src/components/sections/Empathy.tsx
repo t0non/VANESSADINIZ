@@ -19,15 +19,15 @@ export function Empathy() {
                 Empatia e Acolhimento
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline mb-8 md:mb-12 leading-tight text-primary text-center lg:text-left">
-                Um olhar integral para quem <span className="italic font-normal">dedicou a vida a cuidar.</span>
+                Cuidado de excelência para quem <span className="italic font-normal">dedicou a vida a cuidar.</span>
               </h2>
             </FadeIn>
             
             {/* Imagem Mobile com Máscara de Fusão */}
             <FadeIn delay={100} className="lg:hidden mb-4">
-              <Image
+                <Image
                 src={empathyImage}
-                alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
+                alt="Paciente idoso recebendo cuidado humanizado e afetuoso"
                 width={1200}
                 height={1200}
                 className="w-full h-auto object-contain"
@@ -36,6 +36,7 @@ export function Empathy() {
                   WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
                 }}
                 data-ai-hint="elderly couple"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </FadeIn>
 
@@ -53,7 +54,7 @@ export function Empathy() {
           <FadeIn delay={300} className="hidden lg:block">
             <Image
               src={empathyImage}
-              alt="Dra. Vanessa Diniz - Cuidado e acolhimento"
+              alt="Dra. Vanessa Diniz - Filosofia de cuidado humanizado e integral"
               width={1200}
               height={1200}
               className="w-full h-auto object-contain"
@@ -62,7 +63,8 @@ export function Empathy() {
                 WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
               }}
               data-ai-hint="elderly couple"
-              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
             />
           </FadeIn>
         </div>

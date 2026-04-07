@@ -6,43 +6,43 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 const areas = [
   {
-    title: "Planejamento de envelhecimento saudável e prevenção de doenças",
-    image: "/areas/envelhecimento.png",
+    title: "Envelhecimento Saudável e Prevenção",
+    image: "/areas/envelhecimento.webp",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Planejamento%20de%20Envelhecimento%20Saud%C3%A1vel.",
   },
   {
-    title: "Alterações de memória e demências, como a Doença de Alzheimer",
-    image: "/areas/alzheimer.png",
+    title: "Memória, Demências e Alzheimer",
+    image: "/areas/alzheimer.webp",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Altera%C3%A7%C3%B5es%20de%20Mem%C3%B3ria.",
   },
   {
-    title: "Alterações motoras, como a Doença de Parkinson",
+    title: "Alterações Motoras e Parkinson",
     image: "/areas/parkinson.png",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Altera%C3%A7%C3%B5es%20Motoras.",
   },
   {
-    title: "Depressão, ansiedade e outros transtornos psiquiátricos no idoso",
-    image: "/areas/depressao.png",
+    title: "Depressão e Saúde Mental",
+    image: "/areas/depressao.jpg",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Sa%C3%BAde%20Mental%20no%20Idoso.",
   },
   {
-    title: "Osteoporose. Prevenção de quedas e fraturas",
-    image: "/areas/osteoporose.png",
+    title: "Osteoporose e Prevenção de Quedas",
+    image: "/areas/osteoporose.webp",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Osteoporose%20e%20Preven%C3%A7%C3%A3o%20de%20Quedas.",
   },
   {
-    title: "Infecções urinárias de repetição e incontinência urinária",
-    image: "/areas/infeccao.png",
+    title: "Infecções Urinárias e Incontinência",
+    image: "/areas/infeccao.webp",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Infec%C3%A7%C3%B5es%20Urin%C3%A1rias.",
   },
   {
-    title: "Acompanhamento de doenças crônicas: diabetes, hipertensão, disfunção hormonal e outras",
-    image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&q=80",
+    title: "Controle de Doenças Crônicas",
+    image: "/areas/acompanhamentos.jpg",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Doen%C3%A7as%20Cr%C3%B4nicas.",
   },
   {
-    title: "Doenças em fase avançada e finitude",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    title: "Cuidados Paliativos e Finitude",
+    image: "/areas/Doencas.avif",
     href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Cuidados%20em%20Fase%20Avan%C3%A7ada.",
   },
 ];
@@ -90,7 +90,7 @@ export function Pillars() {
 
                 {/* Conteúdo de Texto na Base */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                  <h3 className="text-white font-headline text-base md:text-lg leading-snug mb-3">
+                  <h3 className="text-white font-body font-medium text-base md:text-lg leading-snug mb-3">
                     {area.title}
                   </h3>
                   <div className="flex items-center gap-2 text-white/70 text-[10px] uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-400">

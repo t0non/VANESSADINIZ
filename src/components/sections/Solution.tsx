@@ -45,7 +45,7 @@ export function Solution() {
               <div className="pt-8 border-t border-border/50">
                 <p className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-1">CRM-MG 78668</p>
               </div>
-              <Link href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
                 <Button size="xl" variant="default" className="text-xs uppercase tracking-[0.2em] font-bold w-fit bg-primary hover:bg-[#1A2820] text-white rounded-sm border-none">
                   Agendar Consulta
                 </Button>

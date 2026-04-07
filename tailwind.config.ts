@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Montserrat', 'sans-serif'],
-        headline: ['Cormorant Garamond', 'serif'],
+        body: ['var(--font-montserrat)', 'sans-serif'],
+        headline: ['var(--font-cormorant)', 'serif'],
         code: ['monospace'],
       },
       colors: {

@@ -24,14 +24,15 @@ export function Narrative() {
           <div className="relative w-full h-full flex items-end">
             <Image
               src="/areas/Narrativa.png"
-              alt="Dra. Vanessa Diniz"
+              alt="Dra. Vanessa Diniz - Envelhecimento ativo e saudável"
               fill
               className="object-contain object-bottom scale-[1.0] origin-bottom translate-x-12 -translate-y-10"
               style={{ 
                 maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
                 WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
               }}
-              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
             />
           </div>
         </div>
@@ -48,14 +49,15 @@ export function Narrative() {
                <div className="relative w-full h-full flex items-end">
                 <Image
                   src="/areas/Narrativa.png"
-                  alt="Dra. Vanessa Diniz"
+                  alt="Dra. Vanessa Diniz - Atendimento Geriátrico Diferenciado"
                   fill
                   className="object-contain object-bottom scale-[1.0] origin-bottom translate-x-6 -translate-y-6"
                   style={{ 
                     maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
                     WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
                   }}
-                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -85,26 +87,30 @@ export function Narrative() {
               ))}
             </div>
 
-            <Link href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="xl" 
-                variant="default"
-                className="bg-[#2A3F32] hover:bg-[#1A2820] text-white rounded-full px-16 h-20 flex items-center gap-4 w-fit shadow-xl group transition-all duration-500 hover:scale-105 border-none"
-              >
-                <div className="relative w-7 h-7 md:w-8 md:h-8 transition-transform group-hover:scale-110">
-                  <Image 
-                    src="https://files.catbox.moe/pkq8i0.png" 
-                    alt="WhatsApp" 
-                    fill 
-                    className="object-contain brightness-0 invert" 
-                  />
-                </div>
-                <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.2em]">Agendar consulta</span>
-              </Button>
-            </Link>
           </FadeIn>
         </div>
       </div>
+
+      {/* Botão de Agendamento (Centralizado na tela toda) */}
+      <FadeIn delay={300} className="w-full flex justify-center pb-16 lg:pb-32 mt-8 lg:-mt-12 relative z-10">
+        <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
+          <Button 
+            size="xl" 
+            variant="default"
+            className="bg-[#2A3F32] hover:bg-[#1A2820] text-white rounded-full px-16 h-20 flex items-center gap-4 w-fit shadow-xl group transition-all duration-500 hover:scale-105 border-none"
+          >
+            <div className="relative w-7 h-7 md:w-8 md:h-8 transition-transform group-hover:scale-110">
+              <Image 
+                src="https://files.catbox.moe/pkq8i0.png" 
+                alt="WhatsApp" 
+                fill 
+                className="object-contain brightness-0 invert" 
+              />
+            </div>
+            <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.2em]">Agendar consulta</span>
+          </Button>
+        </Link>
+      </FadeIn>
     </section>
   );
 }

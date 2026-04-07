@@ -22,9 +22,9 @@ export function Hero() {
               Geriatra em Belo Horizonte
             </span>
 
-            {/* Título Principal (H1) */}
+            {/* Título Principal (H1) - Otimizado para SEO */}
             <h1 className="text-[46px] md:text-5xl lg:text-[72px] font-headline leading-[1.25] text-primary mb-2 md:mb-8 max-w-[850px]">
-              Dra. Vanessa Diniz
+              Dra. Vanessa Diniz <span className="sr-only">| Geriatra em Belo Horizonte</span>
             </h1>
 
             {/* Frase de Impacto - verbatim */}
@@ -34,7 +34,7 @@ export function Hero() {
 
             {/* CTA Principal */}
             <div className="flex justify-center lg:justify-start w-full">
-              <Link href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="xl" 
                   variant="default"
@@ -46,6 +46,7 @@ export function Hero() {
                       alt="WhatsApp" 
                       fill 
                       className="object-contain brightness-0 invert" 
+                      sizes="32px"
                     />
                   </div>
                   <span className="text-[11px] md:text-[13px] font-bold uppercase tracking-[0.2em]">Agendar Avaliação</span>
@@ -59,7 +60,7 @@ export function Hero() {
       {/* Imagem Mobile - Escala 1.6 e Posicionamento Elevado */}
       <div className="lg:hidden w-full overflow-visible -mt-12 mb-16">
         <div className="relative w-full aspect-[4/5] flex items-end justify-center overflow-visible">
-          <Image
+            <Image
             src={heroImage}
             alt="Dra. Vanessa Diniz"
             fill
@@ -69,6 +70,7 @@ export function Hero() {
               WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
             }}
             priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </div>
@@ -82,7 +84,7 @@ export function Hero() {
           <div className="relative w-full h-full flex items-end translate-y-0">
             <Image
               src={heroImage}
-              alt="Dra. Vanessa Diniz"
+              alt="Dra. Vanessa Diniz - Geriatria e Saúde do Idoso em Belo Horizonte"
               fill
               priority
               className="object-contain object-bottom scale-[0.8] origin-bottom"
@@ -91,6 +93,7 @@ export function Hero() {
                 WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)'
               }}
               data-ai-hint="professional doctor"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </FadeIn>

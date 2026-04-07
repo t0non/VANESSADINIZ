@@ -17,7 +17,7 @@ export function CTA() {
             Estamos prontos para acolher você e sua família. Garanta um acompanhamento médico que prioriza a sua qualidade de vida.
           </p>
           <div className="flex justify-center items-center w-full max-w-md mx-auto">
-            <Link href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
+            <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" className="w-fit md:w-auto mx-auto">
               <Button 
                 size="xl" 
                 variant="accent"
@@ -29,6 +29,7 @@ export function CTA() {
                     alt="WhatsApp" 
                     fill 
                     className="object-contain brightness-0 invert" 
+                    sizes="(max-width: 768px) 24px, 28px"
                   />
                 </div>
                 <span className="text-[11px] md:text-[14px] font-bold uppercase tracking-[0.2em] whitespace-nowrap">Agendar via WhatsApp</span>

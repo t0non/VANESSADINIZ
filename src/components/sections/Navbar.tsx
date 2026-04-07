@@ -33,7 +33,7 @@ export function Navbar() {
   ];
 
   return (
-    <>
+    <header>
       {/* Barra de Endereço Superior - Fixa */}
       <div className="fixed top-0 left-0 w-full bg-primary text-primary-foreground py-2 px-4 z-50 hidden md:flex items-center justify-center gap-10 text-[10px] font-medium tracking-widest uppercase">
         <span className="flex items-center gap-2 opacity-70">
@@ -50,7 +50,7 @@ export function Navbar() {
         </a>
       </div>
 
-      <nav className="fixed top-0 md:top-[36px] w-full z-40 py-4 md:py-6 px-4 md:px-8 transition-all duration-500 pointer-events-none">
+      <nav className="fixed top-0 md:top-[36px] w-full z-40 py-4 md:py-6 px-4 md:px-8 transition-all duration-500 pointer-events-none" aria-label="Navegação Principal">
         <div className="max-w-7xl mx-auto flex justify-center">
           <div
             className={cn(
@@ -64,15 +64,16 @@ export function Navbar() {
             <Link
               href="/"
               className={cn(
-                "relative h-[60px] w-40 md:w-56 transition-transform hover:scale-105 duration-300 z-10 mx-auto lg:mx-0 lg:ml-0"
+                "relative h-[85px] w-56 md:w-72 transition-transform hover:scale-105 duration-300 z-10 mx-auto lg:mx-0 lg:ml-0"
               )}
             >
               <Image
                 src={logoImage}
-                alt="Dra. Vanessa Diniz Logo"
+                alt="Logotipo Dra. Vanessa Diniz - Geriatria e Longevidade"
                 fill
                 className="object-contain object-center lg:object-left"
                 priority
+                sizes="(max-width: 768px) 224px, 224px"
               />
             </Link>
 
@@ -99,14 +100,15 @@ export function Navbar() {
                   </Link>
                 )
               )}
-              <Link href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
                 <Button variant="default" className="bg-[#2D4035] hover:bg-[#1A2820] px-8 h-10 text-[9px] lettering-wide font-bold uppercase tracking-widest gap-2 group rounded-full text-white border-none">
                   <div className="relative w-5 h-5 transition-transform group-hover:scale-110">
                     <Image
                       src="https://files.catbox.moe/pkq8i0.png"
-                      alt="WhatsApp"
+                      alt="Agende via WhatsApp"
                       fill
                       className="object-contain brightness-0 invert"
+                      sizes="20px"
                     />
                   </div>
                   Agendar
@@ -118,7 +120,7 @@ export function Navbar() {
             <button
               className="lg:hidden text-primary p-2 absolute right-4 md:right-8 pointer-events-auto"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Menu"
+              aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -156,7 +158,7 @@ export function Navbar() {
                 </Link>
               )
             )}
-            <Link href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer" className="w-full">
+            <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" className="w-full">
               <Button className="bg-[#2D4035] hover:bg-[#1A2820] w-full h-14 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group rounded-full text-white border-none">
                 <div className="relative w-5 h-5 mr-1">
                   <Image
@@ -164,6 +166,7 @@ export function Navbar() {
                     alt="WhatsApp"
                     fill
                     className="object-contain brightness-0 invert"
+                    sizes="20px"
                   />
                 </div>
                 Agendar Agora
@@ -172,6 +175,6 @@ export function Navbar() {
           </div>
         )}
       </nav>
-    </>
+    </header>
   );
 }

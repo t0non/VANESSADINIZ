@@ -87,6 +87,7 @@ export function Testimonials() {
                 alt="Google"
                 fill
                 className="object-contain"
+                sizes="24px"
               />
             </div>
             <div className="flex gap-0.5 text-[#FBBC05]">
@@ -181,6 +182,7 @@ export function Testimonials() {
                       alt="Google"
                       fill
                       className="object-contain opacity-100"
+                      sizes="24px"
                     />
                   </div>
                 </Link>

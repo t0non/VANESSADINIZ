@@ -21,6 +21,7 @@ export function Footer() {
                 alt="Dra. Vanessa Diniz Logo"
                 fill
                 className="object-contain object-center md:object-left"
+                sizes="(max-width: 768px) 300px, 300px"
               />
             </Link>
             <p className="text-sm leading-relaxed font-light text-primary/60 mb-8 max-w-sm md:max-w-none">
@@ -46,7 +47,7 @@ export function Footer() {
                 <span>
                   <a href="tel:+553131576255" className="hover:text-accent transition-colors">(31) 3157-6255</a>
                   {" · "}
-                  <a href="https://wa.me/553131576255" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
+                  <a href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
                 </span>
               </li>
             </ul>
