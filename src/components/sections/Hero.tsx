@@ -34,7 +34,7 @@ export function Hero() {
 
             {/* CTA Principal */}
             <div className="flex justify-center lg:justify-start w-full">
-              <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/5531997311234?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="xl" 
                   variant="default"

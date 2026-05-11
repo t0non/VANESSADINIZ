@@ -93,7 +93,7 @@ export function Narrative() {
 
       {/* Botão de Agendamento (Centralizado na tela toda) */}
       <FadeIn delay={300} className="w-full flex justify-center pb-16 lg:pb-32 mt-8 lg:-mt-12 relative z-10">
-        <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
+        <Link href="https://wa.me/5531997311234?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
           <Button 
             size="xl" 
             variant="default"

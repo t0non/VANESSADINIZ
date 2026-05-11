@@ -44,9 +44,9 @@ export function Navbar() {
           <Clock size={11} />
           Seg. a Sex. · 08h às 18h
         </span>
-        <a href="tel:+553131576255" className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+        <a href="tel:+5531997311234" className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
           <Phone size={11} />
-          (31) 3157-6255
+          (31) 99731-1234
         </a>
       </div>
 
@@ -100,7 +100,7 @@ export function Navbar() {
                   </Link>
                 )
               )}
-              <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/5531997311234?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
                 <Button variant="default" className="bg-[#2D4035] hover:bg-[#1A2820] px-8 h-10 text-[9px] lettering-wide font-bold uppercase tracking-widest gap-2 group rounded-full text-white border-none">
                   <div className="relative w-5 h-5 transition-transform group-hover:scale-110">
                     <Image
@@ -133,7 +133,7 @@ export function Navbar() {
             {/* Endereço mobile */}
             <div className="text-center text-[10px] text-primary/50 uppercase tracking-widest font-medium border-b border-primary/10 w-full pb-4">
               <p>Rua Jaceguai, 208 – Sala 1408 – Instituto Hiraki</p>
-              <p className="mt-1">Seg.–Sex. · 08h–18h · (31) 3157-6255</p>
+              <p className="mt-1">Seg.–Sex. · 08h–18h · (31) 99731-1234</p>
             </div>
             {navLinks.map((item) =>
               item.isExternal ? (
@@ -158,7 +158,7 @@ export function Navbar() {
                 </Link>
               )
             )}
-            <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" className="w-full">
+            <Link href="https://wa.me/5531997311234?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" className="w-full">
               <Button className="bg-[#2D4035] hover:bg-[#1A2820] w-full h-14 text-[10px] lettering-wide font-bold uppercase tracking-widest gap-3 group rounded-full text-white border-none">
                 <div className="relative w-5 h-5 mr-1">
                   <Image

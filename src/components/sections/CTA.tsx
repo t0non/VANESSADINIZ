@@ -17,7 +17,7 @@ export function CTA() {
             Estamos prontos para acolher você e sua família. Garanta um acompanhamento médico que prioriza a sua qualidade de vida.
           </p>
           <div className="flex justify-center items-center w-full max-w-md mx-auto">
-            <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" className="w-fit md:w-auto mx-auto">
+            <Link href="https://wa.me/5531997311234?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer" className="w-fit md:w-auto mx-auto">
               <Button 
                 size="xl" 
                 variant="accent"

@@ -80,7 +80,7 @@ export function WhatsAppButton() {
               { text: "Prevenção de doenças", icon: "M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068" },
               { text: "Rastreamento de memória", icon: "M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189" },
             ].map((item, idx) => (
-              <Link key={idx} href={`https://wa.me/553131576255?text=Olá,%20Dra.%20Vanessa.`} target="_blank" className="flex items-center gap-3 bg-white px-4 py-2.5 rounded-full border border-gray-100 hover:shadow-md transition group">
+              <Link key={idx} href={`https://wa.me/5531997311234?text=Olá,%20Dra.%20Vanessa.`} target="_blank" className="flex items-center gap-3 bg-white px-4 py-2.5 rounded-full border border-gray-100 hover:shadow-md transition group">
                 <svg className="w-3.5 h-3.5 text-[#2A3F32]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                 </svg>

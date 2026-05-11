@@ -145,7 +145,7 @@ export function Authority() {
         {/* CTA & Credenciais (Centralizado na tela toda) */}
         <FadeIn delay={500} className="w-full flex flex-col items-center mt-12 md:mt-16">
           <div className="pt-10 border-t border-primary/10 w-full max-w-5xl mx-auto flex flex-col items-center justify-center gap-6">
-            <Link href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
+            <Link href="https://wa.me/5531997311234?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener noreferrer">
               <Button size="xl" variant="default" className="rounded-full bg-primary hover:bg-[#1A2820] transition-all duration-500 shadow-xl group px-10 h-16 hover:scale-105 border-none">
                 <div className="relative w-7 h-7 md:w-8 md:h-8 transition-transform group-hover:scale-110">
                   <Image

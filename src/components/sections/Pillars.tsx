@@ -8,42 +8,42 @@ const areas = [
   {
     title: "Envelhecimento Saudável e Prevenção",
     image: "/areas/envelhecimento.webp",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Planejamento%20de%20Envelhecimento%20Saud%C3%A1vel.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Planejamento%20de%20Envelhecimento%20Saud%C3%A1vel.",
   },
   {
     title: "Memória, Demências e Alzheimer",
     image: "/areas/alzheimer.webp",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Altera%C3%A7%C3%B5es%20de%20Mem%C3%B3ria.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Altera%C3%A7%C3%B5es%20de%20Mem%C3%B3ria.",
   },
   {
     title: "Alterações Motoras e Parkinson",
     image: "/areas/parkinson.png",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Altera%C3%A7%C3%B5es%20Motoras.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Altera%C3%A7%C3%B5es%20Motoras.",
   },
   {
     title: "Depressão e Saúde Mental",
     image: "/areas/depressao.jpg",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Sa%C3%BAde%20Mental%20no%20Idoso.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Sa%C3%BAde%20Mental%20no%20Idoso.",
   },
   {
     title: "Osteoporose e Prevenção de Quedas",
     image: "/areas/osteoporose.webp",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Osteoporose%20e%20Preven%C3%A7%C3%A3o%20de%20Quedas.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Osteoporose%20e%20Preven%C3%A7%C3%A3o%20de%20Quedas.",
   },
   {
     title: "Infecções Urinárias e Incontinência",
     image: "/areas/infeccao.webp",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Infec%C3%A7%C3%B5es%20Urin%C3%A1rias.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Infec%C3%A7%C3%B5es%20Urin%C3%A1rias.",
   },
   {
     title: "Controle de Doenças Crônicas",
     image: "/areas/acompanhamentos.jpg",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Doen%C3%A7as%20Cr%C3%B4nicas.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Doen%C3%A7as%20Cr%C3%B4nicas.",
   },
   {
     title: "Cuidados Paliativos e Finitude",
     image: "/areas/Doencas.avif",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Cuidados%20em%20Fase%20Avan%C3%A7ada.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20saber%20mais%20sobre%20Cuidados%20em%20Fase%20Avan%C3%A7ada.",
   },
 ];
 
@@ -108,7 +108,7 @@ export function Pillars() {
         {/* CTA abaixo */}
         <FadeIn delay={400} className="flex justify-center mt-16 md:mt-20">
           <Link
-            href="https://wa.me/553131576255?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta."
+            href="https://wa.me/5531997311234?text=Olá%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-primary hover:bg-[#1A2820] text-white px-12 h-16 rounded-full font-bold text-[11px] uppercase tracking-[0.2em] transition-all duration-500 hover:scale-105 shadow-xl"

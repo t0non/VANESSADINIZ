@@ -16,7 +16,7 @@ const modalities = [
       "Belo Horizonte, MG",
     ],
     cta: "Agendar consulta",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta%20presencial.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta%20presencial.",
     accent: true,
   },
   {
@@ -29,7 +29,7 @@ const modalities = [
       "Avaliação completa em domicílio",
     ],
     cta: "Agendar visita",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta%20domiciliar.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20consulta%20domiciliar.",
     accent: false,
   },
   {
@@ -42,7 +42,7 @@ const modalities = [
       "Ideal para retornos e orientações",
     ],
     cta: "Agendar teleconsulta",
-    href: "https://wa.me/553131576255?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20teleconsulta.",
+    href: "https://wa.me/5531997311234?text=Ol%C3%A1%2C%20Dra.%20Vanessa.%20Gostaria%20de%20agendar%20uma%20teleconsulta.",
     accent: false,
   },
 ];

@@ -23,7 +23,7 @@ export function JsonLd() {
       "latitude": -19.9245, // Exemplo Prado BH
       "longitude": -43.9352
     },
-    "telephone": "+553131576255",
+    "telephone": "+5531997311234",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
